@@ -6,7 +6,6 @@ import { Constants } from './constants.ts'
 
 const app = new Application()
 const logger = new Logger()
-const port = 8000
 
 app.use(logger.getTiming);
 app.use(logger.setTiming)
@@ -14,6 +13,6 @@ app.use(logger.setTiming)
 app.use(Routes.router.routes())
 app.use(Routes.router.allowedMethods())
 
-log.info(`${Constants.APP_NAME} started on port ${port}`)
+log.info(`${Constants.APP_NAME} started on port ${Constants.PORT}`)
 
-await app.listen({ port })
+await app.listen({ port: Constants.PORT })
