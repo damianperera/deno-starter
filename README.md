@@ -4,20 +4,21 @@
 ### Deno
 To install Deno, follow the setup guide found [here](https://deno.land/#installation).
 
-### Trial Run
-You can run this application without cloning this repository by executing the following command in your terminal.
+### Live Run
+Once you install Deno, you can start the server without cloning this repository by executing the following command in your terminal.
 
 ```bash
 $ deno run --allow-net --allow-read https://raw.githubusercontent.com/damianperera/Deno-REST-Boilerplate/master/server.ts
 ```
 
-### Server
+```
+## Getting Started
+
 Run the following command in your terminal to start the server.
 
 ```bash
 $ deno run --allow-net --allow-read server.ts
-```
-## Getting Started
+
 ### Creating a new REST Endpoint
 When using this boilerplate your starting point for a REST endpoint would be the `controllers` directory.
 
