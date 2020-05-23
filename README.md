@@ -12,7 +12,7 @@ deno run --allow-net --allow-read server.ts
 ```
 ## Getting Started
 ### Creating a new REST Endpoint
-Using this boilerplate your starting point for a REST endpoint would be the `controllers` directory.
+When using this boilerplate your starting point for a REST endpoint would be the `controllers` directory.
 
 ```
 - controllers
