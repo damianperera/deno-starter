@@ -2,7 +2,11 @@
 
 ## Getting Started
 
-To start the server, run the following in your terminal:
+### Deno
+To install Deno, follow the setup guide found [here](https://deno.land/#installation).
+
+### Server
+Run the following in your terminal to start the server.
 
 ```bash
 deno run --allow-net --allow-read server.ts
