@@ -11,7 +11,6 @@ Once you install Deno, you can start the server without cloning this repository 
 $ deno run --allow-net --allow-read https://raw.githubusercontent.com/damianperera/Deno-REST-Boilerplate/master/server.ts
 ```
 
-```
 ## Getting Started
 
 Run the following command in your terminal to start the server.
