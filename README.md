@@ -18,6 +18,7 @@ Run the following command in your terminal to start the server.
 
 ```bash
 $ deno run --allow-net --allow-read server.ts
+```
 
 ### Creating a new REST Endpoint
 When using this boilerplate your starting point for a REST endpoint would be the `controllers` directory.
