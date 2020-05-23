@@ -1,9 +1,9 @@
 import * as log from 'https://deno.land/std/log/mod.ts'
 import { Context } from 'https://deno.land/x/oak/mod.ts';
 import { Constants } from '../../constants.ts'
-import { System } from '../interface/system.ts'
+import { Health } from '../interface/health.ts'
 
-export class SystemService implements System {
+export class HealthService implements Health {
 
     public getTime = async ( context: Context, next: Function) => {
         context.response.body = {
