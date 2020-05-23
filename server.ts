@@ -1,7 +1,7 @@
 import { Application } from 'https://deno.land/x/oak/mod.ts'
+import * as log from 'https://deno.land/std/log/mod.ts'
 import { Routes } from './config/routes.ts'
 import { Logger } from './config/http.ts'
-import * as log from 'https://deno.land/std/log/mod.ts'
 import { Constants } from './constants.ts'
 
 const app = new Application()
