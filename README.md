@@ -16,9 +16,9 @@ Using this boilerplate your starting point for a REST endpoint would be the `con
 
 ```
 - controllers
----- health.ts
----- products.ts
----- accounts.ts
+|-- health.ts
+|-- products.ts
+|-- accounts.ts
 ```
 
 The `controllers` directory contains the route declaration of your REST service. For each file in this directory an automatic base path will be generated. 
