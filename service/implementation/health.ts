@@ -13,7 +13,8 @@ export class HealthService implements Health {
 
     public getInfo = async ( { response } : { response : any }) => {
         response.body = {
-            "app": Constants.APP_NAME
+            "app": Constants.APP_NAME,
+            "status": "UP"
         }
     }
 
