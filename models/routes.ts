@@ -16,4 +16,6 @@ export namespace Routes {
         POST = 'post',
         PUT = 'put'    
     }
+
+    export const isEndpoint = (obj: any): obj is Endpoints => 'httpMethod' in obj && 'path' in obj && 'serviceMethod' in obj
 }
