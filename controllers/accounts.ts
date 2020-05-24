@@ -1,5 +1,5 @@
 import { Routes } from '../config/routes.ts'
-import { AccountsService } from '../service/implementation/accounts.ts';
+import { AccountsService } from '../service/implementation/accounts.ts'
 
 const GET: Routes.Methods = Routes.Methods.GET
 

@@ -1,12 +1,14 @@
 import { Application } from 'https://deno.land/x/oak/mod.ts'
 import * as log from 'https://deno.land/std/log/mod.ts'
 import { Routes } from './config/routes.ts'
-import { Logger } from './config/http.ts'
+import { HTTP } from './config/http.ts'
 import { Constants } from './constants.ts'
 
 const app = new Application()
-const logger = new Logger()
+const logger = new HTTP.Logger()
+const exceptionHandler = new HTTP.Exceptions()
 
+app.use(exceptionHandler.catch);
 app.use(logger.getTiming);
 app.use(logger.setTiming)
 

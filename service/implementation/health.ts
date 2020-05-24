@@ -1,4 +1,5 @@
-import { Context, Response } from 'https://deno.land/x/oak/mod.ts';
+import { Context, Response } from 'https://deno.land/x/oak/mod.ts'
+import { soxa as api } from 'https://deno.land/x/soxa/mod.ts'
 import { Constants } from '../../constants.ts'
 import { Health } from '../interface/health.ts'
 
@@ -11,10 +12,15 @@ export class HealthService implements Health {
     }
 
     public getInfo = async ( { response } : { response : Response } ) => {
-        response.body = {
-            "app": Constants.APP_NAME,
-            "status": "UP"
-        }
+        const ipIfyBaseURL = 'http://api.ipify.org/?format=json'
+        
+        await api.get(ipIfyBaseURL).then((res) => {
+            response.body = {
+                "app": Constants.APP_NAME,
+                "status": "UP",
+                "ipAddress": res.data.ip
+            }
+        })
     }
 
 }
