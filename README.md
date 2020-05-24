@@ -30,4 +30,4 @@ When using this boilerplate your starting point for a REST endpoint would be the
 
 The `controllers` directory contains the route declaration of your REST service. For each file in this directory an automatic base path will be generated. 
 
-For example, specifying a new file named `orders.ts` inside the `controllers` directory with a default export of type `Array<Routes.Endpoints>` will automatically create the base path `/api/v1/orders` and configure any endpoint `path`s specified in the controller on top of the base path.
+For example, specifying a new file named `orders.ts` inside the `controllers` directory with a default export of type `Array<Routes.Endpoints>` will automatically create the base path `/api/v1/orders` and configure any endpoint `path` specified in the controller on top of the base path like `/api/v1/orders/summary`.
