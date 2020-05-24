@@ -1,6 +1,6 @@
 import { Context } from 'https://deno.land/x/oak/mod.ts'
 import * as log from 'https://deno.land/std/log/mod.ts'
-import { ErrorModel } from '../models/error.ts'
+import { Error } from '../models/error.ts'
 
 export namespace HTTP {
     export class Exceptions {
@@ -11,7 +11,7 @@ export namespace HTTP {
                 await next()
             } catch (e) {
                 log.error(e)
-                const error: ErrorModel = {
+                const error: Error = {
                     statusCode: e.statusCode || this.INTERNAL_SERVER_ERROR,
                     message: e.message
                 }
