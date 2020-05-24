@@ -9,4 +9,15 @@ export class ProductsService implements Service {
         }
     }
 
+    public getProductByRegion = async ( { params, response } : { params : Record<string, any>, response: Response }) => {
+        const productId = params.productId
+        const regionCode = params.regionCode
+
+        response.body = {
+            "region": regionCode,
+            "product": productId
+        }
+
+    }
+
 }

@@ -10,4 +10,11 @@ export class AccountsService implements Service {
         }
     }
 
+    public getAccountDetails = async ( { params, response } : { params : Record<string, any>, response : Response }) => {
+        const accountId = params.accountId
+        response.body = {
+            "account": accountId
+        }
+    }
+
 }
