@@ -5,14 +5,14 @@ const GET: Routes.Methods = Routes.Methods.GET
 
 const products: Routes.Endpoints[] = [
     {
-        'httpMethod': GET,
-        'path': '',
-        'serviceMethod': new ProductsService().getName
+        httpMethod: GET,
+        path: '',
+        serviceMethod: new ProductsService().getName
     },
     {
-        'httpMethod': GET,
-        'path': '/:productId/regions/:regionCode',
-        'serviceMethod': new ProductsService().getProductByRegion
+        httpMethod: GET,
+        path: '/:productId/regions/:regionCode',
+        serviceMethod: new ProductsService().getProductByRegion
     }
 ]
 

@@ -5,12 +5,9 @@ import { HTTP } from './config/http.ts'
 import { Constants } from './constants.ts'
 
 const app = new Application()
-const logger = new HTTP.Logger()
-const exceptionHandler = new HTTP.Exceptions()
 
-app.use(exceptionHandler.catch);
-app.use(logger.getTiming);
-app.use(logger.setTiming)
+app.use(new HTTP.Exceptions().catch);
+app.use(new HTTP.Logger().requestTimer);
 
 app.use(Routes.router.routes())
 app.use(Routes.router.allowedMethods())

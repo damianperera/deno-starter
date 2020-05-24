@@ -5,14 +5,14 @@ const GET: Routes.Methods = Routes.Methods.GET
 
 const accounts: Routes.Endpoints[] = [
     {
-        'httpMethod': GET,
-        'path': '',
-        'serviceMethod': new AccountsService().getName
+        httpMethod: GET,
+        path: '',
+        serviceMethod: new AccountsService().getName
     },
     {
-        'httpMethod': GET,
-        'path': '/:accountId',
-        'serviceMethod': new AccountsService().getAccountById
+        httpMethod: GET,
+        path: '/:accountId',
+        serviceMethod: new AccountsService().getAccountById
     }
 ]
 

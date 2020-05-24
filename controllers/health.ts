@@ -5,14 +5,14 @@ const GET: Routes.Methods = Routes.Methods.GET
 
 const health: Routes.Endpoints[] = [
     {
-        'httpMethod': GET,
-        'path': '',
-        'serviceMethod': new HealthService().getTime
+        httpMethod: GET,
+        path: '',
+        serviceMethod: new HealthService().getTime
     },
     {
-        'httpMethod': GET,
-        'path': '/info',
-        'serviceMethod': new HealthService().getInfo
+        httpMethod: GET,
+        path: '/info',
+        serviceMethod: new HealthService().getInfo
     }
 ]
 

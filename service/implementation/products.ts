@@ -5,7 +5,7 @@ export class ProductsService implements Service {
 
     public getName = async ( { response } : { response : Response } ) => {
         response.body = {
-            "module": "products"
+            module: 'products'
         }
     }
 
@@ -14,8 +14,8 @@ export class ProductsService implements Service {
         const regionCode = params.regionCode
 
         response.body = {
-            "region": regionCode,
-            "product": productId
+            region: regionCode,
+            products: productId
         }
 
     }
