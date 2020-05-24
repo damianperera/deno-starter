@@ -24,7 +24,7 @@ export namespace HTTP {
             await next();
             const ms = Date.now() - start;
             context.response.headers.set('X-Response-Time', `${ms}ms`);
-            log.info(`${context.request.method} ${context.request.url} - ${ms}`);
+            log.info(`${context.request.method} ${context.request.url} - ${ms} ms`);
         }
     }
     
