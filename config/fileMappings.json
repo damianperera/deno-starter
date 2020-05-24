@@ -1,0 +1,9 @@
+{
+    "imports": {
+        "remote/": "https://deno.land/",
+        "framework/": "./",
+        "app/models/": "../models/",
+        "app/service/": "../service/",
+        "app/constants": "../constants.ts"
+    }
+}

@@ -1,8 +1,8 @@
-import { Application } from 'https://deno.land/x/oak/mod.ts'
-import * as log from 'https://deno.land/std/log/mod.ts'
-import { router } from './config/routes.ts'
-import { HTTP } from './config/http.ts'
-import { Constants } from './constants.ts'
+import { Application } from 'remote/x/oak/mod.ts'
+import * as log from 'remote/std/log/mod.ts'
+import { router } from 'framework/routes.ts'
+import { HTTP } from 'framework/http.ts'
+import { Constants } from 'app/constants'
 
 const app = new Application()
 

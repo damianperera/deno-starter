@@ -15,7 +15,7 @@ Since Deno is marketed as a _secure_ runtime for JS you need to explicitly give 
 Run the following command in your terminal to start the server.
 
 ```bash
-$ deno run --allow-net --allow-read server.ts
+$ deno run --allow-net --allow-read --importmap=./config/fileMappings.json --unstable server.ts
 ```
 
 ### Creating a new REST Endpoint

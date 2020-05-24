@@ -1,4 +1,4 @@
-import { RouterMiddleware } from 'https://deno.land/x/oak/mod.ts'
+import { RouterMiddleware } from 'remote/x/oak/mod.ts'
 
 export namespace Routes {
     export interface Endpoints {
