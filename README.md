@@ -4,12 +4,11 @@
 ### Deno
 To install Deno, follow the setup guide found [here](https://deno.land/#installation).
 
-### Live Run
-Once you install Deno, you can start the server without cloning this repository by executing the following command in your terminal.
+## Permissions
+Since Deno is marketed as a _secure_ runtime for JS you need to explicitly give programs the permission to do certain 'privileged' actions, such as access the network. This server requires the `--allow-net` and `--allow-read` permissions out of the box.
 
-```bash
-$ deno run --allow-net --allow-read https://raw.githubusercontent.com/damianperera/Deno-REST-Boilerplate/master/server.ts
-```
+- `--allow-net`: As a REST service this is required in order to access the network
+- `--allow-read`: Since the route manager automatically configures endpoints based on filenames and their contents, the server needs read access to the filesystem. You can make the permission level more granular by allowing read access only to the server's root directory by specifying `--allow-read=./`. 
 
 ## Getting Started
 
