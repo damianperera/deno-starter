@@ -4,13 +4,15 @@ import { ErrorModel } from '../models/error.ts'
 
 export namespace HTTP {
     export class Exceptions {
+        private readonly INTERNAL_SERVER_ERROR = 500
+
         public catch = async (context : Context, next : Function) => {
             try {
                 await next()
             } catch (e) {
                 log.error(e)
                 const error: ErrorModel = {
-                    statusCode: e.statusCode || 500,
+                    statusCode: e.statusCode || this.INTERNAL_SERVER_ERROR,
                     message: e.message
                 }
                 context.response.body = error
