@@ -11,6 +11,7 @@ Since Deno is marketed as a _secure_ runtime for JS you need to explicitly give 
 - `--allow-read`: Since the route manager automatically configures endpoints based on filenames and their contents, the server needs read access to the filesystem. You can make the permission level more granular by allowing read access only to the server's root directory instead of the entire filesystem by specifying `--allow-read=./`. 
 
 ## Getting Started
+<p align="center"><img src="https://s7.gifyu.com/images/Peek-2020-05-24-17-23.gif" alt="Terminal"/></p>
 
 Run the following command in your terminal to start the server.
 
