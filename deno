@@ -1,0 +1,9 @@
+start() {
+    cd src/ && deno run --allow-read --allow-net server.ts
+}
+
+test() {
+    deno test
+}
+
+"$@"

@@ -1,6 +1,5 @@
 import { Context, Response } from 'https://deno.land/x/oak/mod.ts'
 import { soxa as api } from 'https://deno.land/x/soxa/mod.ts'
-import from 'https://deno.land/x/arrays/mod.ts'
 import { Constants } from '../../constants.ts'
 import { Health } from '../interface/health.ts'
 
