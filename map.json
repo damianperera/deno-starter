@@ -1,0 +1,6 @@
+{
+    "imports": {
+       "service/": "./src/service/",
+       "models/": "./src/models/"
+    }
+ }

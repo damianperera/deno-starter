@@ -3,7 +3,7 @@ start() {
 }
 
 test() {
-    deno test
+    deno test --importmap=map.json --unstable
 }
 
 "$@"

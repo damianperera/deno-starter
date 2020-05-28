@@ -1,13 +1,12 @@
 import { assertEquals } from 'https://deno.land/std/testing/asserts.ts'
 import { ServerRequest } from 'https://deno.land/x/oak/deps.ts'
 import { Request, Response } from 'https://deno.land/x/oak/mod.ts'
-import { AccountsService } from '../../../src/service/implementation/accounts.ts'
-import { Routes } from '../../../src/models/routes.ts'
+import { AccountsService } from 'service/implementation/accounts.ts'
+import { Routes } from 'models/routes.ts'
 
 const { test } = Deno
 
-test('getName', async () => {
-
+test('accounts/getName', async () => {
     const serverRequest = new ServerRequest()
     const headers = new Headers()
     const headerRequestedBy = 'X-Requested-By'
@@ -25,6 +24,6 @@ test('getName', async () => {
     assertEquals(headers.get(headerRequestedBy), response.body.requestHeaders.get(headerRequestedBy))
 })
 
-test('getAccountById', async () => {
+test('accounts/getAccountById', async () => {
 
 })
