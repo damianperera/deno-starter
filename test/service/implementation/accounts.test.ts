@@ -5,28 +5,41 @@ import { AccountsService } from 'service/implementation/accounts.ts'
 import { Routes } from 'models/routes.ts'
 
 const { test } = Deno
+const headerRequestedBy = 'X-Requested-By'
 
-test('accounts/getName', async () => {
+function setup (): ServerRequest {
     const serverRequest = new ServerRequest()
     const headers = new Headers()
-    const headerRequestedBy = 'X-Requested-By'
 
     serverRequest.url = '/api/v1/accounts'
     serverRequest.method = Routes.Methods.GET
     headers.set(headerRequestedBy, 'tests')
     serverRequest.headers = headers
 
-    const request = new Request(serverRequest);
+    return serverRequest
+}
+
+test('accounts/getName', async () => {
+    const serverRequest = setup()
+    const request = new Request(setup());
     const response = new Response(request);
-    await new AccountsService().getName({ request, response})
+    await new AccountsService().getName({ request, response })
 
     // @ts-ignore
     const { body: { module, requestHeaders } } = response
-
     assertEquals('accounts', module)
-    assertEquals(headers.get(headerRequestedBy), requestHeaders.get(headerRequestedBy))
+    assertEquals(serverRequest.headers.get(headerRequestedBy), requestHeaders.get(headerRequestedBy))
 })
 
 test('accounts/getAccountById', async () => {
+    const request = new Request(setup())
+    const response = new Response(request)
+    const params = {
+        accountId: 12345
+    }
+    await new AccountsService().getAccountById({ params, response })
 
+    // @ts-ignore
+    const { body: { account }} = response
+    assertEquals(params.accountId, account)
 })
