@@ -1,8 +1,0 @@
-{
-    "imports": {
-       "constants": "./src/constants.ts",
-       "config/": "./src/config/",
-       "service/": "./src/service/",
-       "models/": "./src/models/"
-    }
- }
