@@ -13,10 +13,18 @@ Since Deno is a _secure_ runtime for JS you need to explicitly give programs the
 ## Getting Started
 <p align="center"><img src="https://s7.gifyu.com/images/Peek-2020-05-24-17-23.gif" alt="Terminal"/></p>
 
+### Startup
 Run the following command in your terminal to start the server.
 
 ```bash
 $ ./deno run
+```
+
+### Tests
+Run the following command in your terminal to execute the test suite.
+
+```bash
+$ ./deno test
 ```
 
 ### Creating a new REST Endpoint
