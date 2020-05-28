@@ -21,7 +21,7 @@ new class BaseRoute {
         
             if (entry.isFile) {
                 const mainRoute = `${Constants.BASE_PATH}${entryName}`
-                const filePath = `.${Constants.CONTROLLER_DIRECTORY}/${entry.name}`
+                const filePath = `../../${Constants.CONTROLLER_DIRECTORY}/${entry.name}`
         
                 import(filePath).then((module) => {
                     const endpoints: Array<Routes.Endpoints> = module.default
@@ -36,6 +36,7 @@ new class BaseRoute {
                         const route = `${mainRoute}${endpoint.path}`
         
                         log.info(`Configured - ${method.toUpperCase()} ${route}`)
+                        // @ts-ignore
                         router[method](route, endpoint.serviceMethod)
                     }
                 })

@@ -1,9 +1,9 @@
-start() {
-    cd src/ && deno run --allow-read --allow-net server.ts
+run() {
+    deno run --allow-read=./ --allow-net --importmap=map.json --unstable "$@" src/server.ts
 }
 
 test() {
-    deno test --importmap=map.json --unstable
+    deno test --importmap=map.json --unstable "$@"
 }
 
 "$@"

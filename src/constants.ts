@@ -2,5 +2,5 @@ export class Constants {
     static readonly APP_NAME = 'rest-api'
     static readonly PORT = 8000
     static readonly BASE_PATH = '/api/v1/'
-    static readonly CONTROLLER_DIRECTORY = './controllers'
+    static readonly CONTROLLER_DIRECTORY = './src/controllers'
 }

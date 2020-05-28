@@ -20,8 +20,11 @@ test('accounts/getName', async () => {
     const response = new Response(request);
     await new AccountsService().getName({ request, response})
 
-    assertEquals('accounts', response.body.module)
-    assertEquals(headers.get(headerRequestedBy), response.body.requestHeaders.get(headerRequestedBy))
+    // @ts-ignore
+    const { body: { module, requestHeaders } } = response
+
+    assertEquals('accounts', module)
+    assertEquals(headers.get(headerRequestedBy), requestHeaders.get(headerRequestedBy))
 })
 
 test('accounts/getAccountById', async () => {
