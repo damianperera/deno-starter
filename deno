@@ -1,9 +1,9 @@
 run() {
-    deno run --allow-read=./ --allow-net --importmap=map.json --unstable "$@" src/server.ts
+    deno run --allow-read=./ --allow-net --importmap=absolutePaths.json --unstable "$@" src/server.ts
 }
 
 test() {
-    deno test --importmap=map.json --unstable "$@"
+    deno test --importmap=absolutePaths.json --unstable "$@"
 }
 
 "$@"
