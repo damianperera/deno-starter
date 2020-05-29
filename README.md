@@ -27,6 +27,8 @@ Run the following command in your terminal to execute the test suite.
 $ ./deno test
 ```
 
+The reason why tests are written in a separate folder is because Deno has a potential feature in its road-map to ship application sources in a single executable, similar to Java - for more information on this discussion please refer [#986](https://github.com/denoland/deno/issues/986).
+
 ### Creating a new REST Endpoint
 When using this boilerplate your starting point for a REST endpoint would be the `controllers` directory.
 
