@@ -17,7 +17,6 @@ export class ProductsService implements Service {
             region: regionCode,
             products: productId
         }
-
     }
-
+    
 }
