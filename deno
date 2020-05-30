@@ -1,3 +1,11 @@
+###################################################
+#                                                 #
+# Wrapper script for Deno commands.               #
+#                                                 #
+# Author: Damian Perera <github.com/damianperera> #
+#                                                 #
+###################################################
+
 run() {
     deno run --allow-read=./ --allow-net --importmap=src/config/absolutePaths.json --unstable "$@" src/server.ts
 }
