@@ -20,9 +20,9 @@ function setup (): ServerRequest {
 }
 
 test('accounts/getName', async () => {
-    const serverRequest = setup()
-    const request = new Request(setup());
-    const response = new Response(request);
+    const serverRequest: ServerRequest = setup()
+    const request: Request = new Request(setup());
+    const response: Response = new Response(request);
     await new AccountsService().getName({ request, response })
 
     // @ts-ignore
@@ -32,8 +32,8 @@ test('accounts/getName', async () => {
 })
 
 test('accounts/getAccountById', async () => {
-    const request = new Request(setup())
-    const response = new Response(request)
+    const request: Request = new Request(setup())
+    const response: Response = new Response(request)
     const params = {
         accountId: 12345
     }
