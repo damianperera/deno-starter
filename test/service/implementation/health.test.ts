@@ -39,6 +39,8 @@ test('health/getInfo', async () => {
       ip: '172.0.0.1'
     }
   }
+
+  // Mocking soxa.get()
   stub(soxa, 'get', resolves(soxaResponse))
 
   const request: Request = new Request(setup());
