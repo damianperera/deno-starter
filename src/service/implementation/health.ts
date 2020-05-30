@@ -5,7 +5,7 @@ import { Health } from 'service/interface/health.ts'
 
 export class HealthService implements Health {
 
-    public getTime = async ( context: Context, next: Function ) => {
+    public getTime = async ( context: Context ) => {
         context.response.body = {
             serverTime: Date.now()
         }
