@@ -1,9 +1,11 @@
 {
-    "compilerOptions": {
-        "baseUrl": ".",
-        "paths": {
-          "service/*": ["src/service/*"],
-          "routes/*": ["src/routes/*"],
-          "models/*": ["src/models/*"]
-        }
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "typescript-deno-plugin",
+        "enable": true,
+        "importmap": "src/config/absolutePaths.json"
+      }
+    ]
+  }
 }
