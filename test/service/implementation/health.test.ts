@@ -1,8 +1,11 @@
 import { assertEquals } from 'https://deno.land/std/testing/asserts.ts'
 import { ServerRequest } from 'https://deno.land/x/oak/deps.ts'
-import { Application, Context, Response } from 'https://deno.land/x/oak/mod.ts'
+import { Application, Context, Request, Response } from 'https://deno.land/x/oak/mod.ts'
+import { stub, resolves } from 'https://deno.land/x/mock/stub.ts'
 import { HealthService } from 'service/implementation/health.ts'
 import { Routes } from 'models/routes.ts'
+import { soxa } from 'https://deno.land/x/soxa/mod.ts'
+import { Constants } from 'constants'
 
 const { test } = Deno
 
@@ -20,8 +23,7 @@ function setup (): ServerRequest {
 }
 
 test('health/getTime', async () => {
-    const serverRequest: ServerRequest = setup()
-    const context: Context = new Context(new Application(), serverRequest)
+    const context: Context = new Context(new Application(), setup())
     await new HealthService().getTime(context)
 
     // @ts-ignore
@@ -31,6 +33,21 @@ test('health/getTime', async () => {
     assertEquals(currentTime, methodTime)
 })
 
-test('health/getInfo', () => {
+test('health/getInfo', async () => {
+  const soxaResponse = {
+    data: {
+      ip: '172.0.0.1'
+    }
+  }
+  stub(soxa, 'get', resolves(soxaResponse))
 
+  const request: Request = new Request(setup());
+  const response: Response = new Response(request);
+  await new HealthService().getInfo({ response })
+
+  // @ts-ignore
+  const { body: { app, status, ipAddress } } = response
+  assertEquals(soxaResponse.data.ip, ipAddress)
+  assertEquals(Constants.APP_NAME, app)
+  assertEquals('UP', status)
 })
