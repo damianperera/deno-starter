@@ -13,7 +13,7 @@ Since Deno is a secure runtime for JS you need to explicitly give programs the p
 ## Getting Started
 
 ### Startup
-<p align="left"><img src="https://s7.gifyu.com/images/Peek-2020-05-31-15-01.gif" alt="Terminal"/></p>
+<p align="left"><img style="border-radius:50%" src="https://s7.gifyu.com/images/Peek-2020-05-31-15-01.gif" alt="Terminal"/></p>
 
 Run the following command in your terminal to start the server.
 
@@ -22,7 +22,7 @@ $ ./deno run
 ```
 
 ### Tests
-<p align="left"><img src="https://s7.gifyu.com/images/Peek-2020-05-31-15-02.gif" alt="Terminal"/></p>
+<p align="left"><img style="border-radius:50%" src="https://s7.gifyu.com/images/Peek-2020-05-31-15-02.gif" alt="Terminal"/></p>
 
 Run the following command in your terminal to execute the test suite.
 
