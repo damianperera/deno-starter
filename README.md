@@ -27,16 +27,17 @@ Run the following command in your terminal to execute the test suite.
 $ ./deno test
 ```
 
-The reason why tests are in a separate folder is because Deno has a potential feature in its road-map to ship application sources in a single executable, similar to Java - for more information on this discussion please refer [#986](https://github.com/denoland/deno/issues/986).
+The reason why tests are in a separate folder is because Deno has a potential feature in its road-map to ship application sources in a packaged bundle, similar to a `.java` or `.exe` executable - refer [#986](https://github.com/denoland/deno/issues/986) for more information on this discussion.
 
 ### Creating a new REST Endpoint
 When using this boilerplate your starting point for a REST endpoint would be the `controllers` directory.
 
 ```
-- controllers
-|-- health.ts
-|-- products.ts
-|-- accounts.ts
+- src
+|- controllers
+ |- health.ts
+ |- products.ts
+ |- accounts.ts
 ```
 
 The `controllers` directory contains the route declaration of your REST service. For each file in this directory an automatic base path will be generated. 
