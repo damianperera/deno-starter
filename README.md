@@ -5,28 +5,42 @@
 To install Deno follow the setup guide found [here](https://deno.land/#installation).
 
 ## Permissions
-Since Deno is a _secure_ runtime for JS you need to explicitly give programs the permission to do certain 'privileged' actions, such as access the network. This server requires the `--allow-net` and `--allow-read` permissions out of the box.
+Since Deno is a secure runtime for JS you need to explicitly give programs the permission to do certain 'privileged' actions, such as access the network. This server requires the `--allow-net` and `--allow-read` permissions out of the box.
 
-- `--allow-net`: Being a REST service this is required in order to bind a port and access the network. You can make the permission level more granular by specifying the networks that the service has access to (e.g. `--allow-net:0.0.0.0`).
-- `--allow-read`: Since the route manager automatically configures endpoints based on filenames and their contents, the server needs read access to the filesystem. You can make the permission level more granular by allowing read access only to the server's root directory instead of the entire filesystem by specifying `--allow-read=./`. 
+- `--allow-net`: Being a REST service this is required in order to bind a port and access the network. You can make the permission level more granular by specifying the networks that the service has access to (e.g. `--allow-net:0.0.0.0`) in the `./deno` executable.
+- `--allow-read`: Since the route manager automatically configures endpoints based on filenames and their contents, the server needs read access to the filesystem. You can make the permission level more granular by allowing read access only to the server's root directory instead of the entire filesystem by specifying `--allow-read=./` in the `./deno` executable. 
 
 ## Getting Started
-<p align="center"><img src="https://s7.gifyu.com/images/Peek-2020-05-24-17-23.gif" alt="Terminal"/></p>
+
+### Startup
+<p align="left"><img style="border-radius:50%" src="https://s7.gifyu.com/images/Peek-2020-05-31-15-01.gif" alt="Terminal"/></p>
 
 Run the following command in your terminal to start the server.
 
 ```bash
-$ deno run --allow-net --allow-read server.ts
+$ ./deno run
 ```
+
+### Tests
+<p align="left"><img style="border-radius:50%" src="https://s7.gifyu.com/images/Peek-2020-05-31-15-02.gif" alt="Terminal"/></p>
+
+Run the following command in your terminal to execute the test suite.
+
+```bash
+$ ./deno test
+```
+
+The reason why tests are in a separate folder is because Deno has a potential feature in its road-map to ship application sources in a packaged bundle, similar to a `.java` or `.exe` executable - refer [#986](https://github.com/denoland/deno/issues/986) for more information on this discussion.
 
 ### Creating a new REST Endpoint
 When using this boilerplate your starting point for a REST endpoint would be the `controllers` directory.
 
 ```
-- controllers
-|-- health.ts
-|-- products.ts
-|-- accounts.ts
+- src
+|- controllers
+ |- health.ts
+ |- products.ts
+ |- accounts.ts
 ```
 
 The `controllers` directory contains the route declaration of your REST service. For each file in this directory an automatic base path will be generated. 

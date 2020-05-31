@@ -1,5 +1,5 @@
-import { Routes } from '../models/routes.ts'
-import { HealthService } from '../service/implementation/health.ts'
+import { Routes } from 'models/routes.ts'
+import { HealthService } from 'service/implementation/health.ts'
 
 const GET: Routes.Methods = Routes.Methods.GET
 
