@@ -16,7 +16,8 @@ new class BaseRoute {
     }
 
     generateRoutes = () => {
-        for (const entry of readDirSync(Constants.CONTROLLER_DIRECTORY)) {
+        const entries: Iterable<any> = readDirSync(Constants.CONTROLLER_DIRECTORY)
+        for (const entry of entries) {
             const entryName = entry.name.split('.').slice(0, -1).join('.');
         
             if (entry.isFile) {
