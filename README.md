@@ -20,7 +20,7 @@ $ ./deno test
 ```
 <p align="left"><img style="border-radius:50%" src="https://s7.gifyu.com/images/Peek-2020-05-31-15-02.gif" alt="Terminal"/></p>
 
-Tests are maintained in a separate folder since Deno has a feature in its road-map to ship application sources in a single bundle, similar to a `.java` or `.exe` executable - refer [#986](https://github.com/denoland/deno/issues/986) for more information on this discussion.
+Tests are maintained in a separate folder since Deno has a feature in its road-map to ship application sources in a single bundle, similar to a `.java` or `.exe` executable - refer the Deno manual for the [feature](https://deno.land/manual#feature-highlights) and [#986](https://github.com/denoland/deno/issues/986) for the discussion.
 
 ### Creating a new REST Endpoint
 When using this boilerplate your starting point for a REST endpoint would be the `controllers` directory.
