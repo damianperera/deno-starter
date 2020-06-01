@@ -2,7 +2,7 @@
 
 ## Installation
 ### Deno
-To install Deno follow the setup guide found [here](https://deno.land/#installation).
+To install Deno follow the setup guide found [here](https://deno.land/#installation). If you are using an IDE such as VS Code, Atom, Visual Studio or a JetBrains product, make sure to install the appropriate Deno plugin and update `ts-config.json` if required. The official plugin for VS Code can be found [here](https://github.com/denoland/vscode_deno).
 
 ## Permissions
 Since Deno is a secure runtime for JS you need to explicitly give programs the permission to do certain 'privileged' actions, such as access the network. This server requires the `--allow-net` and `--allow-read` permissions out of the box.
@@ -30,7 +30,7 @@ Run the following command in your terminal to execute the test suite.
 $ ./deno test
 ```
 
-The reason why tests are in a separate folder is because Deno has a potential feature in its road-map to ship application sources in a packaged bundle, similar to a `.java` or `.exe` executable - refer [#986](https://github.com/denoland/deno/issues/986) for more information on this discussion.
+Tests are maintained in a separate folder since Deno has a potential feature in its road-map to ship application sources in a packaged bundle, similar to a `.java` or `.exe` executable - refer [#986](https://github.com/denoland/deno/issues/986) for more information on this discussion.
 
 ### Creating a new REST Endpoint
 When using this boilerplate your starting point for a REST endpoint would be the `controllers` directory.
