@@ -14,4 +14,8 @@ test() {
     deno test --importmap=src/config/absolutePaths.json --unstable "$@"
 }
 
+install() {
+    curl -fsSL https://deno.land/x/install/install.sh | sh
+}
+
 "$@"
