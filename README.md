@@ -4,7 +4,7 @@
 ### Deno
 To install Deno follow the setup guide found [here](https://deno.land/#installation). If you are using an IDE such as VS Code, Atom, Visual Studio or a JetBrains product, make sure to install the appropriate Deno plugin and update `ts-config.json` if required. A working community-developed plugin can be found [here](https://github.com/justjavac/typescript-deno-plugin).
 
-### Startup
+### Run
 Run the following command in your terminal to start the server.
 
 ```bash
