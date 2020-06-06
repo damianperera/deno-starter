@@ -86,4 +86,4 @@ $ ./deno run --allow-env
 ```
 
 ## Correlation ID
-A [Correlation ID](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) is generated for every request and injected into the request headers using the value of the `CORRELATION_ID_HEADER` variable in `src/constants.ts`
+A [Correlation ID](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) is generated for every request and injected into the request headers using the value of the `CORRELATION_ID_HEADER` variable in `src/constants.ts`.
