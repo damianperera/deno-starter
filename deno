@@ -10,6 +10,14 @@ run() {
     deno run --allow-read=./ --allow-net --importmap=src/config/absolutePaths.json --unstable "$@" src/server.ts
 }
 
+build() {
+    deno bundle --importmap=src/config/absolutePaths.json --unstable src/server.ts server.bundle.js
+}
+
+generate() {
+    deno run --allow-read --allow-write --allow-net --importmap=src/config/absolutePaths.json --unstable src/config/generator.ts
+}
+
 test() {
     deno test --importmap=src/config/absolutePaths.json --unstable "$@"
 }
