@@ -5,7 +5,7 @@ import { stub, resolves } from 'https://deno.land/x/mock/stub.ts'
 import { HealthService } from 'service/implementation/health.ts'
 import { Routes } from 'models/routes.ts'
 import { soxa } from 'https://deno.land/x/soxa/mod.ts'
-import { Constants } from 'constants'
+import Constants from 'constants'
 
 const { test } = Deno
 

@@ -1,6 +1,6 @@
 import { Router } from 'https://deno.land/x/oak/mod.ts'
 import * as log from 'https://deno.land/std/log/mod.ts'
-import { Constants } from 'constants'
+import Constants from 'constants'
 import { Routes } from 'models/routes.ts'
 
 const { readDirSync } = Deno
