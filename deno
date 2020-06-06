@@ -7,10 +7,12 @@
 ###################################################
 
 run() {
+    generate
     deno run --allow-read=./ --allow-net --importmap=src/config/absolutePaths.json --unstable "$@" src/server.ts
 }
 
 build() {
+    generate
     deno bundle --importmap=src/config/absolutePaths.json --unstable src/server.ts server.bundle.js
 }
 
@@ -19,6 +21,7 @@ generate() {
 }
 
 test() {
+    generate
     deno test --importmap=src/config/absolutePaths.json --unstable "$@"
 }
 
