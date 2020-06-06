@@ -1,7 +1,7 @@
 name: Deploy
 on:
   push:
-    branches: [master, deploy]
+    branches: [master, bundle]
     paths-ignore:
       - README.md
       - LICENSE

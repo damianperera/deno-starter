@@ -1,9 +1,9 @@
 name: CI
 on:
+  pull_request:
+    branches: master
   push:
-    branches-ignore: [master, deploy]
-    pull_request:
-      branches: [ master ]
+    branches-ignore: master
     paths-ignore:
       - README.md
       - LICENSE
