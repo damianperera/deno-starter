@@ -1,5 +1,5 @@
-<a href="https://deno.land"><img src="https://deno.land/logo.svg" alt="Deno Logo" width="50"/></a>
-
+![Deno](https://img.shields.io/badge/deno-v1.x.x-success?logo=deno&style=flat)
+![CI](https://github.com/damianperera/Deno-REST-Boilerplate/workflows/CI/badge.svg?branch=master&event=push) ![GitHub Issues](https://img.shields.io/github/issues/damianperera/Deno-REST-Boilerplate) [![GitHub License](https://img.shields.io/github/license/damianperera/Deno-REST-Boilerplate)](https://github.com/damianperera/Deno-REST-Boilerplate/blob/master/LICENSE)
 ## Getting Started
 ### Deno
 To install Deno follow the setup guide found [here](https://deno.land/#installation). If you are using an IDE such as VS Code, Atom, Visual Studio or a JetBrains product, make sure to install the appropriate Deno plugin and update `ts-config.json` if required. A working community-developed plugin can be found [here](https://github.com/justjavac/typescript-deno-plugin).
