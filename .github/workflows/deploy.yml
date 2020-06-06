@@ -40,6 +40,6 @@ jobs:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.ADMIN_HOOK }}
         BRANCH: gh-pages
         FOLDER: build
