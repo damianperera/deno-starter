@@ -1,5 +1,4 @@
-![Deno](https://img.shields.io/badge/deno-v1.x.x-success?logo=deno&style=flat)
-![CI](https://github.com/damianperera/Deno-REST-Boilerplate/workflows/CI/badge.svg?branch=master&event=push) ![Deploy](https://github.com/damianperera/Deno-REST-Boilerplate/workflows/Deploy/badge.svg?branch=master) [![GitHub License](https://img.shields.io/github/license/damianperera/Deno-REST-Boilerplate)](https://github.com/damianperera/Deno-REST-Boilerplate/blob/master/LICENSE)
+![CI](https://github.com/damianperera/Deno-REST-Boilerplate/workflows/CI/badge.svg?branch=master&event=push) ![Deploy](https://github.com/damianperera/Deno-REST-Boilerplate/workflows/Deploy/badge.svg?branch=master) ![Deno](https://img.shields.io/badge/deno-v1.x.x-success?logo=deno&style=flat) [![GitHub License](https://img.shields.io/github/license/damianperera/Deno-REST-Boilerplate)](https://github.com/damianperera/Deno-REST-Boilerplate/blob/master/LICENSE)
 ## Install
 ### Deno
 To install Deno follow the setup guide found [here](https://deno.land/#installation). If you are using an IDE such as VS Code, Atom, Visual Studio or a JetBrains product, make sure to install the appropriate Deno plugin and update `ts-config.json` if required. A working community-developed plugin can be found [here](https://github.com/justjavac/typescript-deno-plugin).
@@ -76,7 +75,7 @@ Since Deno is a secure runtime for JS you need to explicitly give programs the p
 - `--allow-read`: Since the route manager automatically configures endpoints based on filenames and their contents, the server needs read access to the filesystem. You can make the permission level more granular by allowing read access only to the server's root directory instead of the entire filesystem by specifying `--allow-read=./` in the `./deno` executable.
 
 ## Absolute Imports
-You can refer the TS files in the source directories using absolute file paths such as `service/interface/...` instead of relative file paths such as `../../interface/...`. The paths are configured inside `src/config/absolutePaths.json`.
+You can refer the TS files in the source directories for absolute file paths usage such as `service/interface/...` instead of relative file paths such as `../../interface/...`. The paths are configured inside `src/config/absolutePaths.json`.
 
 ## Deno Args
 You can pass in Deno args such as additional permissions by simply appending them to the `run` or `test` commands - e.g. to grant permission to read environment variables you can execute the following command:
