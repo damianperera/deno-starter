@@ -13,7 +13,8 @@ $ ./deno run
 <p align="left"><img style="border-radius:50%" src="https://s7.gifyu.com/images/Peek-2020-05-31-15-01.gif" alt="Terminal"/></p>
 
 ### Tests
-Run the following command in your terminal to execute the test suite.
+## Unit Tests
+Run the following command in your terminal to execute the unit test suite.
 
 ```bash
 $ ./deno test
@@ -21,6 +22,15 @@ $ ./deno test
 <p align="left"><img style="border-radius:50%" src="https://s7.gifyu.com/images/Peek-2020-05-31-15-02.gif" alt="Terminal"/></p>
 
 Tests are maintained in a separate folder since Deno has a feature in its road-map to ship application sources in a single bundle, similar to a `.java` or `.exe` executable - refer the Deno manual for the [feature](https://deno.land/manual#feature-highlights) and [#986](https://github.com/denoland/deno/issues/986) for the discussion.
+
+## Integration Tests
+Start the server and run the following command in your terminal to execute the integration test suite.
+
+```bash
+$ ./deno integration
+```
+
+Integration tests can be found in the `integration/` directory. These are very rudimentary cURL tests that execute requests against the configured endpoints.
 
 ## Creating a new REST Endpoint
 When using this boilerplate your starting point for a REST API endpoint would be the `controllers` directory.
