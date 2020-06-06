@@ -5,7 +5,7 @@ import { Routes } from '../models/routes.ts'
 const { readDirSync } = Deno
 const entries: Iterable<any> = readDirSync(Constants.CONTROLLER_DIRECTORY)
 
-let routeFile = `import { Router } from 'https://deno.land/x/oak/mod.ts'\nexport const router = new Router()\n`
+let routeFile = `// Automatically Generated\n\nimport { Router } from 'https://deno.land/x/oak/mod.ts'\nexport const router = new Router()\n`
 
 const INVALID_ENDPOINT_TYPE = 'Ensure endpoints are of type Array<Routes.Endpoints> - invalid endpoint type declaration found in'
 
