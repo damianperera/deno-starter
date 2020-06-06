@@ -1,8 +1,7 @@
 name: CI
 on:
   push:
-    branches-ignore:
-      - master
+    branches-ignore: [master, deploy]
     pull_request:
       branches: [ master ]
     paths-ignore:
