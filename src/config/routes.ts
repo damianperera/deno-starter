@@ -9,13 +9,13 @@ export const router = new Router()
 
 new class BaseRoute {
 
-    private readonly INVALID_ENDPOINT_TYPE = 'Ensure endpoints are of type Array<Routes.Endpoints> - invalid endpoint type declaration found in'
+    private static readonly INVALID_ENDPOINT_TYPE = 'Ensure endpoints are of type Array<Routes.Endpoints> - invalid endpoint type declaration found in'
 
     constructor() {
-        this.generateRoutes()
+        BaseRoute.generateRoutes()
     }
 
-    generateRoutes = () => {
+    static generateRoutes = () => {
         const entries: Iterable<any> = readDirSync(Constants.CONTROLLER_DIRECTORY)
         for (const entry of entries) {
             const entryName = entry.name.split('.').slice(0, -1).join('.');
@@ -29,7 +29,7 @@ new class BaseRoute {
 
                     for (const endpoint of endpoints) {
                         if (!Routes.isEndpoint(endpoint)) {
-                            log.error(`${this.INVALID_ENDPOINT_TYPE} ${filePath.substring(3)}`)
+                            log.error(`${BaseRoute.INVALID_ENDPOINT_TYPE} ${filePath.substring(3)}`)
                             Deno.exit(1)
                         }
 
