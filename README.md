@@ -63,3 +63,6 @@ You can pass in Deno args such as additional permissions by simply appending the
 ```bash
 $ ./deno run --allow-env
 ```
+
+## Correlation ID
+A Correlation ID is generated 
