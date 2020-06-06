@@ -76,7 +76,7 @@ Since Deno is a secure runtime for JS you need to explicitly give programs the p
 - `--allow-read`: Since the route manager automatically configures endpoints based on filenames and their contents, the server needs read access to the filesystem. You can make the permission level more granular by allowing read access only to the server's root directory instead of the entire filesystem by specifying `--allow-read=./` in the `./deno` executable.
 
 ## Absolute Imports
-You can refer the TS files in the source directories using absolute file paths such as `service/interface/...` instead of relative file paths such as `../../interface/...`. The paths are configured inside `src/config/absolutePaths.json`.
+You can refer the TS files in the source directories for absolute file paths usage such as `service/interface/...` instead of relative file paths such as `../../interface/...`. The paths are configured inside `src/config/absolutePaths.json`.
 
 ## Deno Args
 You can pass in Deno args such as additional permissions by simply appending them to the `run` or `test` commands - e.g. to grant permission to read environment variables you can execute the following command:
