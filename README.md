@@ -9,6 +9,7 @@ To test drive a production build of this server run the following command after 
 ```bash
 $ deno run --allow-net https://damianperera.github.io/Deno-REST-Boilerplate/server.bundle.js
 ```
+![Production Run](https://s7.gifyu.com/images/deno-production-run.gif)
 
 ## Getting Started
 ### Run
@@ -17,7 +18,6 @@ Execute the following command in your terminal to start the local server.
 ```bash
 $ ./deno run
 ```
-![Run](https://s7.gifyu.com/images/deno-run.gif)
 
 ### Build
 Execute the following command in your terminal to bundle your source files and create a single `.js` file in the `build/` directory. After building the `server.bundle.js`, you can execute the Production Run.
@@ -32,7 +32,6 @@ Execute the following command in your terminal to start the production build of 
 ```bash
 $ deno run --allow-net build/server.bundle.js
 ```
-![Production Run](https://s7.gifyu.com/images/deno-production-run.gif)
 
 ## Tests
 ### Unit Tests
