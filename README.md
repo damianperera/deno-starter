@@ -1,41 +1,57 @@
 ![Deno](https://img.shields.io/badge/deno-v1.x.x-success?logo=deno&style=flat)
 ![CI](https://github.com/damianperera/Deno-REST-Boilerplate/workflows/CI/badge.svg?branch=master&event=push) ![GitHub Issues](https://img.shields.io/github/issues/damianperera/Deno-REST-Boilerplate) [![GitHub License](https://img.shields.io/github/license/damianperera/Deno-REST-Boilerplate)](https://github.com/damianperera/Deno-REST-Boilerplate/blob/master/LICENSE)
-## Getting Started
+## Install
 ### Deno
 To install Deno follow the setup guide found [here](https://deno.land/#installation). If you are using an IDE such as VS Code, Atom, Visual Studio or a JetBrains product, make sure to install the appropriate Deno plugin and update `ts-config.json` if required. A working community-developed plugin can be found [here](https://github.com/justjavac/typescript-deno-plugin).
 
-### Run
-Run the following command in your terminal to start the server.
-
-```bash
-$ ./deno run
-```
-<p align="left"><img style="border-radius:50%" src="https://s7.gifyu.com/images/deno-run.gif" alt="Terminal"/></p>
-
-### Production Run
-Run the following command in your terminal to start the production build of the server.
+### Sandbox
+To test drive this server run the following command after installing Deno.
 ```bash
 $ deno run --allow-net https://damianperera.github.io/Deno-REST-Boilerplate/server.bundle.js
 ```
 
+## Getting Started
+### Run
+Execute the following command in your terminal to start the local server.
+
+```bash
+$ ./deno run
+```
+![Run](https://s7.gifyu.com/images/deno-run.gif)
+
+### Build
+Execute the following command in your terminal to bundle your source files and create a single `.js` file in the `build/` directory. After building the `server.bundle.js`, you can execute the Production Run.
+
+```bash
+$ ./deno build
+```
+![Build](https://s7.gifyu.com/images/deno-build.gif)
+
+### Production Run
+Execute the following command in your terminal to start the production build of the server.
+```bash
+$ deno run --allow-net build/server.bundle.js
+```
+![Production Run](https://s7.gifyu.com/images/deno-production-run.gif)
+
 ### Tests
 ## Unit Tests
-Run the following command in your terminal to execute the unit test suite.
+Execute the following command in your terminal to run the unit test suite.
 
 ```bash
 $ ./deno test
 ```
-<p align="left"><img style="border-radius:50%" src="https://s7.gifyu.com/images/deno-test.gif" alt="Terminal"/></p>
+![Tests](https://s7.gifyu.com/images/deno-test.gif)
 
 Tests are maintained in a separate folder in order to support package bundling in the future.
 
 ## Integration Tests
-Start the server and run the following command in your terminal to execute the integration test suite.
+Start the server and execute the following command in your terminal to execute the integration test suite.
 
 ```bash
 $ ./deno integration
 ```
-<p align="left"><img style="border-radius:50%" src="https://s7.gifyu.com/images/deno-integration.gif" alt="Terminal"/></p>
+![Integration Tests](https://s7.gifyu.com/images/deno-integration.gif)
 
 Integration tests can be found in the `integration/` directory. These are very rudimentary cURL tests that execute requests against the configured endpoints.
 
