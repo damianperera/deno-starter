@@ -21,7 +21,8 @@ run() {
 
 build() {
     generate
-    deno bundle --importmap=src/config/absolutePaths.json --unstable src/server.ts server.bundle.js
+    mkdir -p build
+    deno bundle --importmap=src/config/absolutePaths.json --unstable src/server.ts build/server.bundle.js
 }
 
 generate() {
@@ -39,6 +40,8 @@ integration() {
 
 install() {
     curl -fsSL https://deno.land/x/install/install.sh | sh
+    export DENO_INSTALL="$HOME/.deno"
+    export PATH="$DENO_INSTALL/bin:$PATH"
 }
 
 "$@"

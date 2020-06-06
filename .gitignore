@@ -1,3 +1,3 @@
 .vscode/
 src/config/routes.ts
-server.bundle.js
+build/
