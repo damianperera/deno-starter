@@ -33,7 +33,7 @@ new class BaseRoute {
                             Deno.exit(1)
                         }
 
-                        const method : Routes.Methods = endpoint.httpMethod
+                        const method: Routes.Methods = endpoint.httpMethod
                         const route = `${mainRoute}${endpoint.path}`
         
                         log.info(`Configured - ${method.toUpperCase()} ${route}`)
