@@ -17,7 +17,7 @@
 # Run the local server
 run() {
     generate
-    deno run --allow-read=./ --allow-net --importmap=src/config/absolutePaths.json --unstable "$@" src/server.ts
+    deno run --allow-net --importmap=src/config/absolutePaths.json --unstable "$@" src/server.ts
 }
 
 # Compile and bundle all sources and dependencies into a single JS file
