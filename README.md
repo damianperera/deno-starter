@@ -19,8 +19,7 @@ $ ./deno run
 ```
 
 ### Build
-Execute the following command in your terminal to bundle your source files and dependencies, compile the TypeScript files and create a `server.bundle.js` file in the `build/` directory. This bundled file contains all your sources and third-party imports can be directly run via Deno as shown in the [Production Run](#production-run) section.
-
+Execute the following command in your terminal to bundle your source files and dependencies, compile the TypeScript files and create a `server.bundle.js` file in the `build/` directory.
 ```bash
 $ ./deno build
 ```
@@ -35,7 +34,6 @@ $ deno run --allow-net build/server.bundle.js
 ## Tests
 ### Unit Tests
 Execute the following command in your terminal to run the unit test suite.
-
 ```bash
 $ ./deno test
 ```
@@ -45,7 +43,6 @@ Tests are written in a separate folder in order to maintain a logical seperation
 
 ### Integration Tests
 Start the server and execute the following command in your terminal to execute the integration test suite.
-
 ```bash
 $ ./deno integration
 ```
@@ -55,7 +52,6 @@ Integration tests can be found in the `integration/` directory. These are very r
 
 ## Creating a new REST Endpoint
 When using this boilerplate your starting point for a REST API endpoint would be the `src/controllers/` directory.
-
 ```
 - src
 |- controllers
@@ -80,7 +76,6 @@ You can refer the TS files in the source directories for absolute file paths usa
 
 ## Deno Args
 You can pass in Deno args such as additional permissions by simply appending them to the `run` or `test` commands - e.g. to grant permission to read environment variables you can execute the following command:
-
 ```bash
 $ ./deno run --allow-env
 ```
