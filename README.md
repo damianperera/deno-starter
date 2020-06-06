@@ -26,7 +26,7 @@ $ ./deno build
 ![Build](https://s7.gifyu.com/images/deno-build.gif)
 
 ### Production Run
-Execute the following command in your terminal to start the production build of the server. As mentioned in the Build section, since the production build is a bundle of all the application sources and third-party modules you can directly run it without compiling the TypeScript sources or downloading any of the dependencies.
+Execute the following command in your terminal to start the production build of the server. As mentioned in the [Build](#build) section, since the production build is a bundle of all the application sources and third-party modules you can directly run it without compiling the TypeScript sources or downloading any of the dependencies.
 ```bash
 $ deno run --allow-net build/server.bundle.js
 ```
