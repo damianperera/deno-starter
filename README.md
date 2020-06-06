@@ -34,8 +34,8 @@ $ deno run --allow-net build/server.bundle.js
 ```
 ![Production Run](https://s7.gifyu.com/images/deno-production-run.gif)
 
-### Tests
-## Unit Tests
+## Tests
+### Unit Tests
 Execute the following command in your terminal to run the unit test suite.
 
 ```bash
@@ -45,7 +45,7 @@ $ ./deno test
 
 Tests are maintained in a separate folder in order to support package bundling in the future.
 
-## Integration Tests
+### Integration Tests
 Start the server and execute the following command in your terminal to execute the integration test suite.
 
 ```bash
@@ -87,4 +87,4 @@ $ ./deno run --allow-env
 ```
 
 ## Correlation ID
-A Correlation ID is generated 
+A [Correlation ID](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) is generated for every request and injected into the request headers using the value of `CORRELATION_ID_HEADER` in `src/constants.ts`
