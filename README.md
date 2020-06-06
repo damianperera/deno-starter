@@ -10,7 +10,7 @@ Run the following command in your terminal to start the server.
 ```bash
 $ ./deno run
 ```
-<p align="left"><img style="border-radius:50%" src="https://s7.gifyu.com/images/Peek-2020-05-31-15-01.gif" alt="Terminal"/></p>
+<p align="left"><img style="border-radius:50%" src="https://s7.gifyu.com/images/deno-run.gif" alt="Terminal"/></p>
 
 ### Tests
 ## Unit Tests
@@ -19,7 +19,7 @@ Run the following command in your terminal to execute the unit test suite.
 ```bash
 $ ./deno test
 ```
-<p align="left"><img style="border-radius:50%" src="https://s7.gifyu.com/images/Peek-2020-05-31-15-02.gif" alt="Terminal"/></p>
+<p align="left"><img style="border-radius:50%" src="https://s7.gifyu.com/images/deno-test.gif" alt="Terminal"/></p>
 
 Tests are maintained in a separate folder since Deno has a feature in its road-map to ship application sources in a single bundle, similar to a `.java` or `.exe` executable - refer the Deno manual for the [feature](https://deno.land/manual#feature-highlights) and [#986](https://github.com/denoland/deno/issues/986) for the discussion.
 
@@ -29,6 +29,7 @@ Start the server and run the following command in your terminal to execute the i
 ```bash
 $ ./deno integration
 ```
+<p align="left"><img style="border-radius:50%" src="https://s7.gifyu.com/images/deno-integration.gif" alt="Terminal"/></p>
 
 Integration tests can be found in the `integration/` directory. These are very rudimentary cURL tests that execute requests against the configured endpoints.
 
