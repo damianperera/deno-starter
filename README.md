@@ -20,7 +20,7 @@ $ ./deno run
 ```
 
 ### Build
-Execute the following command in your terminal to bundle your source files and create a single `.js` file in the `build/` directory. After building the `server.bundle.js`, you can execute the Production Run.
+Execute the following command in your terminal to bundle your source files and create a `server.bundle.js` file in the `build/` directory. This bundled file can be directly run via Deno as shown in the [Production Run](#production-run) section.
 
 ```bash
 $ ./deno build
