@@ -11,7 +11,7 @@ export class HealthService implements Health {
         }
     }
 
-    public getInfo = async ( { response } : { response : Response } ) => {
+    public getInfo = async ( { response }: { response: Response } ) => {
         const ipIfyBaseURL = 'http://api.ipify.org'
         const options = {
             params : {
