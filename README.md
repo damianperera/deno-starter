@@ -55,7 +55,7 @@ $ ./deno integration
 Integration tests can be found in the `integration/` directory. These are very rudimentary cURL tests that execute requests against the configured endpoints.
 
 ## Creating a new REST Endpoint
-When using this boilerplate your starting point for a REST API endpoint would be the `controllers` directory.
+When using this boilerplate your starting point for a REST API endpoint would be the `src/controllers/` directory.
 
 ```
 - src
