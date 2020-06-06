@@ -28,7 +28,7 @@ test('accounts/getName', async () => {
     // @ts-ignore
     const { body: { module, requestHeaders } } = response
     assertEquals('accounts', module)
-    assertEquals(serverRequest.headers.get(headerRequestedBy), requestHeaders.get(headerRequestedBy))
+    assertEquals(serverRequest.headers.get(headerRequestedBy), Object.values(requestHeaders.find(() => headerRequestedBy))[0])
 })
 
 test('accounts/getAccountById', async () => {

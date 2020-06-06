@@ -4,9 +4,11 @@ import { Service } from 'service/interface/service.ts'
 export class AccountsService implements Service {
 
     public getName = async ( { request, response } : { request : Request, response : Response } ) => {
+        const headers: Array<object> = []
+        request.headers.forEach((value, key) => headers.push({ [key]: value }))
         response.body = {
             module: 'accounts',
-            requestHeaders: request.headers,
+            requestHeaders: headers,
         }
     }
 
