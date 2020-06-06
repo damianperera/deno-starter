@@ -21,7 +21,7 @@ $ ./deno test
 ```
 <p align="left"><img style="border-radius:50%" src="https://s7.gifyu.com/images/deno-test.gif" alt="Terminal"/></p>
 
-Tests are maintained in a separate folder since Deno has a feature in its road-map to ship application sources in a single bundle, similar to a `.java` or `.exe` executable - refer the Deno manual for the [feature](https://deno.land/manual#feature-highlights) and [#986](https://github.com/denoland/deno/issues/986) for the discussion.
+Tests are maintained in a separate folder in order to support package bundling in the future.
 
 ## Integration Tests
 Start the server and run the following command in your terminal to execute the integration test suite.
