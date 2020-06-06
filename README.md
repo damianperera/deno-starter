@@ -12,6 +12,12 @@ $ ./deno run
 ```
 <p align="left"><img style="border-radius:50%" src="https://s7.gifyu.com/images/deno-run.gif" alt="Terminal"/></p>
 
+### Production Run
+Run the following command in your terminal to start the production build of the server.
+```bash
+$ deno run --allow-net https://damianperera.github.io/Deno-REST-Boilerplate/server.bundle.js
+```
+
 ### Tests
 ## Unit Tests
 Run the following command in your terminal to execute the unit test suite.
