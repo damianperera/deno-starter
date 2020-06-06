@@ -14,30 +14,36 @@
 #                                                                                            #
 ##############################################################################################
 
+# Run the local server
 run() {
     generate
     deno run --allow-read=./ --allow-net --importmap=src/config/absolutePaths.json --unstable "$@" src/server.ts
 }
 
+# Compile and bundle all sources and dependencies into a single JS file
 build() {
     generate
     mkdir -p build
     deno bundle --importmap=src/config/absolutePaths.json --unstable src/server.ts build/server.bundle.js
 }
 
+# Generate source routes
 generate() {
     deno run --allow-read --allow-write --allow-net --importmap=src/config/absolutePaths.json --unstable src/config/generator.ts
 }
 
+# Execute tests in the test/ directory
 test() {
     generate
     deno test --importmap=src/config/absolutePaths.json --unstable "$@"
 }
 
+# Execute the integration tests in the integration/ directory
 integration() {
     ./integration/test.sh
 }
 
+# Run the install command for Deno
 install() {
     curl -fsSL https://deno.land/x/install/install.sh | sh
 }
