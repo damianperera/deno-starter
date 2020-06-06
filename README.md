@@ -1,4 +1,4 @@
-![Deno](https://img.shields.io/badge/deno-v1.x.x-green?logo=deno&style=flat)
+![Deno](https://img.shields.io/badge/deno-v1.x.x-success?logo=deno&style=flat)
 ![CI](https://github.com/damianperera/Deno-REST-Boilerplate/workflows/CI/badge.svg?branch=master&event=push) ![GitHub Issues](https://img.shields.io/github/issues/damianperera/Deno-REST-Boilerplate) [![GitHub License](https://img.shields.io/github/license/damianperera/Deno-REST-Boilerplate)](https://github.com/damianperera/Deno-REST-Boilerplate/blob/master/LICENSE)
 ## Getting Started
 ### Deno
