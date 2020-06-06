@@ -20,7 +20,7 @@ $ ./deno run
 ```
 
 ### Build
-Execute the following command in your terminal to bundle your source files and dependencies and create a `server.bundle.js` file in the `build/` directory. This bundled file contains all your sources and third-party imports can be directly run via Deno as shown in the [Production Run](#production-run) section.
+Execute the following command in your terminal to bundle your source files and dependencies, compile the TypeScript files and create a `server.bundle.js` file in the `build/` directory. This bundled file contains all your sources and third-party imports can be directly run via Deno as shown in the [Production Run](#production-run) section.
 
 ```bash
 $ ./deno build
@@ -28,7 +28,7 @@ $ ./deno build
 ![Build](https://s7.gifyu.com/images/deno-build.gif)
 
 ### Production Run
-Execute the following command in your terminal to start the production build of the server.
+Execute the following command in your terminal to start the production build of the server. As mentioned in the Build section, since the production build is a bundle of all the application sources and third-party modules you can directly run it without compiling the TypeScript sources or downloading any of the dependencies.
 ```bash
 $ deno run --allow-net build/server.bundle.js
 ```
