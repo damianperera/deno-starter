@@ -19,7 +19,7 @@ $ ./deno run
 ```
 
 ### Build
-Execute the following command in your terminal to bundle your source files and dependencies, compile the TypeScript files and create a `server.bundle.js` file in the `build/` directory.
+Execute the following command in your terminal to bundle your source files and dependencies, compile the TypeScript files and creates a `server.bundle.js` file in the `build/` directory.
 ```bash
 $ ./deno build
 ```
