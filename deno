@@ -29,7 +29,7 @@ build() {
 
 # Generate source routes
 generate() {
-    deno run --allow-read --allow-write --allow-net --importmap=src/config/absolutePaths.json --unstable src/config/generator.ts
+    deno run --allow-read=src/ --allow-write=src/config --allow-net --importmap=src/config/absolutePaths.json --unstable src/config/generator.ts
 }
 
 # Execute tests in the test/ directory
