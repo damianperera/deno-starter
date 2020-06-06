@@ -41,7 +41,7 @@ $ ./deno test
 ```
 ![Tests](https://s7.gifyu.com/images/deno-test.gif)
 
-Tests are maintained in a separate folder in order to support package bundling in the future.
+Tests are written in a separate folder in order to maintain a logical seperation between the source and testing layers.
 
 ### Integration Tests
 Start the server and execute the following command in your terminal to execute the integration test suite.
