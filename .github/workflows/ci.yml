@@ -1,16 +1,8 @@
 name: CI
 on:
-  push:
-    branches-ignore:
-      - master
-    paths-ignore:
-      - README.md
-      - LICENSE
-      - .gitignore
   pull_request:
     branches:
       - master
-  
 jobs:
   tests:
     runs-on: ubuntu-latest
