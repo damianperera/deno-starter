@@ -7,6 +7,7 @@ import { Constants } from 'constants'
 const app = new Application()
 
 app.use(new HTTP.Exceptions().catch);
+app.use(new HTTP.Logger().requestCorrelation)
 app.use(new HTTP.Logger().requestTimer);
 
 app.use(router.routes())
