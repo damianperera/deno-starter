@@ -5,7 +5,7 @@
 To install Deno follow the setup guide found [here](https://deno.land/#installation). If you are using an IDE such as VS Code, Atom, Visual Studio or a JetBrains product, make sure to install the appropriate Deno plugin and update `ts-config.json` if required. A working community-developed plugin can be found [here](https://github.com/justjavac/typescript-deno-plugin).
 
 ### Sandbox
-To test drive this server run the following command after installing Deno.
+To test drive a production build of this server run the following command after installing Deno.
 ```bash
 $ deno run --allow-net https://damianperera.github.io/Deno-REST-Boilerplate/server.bundle.js
 ```
