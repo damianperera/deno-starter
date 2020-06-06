@@ -26665,6 +26665,7 @@ System.register(
     };
   },
 );
+// Automatically Generated
 System.register(
   "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/config/routes",
   [
