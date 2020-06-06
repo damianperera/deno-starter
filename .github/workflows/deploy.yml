@@ -17,6 +17,8 @@ jobs:
     - name: Build
       run: |
         ./deno install
+        export DENO_INSTALL="/home/runner/.deno"
+        export PATH="$DENO_INSTALL/bin:$PATH"
         ./deno test
   deploy:
     needs: [tests]
@@ -29,6 +31,8 @@ jobs:
     - name: Build
       run: |
         ./deno install
+        export DENO_INSTALL="/home/runner/.deno"
+        export PATH="$DENO_INSTALL/bin:$PATH"
         ./deno build
         echo "* @damianperera" > build/CODEOWNERS
     - name: Deploy
