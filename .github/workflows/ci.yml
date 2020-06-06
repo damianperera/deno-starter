@@ -20,4 +20,5 @@ jobs:
     - name: Test
       run: |
         ./deno install
+        export DENO_INSTALL="/home/runner/.deno"
         ./deno test
