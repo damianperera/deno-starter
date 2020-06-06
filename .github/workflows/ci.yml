@@ -2,13 +2,13 @@ name: CI
 on:
   push:
     branches: "*"
-  pull_request:
-    branches: [ master ]
-  paths-ignore:
-    - README.md
-    - LICENSE
-    - .gitignore
-    - '.github/**'
+    pull_request:
+      branches: [ master ]
+    paths-ignore:
+      - README.md
+      - LICENSE
+      - .gitignore
+      - '.github/**'
 jobs:
   tests:
     runs-on: ubuntu-latest
