@@ -52,7 +52,7 @@ Integration tests can be found in the `integration/` directory. These are very r
 
 ## Creating a new REST Endpoint
 When using this boilerplate your starting point for a REST API endpoint would be the `src/controllers/` directory.
-```
+```text
 - src
 |- controllers
  |- health.ts
