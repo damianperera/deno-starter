@@ -11,9 +11,14 @@ $ deno run --allow-net https://damianperera.github.io/Deno-REST-Boilerplate/serv
 ![Production Run](https://s7.gifyu.com/images/deno-production-run.gif)
 
 ## Getting Started
-### Run
-Clone or download this repository and execute the following command in your terminal to start the local server.
+### Install
+Install the development dependencies to enable the file-watcher and automatic restarts on code changes.
+```bash
+$ ./deno install
+```
 
+### Run
+Execute the following command in your terminal to start the local server.
 ```bash
 $ ./deno run
 ```
