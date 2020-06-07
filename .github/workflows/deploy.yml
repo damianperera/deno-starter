@@ -17,7 +17,7 @@ jobs:
         persist-credentials: false
     - name: Build
       run: |
-        ./deno install
+        curl -fsSL https://deno.land/x/install/install.sh | sh
         export DENO_INSTALL="/home/runner/.deno"
         export PATH="$DENO_INSTALL/bin:$PATH"
         ./deno test
@@ -31,7 +31,7 @@ jobs:
         persist-credentials: false
     - name: Build
       run: |
-        ./deno install
+        curl -fsSL https://deno.land/x/install/install.sh | sh
         export DENO_INSTALL="/home/runner/.deno"
         export PATH="$DENO_INSTALL/bin:$PATH"
         ./deno build
