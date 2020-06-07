@@ -27329,7 +27329,7 @@ System.register(
           maybeCb.apply(this, args);
         };
         original.apply(this, args).then((ret) => {
-          setTimeout(cb.bind(this, null, ret), 0);
+          queueMicrotask(cb.bind(this, null, ret));
         }, (rej) => {
           rej = rej || new NodeFalsyValueRejectionError(rej);
           queueMicrotask(cb.bind(this, rej));
