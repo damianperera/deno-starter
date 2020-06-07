@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0b42d181ef4b4bf6adfca64a7e4db6ee)](https://app.codacy.com/manual/damianperera/Deno-REST-Boilerplate?utm_source=github.com&utm_medium=referral&utm_content=damianperera/Deno-REST-Boilerplate&utm_campaign=Badge_Grade_Dashboard)
 ![build](https://github.com/damianperera/Deno-REST-Boilerplate/workflows/build/badge.svg?branch=master&event=push) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9fe16d894eb94f00a2f72db5976b264d)](https://www.codacy.com/manual/damianperera/Deno-REST-Boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=damianperera/Deno-REST-Boilerplate&amp;utm_campaign=Badge_Grade) ![Deno](https://img.shields.io/badge/deno-v1.x.x-success?logo=deno&style=flat) [![GitHub License](https://img.shields.io/github/license/damianperera/Deno-REST-Boilerplate)](https://github.com/damianperera/Deno-REST-Boilerplate/blob/master/LICENSE)
 ## Install
 ### Deno
