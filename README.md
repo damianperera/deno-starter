@@ -12,7 +12,7 @@ $ deno run --allow-net https://damianperera.github.io/Deno-REST-Boilerplate/serv
 
 ## Getting Started
 ### Run
-Execute the following command in your terminal to start the local server.
+Clone or download this repository and execute the following command in your terminal to start the local server.
 
 ```bash
 $ ./deno run
