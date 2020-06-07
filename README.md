@@ -1,4 +1,12 @@
 ![build](https://github.com/damianperera/Deno-REST-Boilerplate/workflows/build/badge.svg?branch=master&event=push) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9fe16d894eb94f00a2f72db5976b264d)](https://www.codacy.com/manual/damianperera/Deno-REST-Boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=damianperera/Deno-REST-Boilerplate&amp;utm_campaign=Badge_Grade) ![Deno](https://img.shields.io/badge/deno-^1.0.0-blue?logo=deno&style=flat) ![GitHub Stars](https://img.shields.io/github/stars/damianperera/Deno-REST-Boilerplate) [![GitHub License](https://img.shields.io/github/license/damianperera/Deno-REST-Boilerplate)](https://github.com/damianperera/Deno-REST-Boilerplate/blob/master/LICENSE)
+
+## Features
+- Automatic route generation
+- Unit tests
+- Production bundling and build generation
+- File-watching and automatic restarts via [Denon](https://github.com/denosaurs/denon)
+- Request tracing support
+
 ## Install
 ### Deno
 To install Deno follow the setup guide found [here](https://deno.land/#installation). If you are using an IDE such as VS Code, Atom, Visual Studio or a JetBrains product, make sure to install the appropriate Deno plugin and update `ts-config.json` if required. A working community-developed plugin can be found [here](https://github.com/justjavac/typescript-deno-plugin).
