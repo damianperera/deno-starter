@@ -19,7 +19,7 @@ $ deno run --allow-net https://damianperera.github.io/Deno-REST-Boilerplate/serv
 ![Production Run](https://s7.gifyu.com/images/deno-production-run.gif)
 
 ## Getting Started
-### Install
+### Dependencies
 Install the development dependencies to enable the file-watcher and automatic restarts on code changes.
 ```bash
 $ ./deno install
