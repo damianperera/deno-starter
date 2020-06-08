@@ -97,5 +97,5 @@ $ ./deno run --allow-env
 A [Correlation ID](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) is generated for every request and injected into the request headers if value of the `CORRELATION_ID_HEADER` variable in `src/constants.ts` is not found in the incoming request.
 
 ## TODO
-[] Asynchronous middleware support in controllers (passing in multiple functions to serve as middleware instead of a single function)
-[] Unit tests for framework files (`http.ts`, `generator.ts`)
+- [ ] Asynchronous middleware support in controllers (passing in multiple functions to serve as middleware instead of a single function)
+- [ ] Unit tests for framework files (`http.ts`, `generator.ts`)
