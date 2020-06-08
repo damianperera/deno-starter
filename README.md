@@ -99,3 +99,4 @@ A [Correlation ID](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-i
 ## TODO
 - [ ] Asynchronous middleware support in controllers (passing in multiple functions to serve as middleware instead of a single function)
 - [ ] Unit tests for framework files (`http.ts`, `generator.ts`)
+- [ ] Custom logger (to wrap logs and output JSON logs to stdout)
