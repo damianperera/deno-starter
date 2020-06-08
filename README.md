@@ -2,10 +2,10 @@
 
 ## Features
 - Automatic route generation
-- Unit tests
 - Production bundling and build generation
 - File-watching and automatic restarts via [Denon](https://github.com/denosaurs/denon)
 - Request tracing support
+- Unit tests
 
 ## Install
 ### Deno
@@ -20,7 +20,7 @@ $ deno run --allow-net https://damianperera.github.io/Deno-REST-Boilerplate/serv
 
 ## Getting Started
 ### Dependencies
-Install the development dependencies to enable the file-watcher and automatic restarts on code changes.
+Install the development dependencies to enable file-watcher and automatic restarts on code changes.
 ```bash
 $ ./deno install
 ```
@@ -78,7 +78,7 @@ The `controllers` directory contains the route declaration of your REST service.
 For example, specifying a new file named `orders.ts` inside the `controllers` directory with a default export of type `Array<Routes.Endpoints>` will automatically create the base path `/api/v1/orders` and configure any endpoint `path` specified in the controller on top of the base path like `/api/v1/orders/summary`.
 
 ## Permissions
-Since Deno is a secure runtime for JS you need to explicitly give programs the permission to do certain 'privileged' actions, such as access the network. This server requires the `--allow-net` and `--allow-read` permissions out of the box.
+Since Deno is a secure runtime for JS you need to explicitly give scripts the permission to do certain 'privileged' actions, such as access the network. This server requires the `--allow-net` and `--allow-read` permissions out of the box.
 
 - `--allow-net`: Being a REST service this is required in order to bind a port and access the network. You can make the permission level more granular by specifying the networks that the service has access to (e.g. `--allow-net:0.0.0.0`) in the `./deno` executable.
 - `--allow-read`: Since the route manager automatically configures endpoints based on filenames and their contents, the server needs read access to the filesystem. You can make the permission level more granular by allowing read access only to the server's root directory instead of the entire filesystem by specifying `--allow-read=./` in the `./deno` executable.
@@ -95,3 +95,7 @@ $ ./deno run --allow-env
 
 ## Correlation ID
 A [Correlation ID](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) is generated for every request and injected into the request headers if value of the `CORRELATION_ID_HEADER` variable in `src/constants.ts` is not found in the incoming request.
+
+## TODO
+[] Asynchronous middleware support in controllers (passing in multiple functions to serve as middleware instead of a single function)
+[] Unit tests for framework files (`http.ts`, `generator.ts`)
