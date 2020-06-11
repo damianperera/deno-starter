@@ -1,4 +1,5 @@
-import { assertEquals, ServerRequest, Application, Context, Request, Response, stub, resolves, api as soxa } from 'deps'
+import { Application, Context, Request, Response, api as soxa } from 'deps'
+import { ServerRequest, assertEquals, stub, resolves } from 'test-deps'
 import { HealthService } from 'service/implementation/health.ts'
 import { Routes } from 'models/routes.ts'
 import Constants from 'constants'

@@ -1,4 +1,4 @@
-import { assert } from 'https://deno.land/std/testing/asserts.ts'
+import { assert } from 'test-deps'
 import { Routes } from 'models/routes.ts'
 
 const { test } = Deno

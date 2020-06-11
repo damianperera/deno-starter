@@ -1,4 +1,5 @@
-import { assertEquals, ServerRequest, Request, Response } from 'deps'
+import { Request, Response } from 'deps'
+import { ServerRequest, assertEquals } from 'test-deps'
 import { ProductsService } from 'service/implementation/products.ts'
 import { Routes } from 'models/routes.ts'
 
