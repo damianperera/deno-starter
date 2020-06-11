@@ -2,7 +2,7 @@
     "imports": {
        "constants": "../../src/constants.ts",
        "deps": "../../src/deps.ts",
-       "test-deps": "../../test/test.deps.ts",
+       "test-deps": "../../test/deps.ts",
        "config/": "../../src/config/",
        "service/": "../../src/service/",
        "models/": "../../src/models/",
