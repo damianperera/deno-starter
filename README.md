@@ -14,7 +14,7 @@ To install Deno follow the setup guide found [here](https://deno.land/#installat
 ### Sandbox
 To test drive a production build of this server run the following command after installing Deno.
 ```bash
-$ deno run --allow-net https://damianperera.github.io/Deno-REST-Boilerplate/server.bundle.js
+$ deno run --allow-net https://damianperera.github.io/deno-starter/server.bundle.js
 ```
 ![Production Run](https://s7.gifyu.com/images/deno-production-run.gif)
 
