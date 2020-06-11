@@ -16394,7 +16394,7 @@ System.register(
 );
 // Copyright 2018-2020 the oak authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/x/oak/deps",
+  "https://deno.land/x/oak@master/deps",
   [
     "https://deno.land/std@0.56.0/bytes/mod",
     "https://deno.land/std@0.56.0/hash/sha1",
@@ -16402,6 +16402,7 @@ System.register(
     "https://deno.land/std@0.56.0/http/server",
     "https://deno.land/std@0.56.0/http/http_status",
     "https://deno.land/std@0.56.0/http/cookie",
+    "https://deno.land/std@0.56.0/io/bufio",
     "https://deno.land/std@0.56.0/io/util",
     "https://deno.land/std@0.56.0/path/mod",
     "https://deno.land/std@0.56.0/testing/asserts",
@@ -16448,6 +16449,11 @@ System.register(
             "setCookie": cookie_ts_1_1["setCookie"],
             "getCookies": cookie_ts_1_1["getCookies"],
             "delCookie": cookie_ts_1_1["delCookie"],
+          });
+        },
+        function (bufio_ts_4_1) {
+          exports_37({
+            "BufWriter": bufio_ts_4_1["BufWriter"],
           });
         },
         function (util_ts_4_1) {
@@ -16500,8 +16506,8 @@ System.register(
 );
 // Copyright 2018-2020 the oak authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/x/oak/tssCompare",
-  ["https://deno.land/x/oak/deps"],
+  "https://deno.land/x/oak@master/tssCompare",
+  ["https://deno.land/x/oak@master/deps"],
   function (exports_38, context_38) {
     "use strict";
     var deps_ts_2;
@@ -16547,8 +16553,11 @@ System.register(
 );
 // Copyright 2018-2020 the oak authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/x/oak/keyStack",
-  ["https://deno.land/x/oak/deps", "https://deno.land/x/oak/tssCompare"],
+  "https://deno.land/x/oak@master/keyStack",
+  [
+    "https://deno.land/x/oak@master/deps",
+    "https://deno.land/x/oak@master/tssCompare",
+  ],
   function (exports_39, context_39) {
     "use strict";
     var deps_ts_3, tssCompare_ts_1, replacements, KeyStack;
@@ -16654,8 +16663,8 @@ System.register(
  * THE SOFTWARE.
  */
 System.register(
-  "https://deno.land/x/oak/httpError",
-  ["https://deno.land/x/oak/deps"],
+  "https://deno.land/x/oak@master/httpError",
+  ["https://deno.land/x/oak@master/deps"],
   function (exports_40, context_40) {
     "use strict";
     var deps_ts_4, errorStatusMap, HttpError, httpErrors;
@@ -16774,7 +16783,7 @@ System.register(
  * MIT Licensed
  */
 System.register(
-  "https://deno.land/x/oak/mediaTyper",
+  "https://deno.land/x/oak@master/mediaTyper",
   [],
   function (exports_41, context_41) {
     "use strict";
@@ -16863,8 +16872,11 @@ System.register(
  * MIT Licensed
  */
 System.register(
-  "https://deno.land/x/oak/isMediaType",
-  ["https://deno.land/x/oak/deps", "https://deno.land/x/oak/mediaTyper"],
+  "https://deno.land/x/oak@master/isMediaType",
+  [
+    "https://deno.land/x/oak@master/deps",
+    "https://deno.land/x/oak@master/mediaTyper",
+  ],
   function (exports_42, context_42) {
     "use strict";
     var deps_ts_5, mediaTyper_ts_1;
@@ -16949,8 +16961,11 @@ System.register(
 );
 // Copyright 2018-2020 the oak authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/x/oak/util",
-  ["https://deno.land/x/oak/deps", "https://deno.land/x/oak/httpError"],
+  "https://deno.land/x/oak@master/util",
+  [
+    "https://deno.land/x/oak@master/deps",
+    "https://deno.land/x/oak@master/httpError",
+  ],
   function (exports_43, context_43) {
     "use strict";
     var deps_ts_6,
@@ -17162,8 +17177,11 @@ System.register(
 );
 // Copyright 2018-2020 the oak authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/x/oak/buf_reader",
-  ["https://deno.land/x/oak/deps", "https://deno.land/x/oak/util"],
+  "https://deno.land/x/oak@master/buf_reader",
+  [
+    "https://deno.land/x/oak@master/deps",
+    "https://deno.land/x/oak@master/util",
+  ],
   function (exports_44, context_44) {
     "use strict";
     var deps_ts_7,
@@ -17352,8 +17370,8 @@ System.register(
 );
 // Copyright 2018-2020 the oak authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/x/oak/headers",
-  ["https://deno.land/x/oak/httpError"],
+  "https://deno.land/x/oak@master/headers",
+  ["https://deno.land/x/oak@master/httpError"],
   function (exports_45, context_45) {
     "use strict";
     var httpError_ts_2, COLON, HTAB, SPACE, decoder;
@@ -17450,8 +17468,8 @@ System.register(
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 System.register(
-  "https://deno.land/x/oak/content_disposition",
-  ["https://deno.land/x/oak/headers"],
+  "https://deno.land/x/oak@master/content_disposition",
+  ["https://deno.land/x/oak@master/headers"],
   function (exports_46, context_46) {
     "use strict";
     var headers_ts_1,
@@ -17478,14 +17496,15 @@ System.register(
         (_, charset, encoding, text) => {
           if (encoding === "q" || encoding === "Q") {
             text = text.replace(/_/g, " ");
-            text = text.replace(/=([0-9a-fA-F]{2})/g, (_, hex) =>
-              String.fromCharCode(parseInt(hex, 16)));
+            text = text.replace(
+              /=([0-9a-fA-F]{2})/g,
+              (_, hex) => String.fromCharCode(parseInt(hex, 16)),
+            );
             return textDecode(charset, text);
           }
           try {
             text = atob(text);
-          } catch {
-          }
+          } catch {}
           return textDecode(charset, text);
         },
       );
@@ -17591,14 +17610,14 @@ System.register(
 );
 // Copyright 2018-2020 the oak authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/x/oak/multipart",
+  "https://deno.land/x/oak@master/multipart",
   [
-    "https://deno.land/x/oak/buf_reader",
-    "https://deno.land/x/oak/content_disposition",
-    "https://deno.land/x/oak/deps",
-    "https://deno.land/x/oak/headers",
-    "https://deno.land/x/oak/httpError",
-    "https://deno.land/x/oak/util",
+    "https://deno.land/x/oak@master/buf_reader",
+    "https://deno.land/x/oak@master/content_disposition",
+    "https://deno.land/x/oak@master/deps",
+    "https://deno.land/x/oak@master/headers",
+    "https://deno.land/x/oak@master/httpError",
+    "https://deno.land/x/oak@master/util",
   ],
   function (exports_47, context_47) {
     "use strict";
@@ -17953,7 +17972,7 @@ System.register(
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 System.register(
-  "https://deno.land/x/oak/negotiation/common",
+  "https://deno.land/x/oak@master/negotiation/common",
   [],
   function (exports_48, context_48) {
     "use strict";
@@ -18007,8 +18026,8 @@ System.register(
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 System.register(
-  "https://deno.land/x/oak/negotiation/charset",
-  ["https://deno.land/x/oak/negotiation/common"],
+  "https://deno.land/x/oak@master/negotiation/charset",
+  ["https://deno.land/x/oak@master/negotiation/common"],
   function (exports_49, context_49) {
     "use strict";
     var common_ts_2, SIMPLE_CHARSET_REGEXP;
@@ -18124,8 +18143,8 @@ System.register(
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 System.register(
-  "https://deno.land/x/oak/negotiation/encoding",
-  ["https://deno.land/x/oak/negotiation/common"],
+  "https://deno.land/x/oak@master/negotiation/encoding",
+  ["https://deno.land/x/oak@master/negotiation/common"],
   function (exports_50, context_50) {
     "use strict";
     var common_ts_3, simpleEncodingRegExp;
@@ -18265,8 +18284,8 @@ System.register(
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 System.register(
-  "https://deno.land/x/oak/negotiation/language",
-  ["https://deno.land/x/oak/negotiation/common"],
+  "https://deno.land/x/oak@master/negotiation/language",
+  ["https://deno.land/x/oak@master/negotiation/common"],
   function (exports_51, context_51) {
     "use strict";
     var common_ts_4, SIMPLE_LANGUAGE_REGEXP;
@@ -18391,8 +18410,8 @@ System.register(
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 System.register(
-  "https://deno.land/x/oak/negotiation/mediaType",
-  ["https://deno.land/x/oak/negotiation/common"],
+  "https://deno.land/x/oak@master/negotiation/mediaType",
+  ["https://deno.land/x/oak@master/negotiation/common"],
   function (exports_52, context_52) {
     "use strict";
     var common_ts_5, simpleMediaTypeRegExp;
@@ -18555,15 +18574,15 @@ System.register(
 );
 // Copyright 2018-2020 the oak authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/x/oak/request",
+  "https://deno.land/x/oak@master/request",
   [
-    "https://deno.land/x/oak/httpError",
-    "https://deno.land/x/oak/isMediaType",
-    "https://deno.land/x/oak/multipart",
-    "https://deno.land/x/oak/negotiation/charset",
-    "https://deno.land/x/oak/negotiation/encoding",
-    "https://deno.land/x/oak/negotiation/language",
-    "https://deno.land/x/oak/negotiation/mediaType",
+    "https://deno.land/x/oak@master/httpError",
+    "https://deno.land/x/oak@master/isMediaType",
+    "https://deno.land/x/oak@master/multipart",
+    "https://deno.land/x/oak@master/negotiation/charset",
+    "https://deno.land/x/oak@master/negotiation/encoding",
+    "https://deno.land/x/oak@master/negotiation/language",
+    "https://deno.land/x/oak@master/negotiation/mediaType",
   ],
   function (exports_53, context_53) {
     "use strict";
@@ -18815,15 +18834,18 @@ System.register(
 );
 // Copyright 2018-2020 the oak authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/x/oak/response",
-  ["https://deno.land/x/oak/deps", "https://deno.land/x/oak/util"],
+  "https://deno.land/x/oak@master/response",
+  [
+    "https://deno.land/x/oak@master/deps",
+    "https://deno.land/x/oak@master/util",
+  ],
   function (exports_54, context_54) {
     "use strict";
     var deps_ts_9, util_ts_7, REDIRECT_BACK, BODY_TYPES, encoder, Response;
     var __moduleName = context_54 && context_54.id;
     /** Guard for `Deno.Reader`. */
     function isReader(value) {
-      return typeof value === "object" && "read" in value &&
+      return value && typeof value === "object" && "read" in value &&
         typeof value.read === "function";
     }
     function isPromiseLike(value) {
@@ -18952,8 +18974,7 @@ System.register(
             const typeofbody = typeof this.body;
             return this.body &&
               (BODY_TYPES.includes(typeofbody) || typeofbody === "object")
-              ? deps_ts_9.Status.OK
-              : deps_ts_9.Status.NotFound;
+              ? deps_ts_9.Status.OK : deps_ts_9.Status.NotFound;
           }
           /** The HTTP status of the response.  If this has not been explicitly set,
                  * reading the value will return what would be the value of status if the
@@ -19055,7 +19076,7 @@ System.register(
 );
 // Copyright 2018-2020 the oak authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/x/oak/cookies",
+  "https://deno.land/x/oak@master/cookies",
   [],
   function (exports_55, context_55) {
     "use strict";
@@ -19344,11 +19365,11 @@ System.register(
  * with the MIT license.
  */
 System.register(
-  "https://deno.land/x/oak/send",
+  "https://deno.land/x/oak@master/send",
   [
-    "https://deno.land/x/oak/httpError",
-    "https://deno.land/x/oak/deps",
-    "https://deno.land/x/oak/util",
+    "https://deno.land/x/oak@master/httpError",
+    "https://deno.land/x/oak@master/deps",
+    "https://deno.land/x/oak@master/util",
   ],
   function (exports_56, context_56) {
     "use strict";
@@ -19486,32 +19507,240 @@ System.register(
 );
 // Copyright 2018-2020 the oak authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/x/oak/context",
-  [
-    "https://deno.land/x/oak/cookies",
-    "https://deno.land/x/oak/deps",
-    "https://deno.land/x/oak/httpError",
-    "https://deno.land/x/oak/request",
-    "https://deno.land/x/oak/response",
-    "https://deno.land/x/oak/send",
-  ],
+  "https://deno.land/x/oak@master/server_sent_event",
+  ["https://deno.land/x/oak@master/deps"],
   function (exports_57, context_57) {
     "use strict";
+    var deps_ts_11,
+      encoder,
+      CloseEvent,
+      ServerSentEvent,
+      response,
+      responseHeaders,
+      ServerSentEventTarget;
+    var __moduleName = context_57 && context_57.id;
+    return {
+      setters: [
+        function (deps_ts_11_1) {
+          deps_ts_11 = deps_ts_11_1;
+        },
+      ],
+      execute: function () {
+        encoder = new TextEncoder();
+        CloseEvent = class CloseEvent extends Event {
+          constructor(eventInit) {
+            super("close", eventInit);
+          }
+        };
+        /** An event which contains information which will be sent to the remote
+             * connection and be made available in an `EventSource` as an event. */
+        ServerSentEvent = class ServerSentEvent extends Event {
+          constructor(type, data, { replacer, space, ...eventInit } = {}) {
+            super(type, eventInit);
+            this.#type = type;
+            try {
+              this.#data = typeof data === "string" ? data
+              : JSON.stringify(data, replacer, space);
+            } catch (e) {
+              deps_ts_11.assert(e instanceof Error);
+              throw new TypeError(
+                `data could not be coerced into a serialized string.\n  ${e.message}`,
+              );
+            }
+            const { id } = eventInit;
+            this.#id = id;
+          }
+          #data;
+          #id;
+          #type;
+          /** The data associated with the event, which will be sent to the client and
+                 * be made available in the `EventSource`. */
+          get data() {
+            return this.#data;
+          }
+          /** The optional ID associated with the event that will be sent to the client
+                 * and be made available in the `EventSource`. */
+          get id() {
+            return this.#id;
+          }
+          toString() {
+            const data = `data: ${this.#data.split("\n").join("\ndata: ")}\n`;
+            return `${
+              this.#type === "__message" ? "" : `event: ${this.#type}\n`
+            }${this.#id ? `id: ${String(this.#id)}\n` : ""}${data}\n`;
+          }
+        };
+        exports_57("ServerSentEvent", ServerSentEvent);
+        response = `HTTP/1.1 200 OK\n`;
+        responseHeaders = new Headers([
+          ["Connection", "Keep-Alive"],
+          ["Content-Type", "text/event-stream"],
+          ["Cache-Control", "no-cache"],
+          ["Keep-Alive", `timeout=${Number.MAX_SAFE_INTEGER}`],
+        ]);
+        ServerSentEventTarget = class ServerSentEventTarget
+          extends EventTarget {
+          constructor(app, serverRequest, { headers } = {}) {
+            super();
+            this.#closed = false;
+            this.#send = async (payload) => {
+              if (this.#closed) {
+                return;
+              }
+              if (this.#ready !== true) {
+                await this.#ready;
+                this.#ready = true;
+              }
+              try {
+                await (this.#writing = this.#writer.write(
+                  encoder.encode(payload),
+                ));
+                await (this.#writing = this.#writer.flush());
+              } catch (error) {
+                this.#writing = undefined;
+                this.dispatchEvent(new CloseEvent({ cancelable: false }));
+                const errorEvent = new ErrorEvent("error", { error });
+                this.dispatchEvent(errorEvent);
+                this.#app.dispatchEvent(errorEvent);
+              }
+            };
+            this.#setup = async (overrideHeaders) => {
+              const headers = new Headers(responseHeaders);
+              if (overrideHeaders) {
+                for (const [key, value] of overrideHeaders) {
+                  headers.set(key, value);
+                }
+              }
+              let payload = response;
+              for (const [key, value] of headers) {
+                payload += `${key}: ${value}\n`;
+              }
+              payload += `\n`;
+              try {
+                await this.#writer.write(encoder.encode(payload));
+                await this.#writer.flush();
+              } catch (error) {
+                this.dispatchEvent(new CloseEvent({ cancelable: false }));
+                const errorEvent = new ErrorEvent("error", { error });
+                this.dispatchEvent(errorEvent);
+                this.#app.dispatchEvent(errorEvent);
+                throw error;
+              }
+            };
+            this.#app = app;
+            this.#serverRequest = serverRequest;
+            this.#writer = this.#serverRequest.w;
+            this.addEventListener("close", () => {
+              this.#closed = true;
+              try {
+                this.#serverRequest.conn.close();
+              } catch (error) {
+                if (!(error instanceof Deno.errors.BadResource)) {
+                  const errorEvent = new ErrorEvent("error", { error });
+                  this.dispatchEvent(errorEvent);
+                  this.#app.dispatchEvent(errorEvent);
+                }
+              }
+            });
+            this.#ready = this.#setup(headers);
+          }
+          #app;
+          #closed;
+          #ready;
+          #serverRequest;
+          #writer;
+          #writing;
+          #send;
+          #setup;
+          /** Is set to `true` if events cannot be sent to the remote connection.
+                 * Otherwise it is set to `false`.
+                 *
+                 * *Note*: This flag is lazily set, and might not reflect a closed state until
+                 * another event, comment or message is attempted to be processed. */
+          get closed() {
+            return this.#closed;
+          }
+          /** Stop sending events to the remote connection and close the connection. */
+          async close() {
+            if (this.#ready !== true) {
+              await this.#ready;
+            }
+            if (this.#writing) {
+              await this.#writing;
+            }
+            this.dispatchEvent(new CloseEvent({ cancelable: false }));
+          }
+          /** Send a comment to the remote connection.  Comments are not exposed to the
+                 * client `EventSource` but are used for diagnostics and helping ensure a
+                 * connection is kept alive.
+                 *
+                 * ```ts
+                 * import { Application } from "https://deno.land/x/oak/mod.ts";
+                 *
+                 * const app = new Application();
+                 *
+                 * app.use((ctx) => {
+                 *    const sse = ctx.getSSETarget();
+                 *    sse.dispatchComment("this is a comment");
+                 * });
+                 *
+                 * await app.listen();
+                 * ```
+                 */
+          dispatchComment(comment) {
+            this.#send(`: ${comment.split("\n").join("\n: ")}\n\n`);
+            return true;
+          }
+          /** Dispatch a message to the client.  This message will contain `data: ` only
+                 * and be available on the client `EventSource` on the `onmessage` or an event
+                 * listener of type `"message"`. */
+          dispatchMessage(data) {
+            const event = new ServerSentEvent("__message", data);
+            return this.dispatchEvent(event);
+          }
+          dispatchEvent(event) {
+            let dispatched = super.dispatchEvent(event);
+            if (dispatched) {
+              this.#send(String(event));
+            }
+            return dispatched;
+          }
+        };
+        exports_57("ServerSentEventTarget", ServerSentEventTarget);
+      },
+    };
+  },
+);
+// Copyright 2018-2020 the oak authors. All rights reserved. MIT license.
+System.register(
+  "https://deno.land/x/oak@master/context",
+  [
+    "https://deno.land/x/oak@master/cookies",
+    "https://deno.land/x/oak@master/deps",
+    "https://deno.land/x/oak@master/httpError",
+    "https://deno.land/x/oak@master/request",
+    "https://deno.land/x/oak@master/response",
+    "https://deno.land/x/oak@master/send",
+    "https://deno.land/x/oak@master/server_sent_event",
+  ],
+  function (exports_58, context_58) {
+    "use strict";
     var cookies_ts_1,
-      deps_ts_11,
+      deps_ts_12,
       httpError_ts_6,
       request_ts_1,
       response_ts_1,
       send_ts_1,
+      server_sent_event_ts_1,
       Context;
-    var __moduleName = context_57 && context_57.id;
+    var __moduleName = context_58 && context_58.id;
     return {
       setters: [
         function (cookies_ts_1_1) {
           cookies_ts_1 = cookies_ts_1_1;
         },
-        function (deps_ts_11_1) {
-          deps_ts_11 = deps_ts_11_1;
+        function (deps_ts_12_1) {
+          deps_ts_12 = deps_ts_12_1;
         },
         function (httpError_ts_6_1) {
           httpError_ts_6 = httpError_ts_6_1;
@@ -19524,6 +19753,9 @@ System.register(
         },
         function (send_ts_1_1) {
           send_ts_1 = send_ts_1_1;
+        },
+        function (server_sent_event_ts_1_1) {
+          server_sent_event_ts_1 = server_sent_event_ts_1_1;
         },
       ],
       execute: function () {
@@ -19546,11 +19778,12 @@ System.register(
             );
           }
           #socket;
+          #sse;
           /** Is `true` if the current connection is upgradeable to a web socket.
                  * Otherwise the value is `false`.  Use `.upgrade()` to upgrade the connection
                  * and return the web socket. */
           get isUpgradable() {
-            return deps_ts_11.acceptable(this.request);
+            return deps_ts_12.acceptable(this.request);
           }
           /** If the the current context has been upgraded, then this will be set to
                  * with the web socket, otherwise it is `undefined`. */
@@ -19583,6 +19816,23 @@ System.register(
               options;
             return send_ts_1.send(this, path, sendOptions);
           }
+          /** Convert the connection to stream events, returning an event target for
+                 * sending server sent events.  Events dispatched on the returned target will
+                 * be sent to the client and be available in the client's `EventSource` that
+                 * initiated the connection.
+                 *
+                 * This will set `.respond` to `false`. */
+          sendEvents(options) {
+            if (this.#sse) {
+              return this.#sse;
+            }
+            this.respond = false;
+            return this.#sse = new server_sent_event_ts_1.ServerSentEventTarget(
+              this.app,
+              this.request.serverRequest,
+              options,
+            );
+          }
           /** Create and throw an HTTP Error, which can be used to pass status
                  * information which can be caught by other middleware to send more
                  * meaningful error messages back to the client.  The passed error status will
@@ -19603,25 +19853,25 @@ System.register(
             }
             const { conn, r: bufReader, w: bufWriter, headers } =
               this.request.serverRequest;
-            this.#socket = await deps_ts_11.acceptWebSocket(
+            this.#socket = await deps_ts_12.acceptWebSocket(
               { conn, bufReader, bufWriter, headers },
             );
             this.respond = false;
             return this.#socket;
           }
         };
-        exports_57("Context", Context);
+        exports_58("Context", Context);
       },
     };
   },
 );
 // Copyright 2018-2020 the oak authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/x/oak/middleware",
+  "https://deno.land/x/oak@master/middleware",
   [],
-  function (exports_58, context_58) {
+  function (exports_59, context_59) {
     "use strict";
-    var __moduleName = context_58 && context_58.id;
+    var __moduleName = context_59 && context_59.id;
     /** Compose multiple middleware functions into a single middleware function. */
     function compose(middleware) {
       return function composedMiddleware(context, next) {
@@ -19647,7 +19897,7 @@ System.register(
         return dispatch(0);
       };
     }
-    exports_58("compose", compose);
+    exports_59("compose", compose);
     return {
       setters: [],
       execute: function () {
@@ -19657,24 +19907,24 @@ System.register(
 );
 // Copyright 2018-2020 the oak authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/x/oak/application",
+  "https://deno.land/x/oak@master/application",
   [
-    "https://deno.land/x/oak/context",
-    "https://deno.land/x/oak/deps",
-    "https://deno.land/x/oak/keyStack",
-    "https://deno.land/x/oak/middleware",
+    "https://deno.land/x/oak@master/context",
+    "https://deno.land/x/oak@master/deps",
+    "https://deno.land/x/oak@master/keyStack",
+    "https://deno.land/x/oak@master/middleware",
   ],
-  function (exports_59, context_59) {
+  function (exports_60, context_60) {
     "use strict";
     var context_ts_1,
-      deps_ts_12,
+      deps_ts_13,
       keyStack_ts_1,
       middleware_ts_1,
       ADDR_REGEXP,
       ApplicationErrorEvent,
       ApplicationListenEvent,
       Application;
-    var __moduleName = context_59 && context_59.id;
+    var __moduleName = context_60 && context_60.id;
     function isOptionsTls(options) {
       return options.secure === true;
     }
@@ -19683,8 +19933,8 @@ System.register(
         function (context_ts_1_1) {
           context_ts_1 = context_ts_1_1;
         },
-        function (deps_ts_12_1) {
-          deps_ts_12 = deps_ts_12_1;
+        function (deps_ts_13_1) {
+          deps_ts_13 = deps_ts_13_1;
         },
         function (keyStack_ts_1_1) {
           keyStack_ts_1 = keyStack_ts_1_1;
@@ -19701,7 +19951,7 @@ System.register(
             this.context = eventInitDict.context;
           }
         };
-        exports_59("ApplicationErrorEvent", ApplicationErrorEvent);
+        exports_60("ApplicationErrorEvent", ApplicationErrorEvent);
         ApplicationListenEvent = class ApplicationListenEvent extends Event {
           constructor(eventInitDict) {
             super("listen", eventInitDict);
@@ -19710,7 +19960,7 @@ System.register(
             this.secure = eventInitDict.secure;
           }
         };
-        exports_59("ApplicationListenEvent", ApplicationListenEvent);
+        exports_60("ApplicationListenEvent", ApplicationListenEvent);
         /** A class which registers middleware (via `.use()`) and then processes
              * inbound requests against that middleware (via `.listen()`).
              *
@@ -19750,7 +20000,7 @@ System.register(
                 : 500;
               context.response.body = error.expose
                 ? error.message
-                : deps_ts_12.STATUS_TEXT.get(status);
+                : deps_ts_13.STATUS_TEXT.get(status);
             };
             /** Processing registered middleware on each request. */
             this.#handleRequest = async (request, state) => {
@@ -19785,8 +20035,8 @@ System.register(
             const {
               state,
               keys,
-              serve = deps_ts_12.serve,
-              serveTls = deps_ts_12.serveTLS,
+              serve = deps_ts_13.serve,
+              serveTls = deps_ts_13.serveTLS,
             } = options;
             this.keys = keys;
             this.state = state ?? {};
@@ -19898,7 +20148,7 @@ System.register(
             return this;
           }
         };
-        exports_59("Application", Application);
+        exports_60("Application", Application);
       },
     };
   },
@@ -19930,28 +20180,28 @@ System.register(
  * THE SOFTWARE.
  */
 System.register(
-  "https://deno.land/x/oak/router",
+  "https://deno.land/x/oak@master/router",
   [
-    "https://deno.land/x/oak/deps",
-    "https://deno.land/x/oak/httpError",
-    "https://deno.land/x/oak/middleware",
-    "https://deno.land/x/oak/util",
+    "https://deno.land/x/oak@master/deps",
+    "https://deno.land/x/oak@master/httpError",
+    "https://deno.land/x/oak@master/middleware",
+    "https://deno.land/x/oak@master/util",
   ],
-  function (exports_60, context_60) {
+  function (exports_61, context_61) {
     "use strict";
-    var deps_ts_13, httpError_ts_7, middleware_ts_2, util_ts_9, Layer, Router;
-    var __moduleName = context_60 && context_60.id;
+    var deps_ts_14, httpError_ts_7, middleware_ts_2, util_ts_9, Layer, Router;
+    var __moduleName = context_61 && context_61.id;
     /** Generate a URL from a string, potentially replace route params with
      * values. */
     function toUrl(url, params = {}, options) {
-      const tokens = deps_ts_13.pathParse(url);
+      const tokens = deps_ts_14.pathParse(url);
       let replace = {};
       if (tokens.some((token) => typeof token === "object")) {
         replace = params;
       } else {
         options = params;
       }
-      const toPath = deps_ts_13.compile(url, options);
+      const toPath = deps_ts_14.compile(url, options);
       let replaced = toPath(replace);
       if (options && options.query) {
         const url = new URL(replaced, "http://oak");
@@ -19970,8 +20220,8 @@ System.register(
     }
     return {
       setters: [
-        function (deps_ts_13_1) {
-          deps_ts_13 = deps_ts_13_1;
+        function (deps_ts_14_1) {
+          deps_ts_14 = deps_ts_14_1;
         },
         function (httpError_ts_7_1) {
           httpError_ts_7 = httpError_ts_7_1;
@@ -19995,7 +20245,7 @@ System.register(
             }
             this.stack = Array.isArray(middleware) ? middleware : [middleware];
             this.path = path;
-            this.#regexp = deps_ts_13.pathToRegexp(
+            this.#regexp = deps_ts_14.pathToRegexp(
               path,
               this.#paramNames,
               this.#opts,
@@ -20033,7 +20283,7 @@ System.register(
             const params = this.#paramNames;
             const middleware = function (ctx, next) {
               const p = ctx.params[param];
-              deps_ts_13.assert(p);
+              deps_ts_14.assert(p);
               return fn.call(this, p, ctx, next);
             };
             middleware.param = param;
@@ -20056,7 +20306,7 @@ System.register(
                 ? `${prefix}${this.path}`
                 : prefix;
               this.#paramNames = [];
-              this.#regexp = deps_ts_13.pathToRegexp(
+              this.#regexp = deps_ts_14.pathToRegexp(
                 this.path,
                 this.#paramNames,
                 this.#opts,
@@ -20202,9 +20452,9 @@ System.register(
               await next();
               if (
                 !ctx.response.status ||
-                ctx.response.status === deps_ts_13.Status.NotFound
+                ctx.response.status === deps_ts_14.Status.NotFound
               ) {
-                deps_ts_13.assert(ctx.matched);
+                deps_ts_14.assert(ctx.matched);
                 const allowed = new Set();
                 for (const route of ctx.matched) {
                   for (const method of route.methods) {
@@ -20217,12 +20467,12 @@ System.register(
                     throw options.notImplemented ? options.notImplemented()
                     : new httpError_ts_7.httpErrors.NotImplemented();
                   } else {
-                    ctx.response.status = deps_ts_13.Status.NotImplemented;
+                    ctx.response.status = deps_ts_14.Status.NotImplemented;
                     ctx.response.headers.set("Allowed", allowedStr);
                   }
                 } else if (allowed.size) {
                   if (ctx.request.method === "OPTIONS") {
-                    ctx.response.status = deps_ts_13.Status.OK;
+                    ctx.response.status = deps_ts_14.Status.OK;
                     ctx.response.headers.set("Allowed", allowedStr);
                   } else if (!allowed.has(ctx.request.method)) {
                     if (options.throw) {
@@ -20230,7 +20480,7 @@ System.register(
                         ? options.methodNotAllowed()
                         : new httpError_ts_7.httpErrors.MethodNotAllowed();
                     } else {
-                      ctx.response.status = deps_ts_13.Status.MethodNotAllowed;
+                      ctx.response.status = deps_ts_14.Status.MethodNotAllowed;
                       ctx.response.headers.set("Allowed", allowedStr);
                     }
                   }
@@ -20319,7 +20569,7 @@ System.register(
                  * of `302 Found` will be set by default.
                  *
                  * The `source` and `destination` can be named routes. */
-          redirect(source, destination, status = deps_ts_13.Status.Found) {
+          redirect(source, destination, status = deps_ts_14.Status.Found) {
             if (source[0] !== "/") {
               const s = this.url(source);
               if (!s) {
@@ -20436,18 +20686,18 @@ System.register(
             return toUrl(path, params, options);
           }
         };
-        exports_60("Router", Router);
+        exports_61("Router", Router);
       },
     };
   },
 );
 // Copyright 2018-2020 the oak authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/x/oak/helpers",
+  "https://deno.land/x/oak@master/helpers",
   [],
-  function (exports_61, context_61) {
+  function (exports_62, context_62) {
     "use strict";
-    var __moduleName = context_61 && context_61.id;
+    var __moduleName = context_62 && context_62.id;
     function isRouterContext(value) {
       return "params" in value;
     }
@@ -20461,7 +20711,7 @@ System.register(
       }
       return asMap ? new Map(Object.entries(result)) : result;
     }
-    exports_61("getQuery", getQuery);
+    exports_62("getQuery", getQuery);
     return {
       setters: [],
       execute: function () {
@@ -20471,93 +20721,101 @@ System.register(
 );
 // Copyright 2018-2020 the oak authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/x/oak/mod",
+  "https://deno.land/x/oak@master/mod",
   [
-    "https://deno.land/x/oak/application",
-    "https://deno.land/x/oak/context",
-    "https://deno.land/x/oak/helpers",
-    "https://deno.land/x/oak/cookies",
-    "https://deno.land/x/oak/httpError",
-    "https://deno.land/x/oak/middleware",
-    "https://deno.land/x/oak/multipart",
-    "https://deno.land/x/oak/request",
-    "https://deno.land/x/oak/response",
-    "https://deno.land/x/oak/router",
-    "https://deno.land/x/oak/send",
-    "https://deno.land/x/oak/util",
-    "https://deno.land/x/oak/deps",
+    "https://deno.land/x/oak@master/application",
+    "https://deno.land/x/oak@master/context",
+    "https://deno.land/x/oak@master/helpers",
+    "https://deno.land/x/oak@master/cookies",
+    "https://deno.land/x/oak@master/httpError",
+    "https://deno.land/x/oak@master/middleware",
+    "https://deno.land/x/oak@master/multipart",
+    "https://deno.land/x/oak@master/request",
+    "https://deno.land/x/oak@master/response",
+    "https://deno.land/x/oak@master/router",
+    "https://deno.land/x/oak@master/send",
+    "https://deno.land/x/oak@master/server_sent_event",
+    "https://deno.land/x/oak@master/util",
+    "https://deno.land/x/oak@master/deps",
   ],
-  function (exports_62, context_62) {
+  function (exports_63, context_63) {
     "use strict";
-    var __moduleName = context_62 && context_62.id;
+    var __moduleName = context_63 && context_63.id;
     return {
       setters: [
         function (application_ts_1_1) {
-          exports_62({
+          exports_63({
             "Application": application_ts_1_1["Application"],
           });
         },
         function (context_ts_2_1) {
-          exports_62({
+          exports_63({
             "Context": context_ts_2_1["Context"],
           });
         },
         function (helpers_1) {
-          exports_62("helpers", helpers_1);
+          exports_63("helpers", helpers_1);
         },
         function (cookies_ts_2_1) {
-          exports_62({
+          exports_63({
             "Cookies": cookies_ts_2_1["Cookies"],
           });
         },
         function (httpError_ts_8_1) {
-          exports_62({
+          exports_63({
             "HttpError": httpError_ts_8_1["HttpError"],
             "httpErrors": httpError_ts_8_1["httpErrors"],
             "isHttpError": httpError_ts_8_1["isHttpError"],
           });
         },
         function (middleware_ts_3_1) {
-          exports_62({
+          exports_63({
             "composeMiddleware": middleware_ts_3_1["compose"],
           });
         },
         function (multipart_ts_2_1) {
-          exports_62({
+          exports_63({
             "FormDataReader": multipart_ts_2_1["FormDataReader"],
           });
         },
         function (request_ts_2_1) {
-          exports_62({
+          exports_63({
             "Request": request_ts_2_1["Request"],
           });
         },
         function (response_ts_2_1) {
-          exports_62({
+          exports_63({
             "Response": response_ts_2_1["Response"],
             "REDIRECT_BACK": response_ts_2_1["REDIRECT_BACK"],
           });
         },
         function (router_ts_1_1) {
-          exports_62({
+          exports_63({
             "Router": router_ts_1_1["Router"],
           });
         },
         function (send_ts_2_1) {
-          exports_62({
+          exports_63({
             "send": send_ts_2_1["send"],
           });
         },
+        function (server_sent_event_ts_2_1) {
+          exports_63({
+            "ServerSentEvent": server_sent_event_ts_2_1["ServerSentEvent"],
+            "ServerSentEventTarget":
+              server_sent_event_ts_2_1["ServerSentEventTarget"],
+          });
+        },
         function (util_ts_10_1) {
-          exports_62({
+          exports_63({
             "isErrorStatus": util_ts_10_1["isErrorStatus"],
             "isRedirectStatus": util_ts_10_1["isRedirectStatus"],
           });
         },
-        function (deps_ts_14_1) {
-          exports_62({
-            "Status": deps_ts_14_1["Status"],
-            "STATUS_TEXT": deps_ts_14_1["STATUS_TEXT"],
+        function (deps_ts_15_1) {
+          exports_63({
+            "Status": deps_ts_15_1["Status"],
+            "STATUS_TEXT": deps_ts_15_1["STATUS_TEXT"],
           });
         },
       ],
@@ -20567,12 +20825,12 @@ System.register(
   },
 );
 System.register(
-  "https://deno.land/std/log/levels",
+  "https://deno.land/std@master/log/levels",
   [],
-  function (exports_63, context_63) {
+  function (exports_64, context_64) {
     "use strict";
     var LogLevels, LogLevelNames, byLevel;
-    var __moduleName = context_63 && context_63.id;
+    var __moduleName = context_64 && context_64.id;
     /** Returns the numeric log level associated with the passed,
      * stringy log level name.
      */
@@ -20594,7 +20852,7 @@ System.register(
           throw new Error(`no log level found for "${name}"`);
       }
     }
-    exports_63("getLevelByName", getLevelByName);
+    exports_64("getLevelByName", getLevelByName);
     /** Returns the stringy log level name provided the numeric log level */
     function getLevelName(level) {
       const levelName = byLevel[level];
@@ -20603,7 +20861,7 @@ System.register(
       }
       throw new Error(`no level name found for level: ${level}`);
     }
-    exports_63("getLevelName", getLevelName);
+    exports_64("getLevelName", getLevelName);
     return {
       setters: [],
       execute: function () {
@@ -20618,9 +20876,9 @@ System.register(
           LogLevels[LogLevels["ERROR"] = 40] = "ERROR";
           LogLevels[LogLevels["CRITICAL"] = 50] = "CRITICAL";
         })(LogLevels || (LogLevels = {}));
-        exports_63("LogLevels", LogLevels);
+        exports_64("LogLevels", LogLevels);
         /** Permitted log level names */
-        exports_63(
+        exports_64(
           "LogLevelNames",
           LogLevelNames = Object.keys(LogLevels).filter((key) =>
             isNaN(Number(key))
@@ -20652,23 +20910,23 @@ System.register(
  *
  * This module is browser compatible. */
 System.register(
-  "https://deno.land/std/fmt/colors",
+  "https://deno.land/std@master/fmt/colors",
   [],
-  function (exports_64, context_64) {
+  function (exports_65, context_65) {
     "use strict";
     var noColor, enabled, ANSI_PATTERN;
-    var __moduleName = context_64 && context_64.id;
+    var __moduleName = context_65 && context_65.id;
     function setColorEnabled(value) {
       if (noColor) {
         return;
       }
       enabled = value;
     }
-    exports_64("setColorEnabled", setColorEnabled);
+    exports_65("setColorEnabled", setColorEnabled);
     function getColorEnabled() {
       return enabled;
     }
-    exports_64("getColorEnabled", getColorEnabled);
+    exports_65("getColorEnabled", getColorEnabled);
     function code(open, close) {
       return {
         open: `\x1b[${open.join(";")}m`,
@@ -20684,103 +20942,103 @@ System.register(
     function reset(str) {
       return run(str, code([0], 0));
     }
-    exports_64("reset", reset);
+    exports_65("reset", reset);
     function bold(str) {
       return run(str, code([1], 22));
     }
-    exports_64("bold", bold);
+    exports_65("bold", bold);
     function dim(str) {
       return run(str, code([2], 22));
     }
-    exports_64("dim", dim);
+    exports_65("dim", dim);
     function italic(str) {
       return run(str, code([3], 23));
     }
-    exports_64("italic", italic);
+    exports_65("italic", italic);
     function underline(str) {
       return run(str, code([4], 24));
     }
-    exports_64("underline", underline);
+    exports_65("underline", underline);
     function inverse(str) {
       return run(str, code([7], 27));
     }
-    exports_64("inverse", inverse);
+    exports_65("inverse", inverse);
     function hidden(str) {
       return run(str, code([8], 28));
     }
-    exports_64("hidden", hidden);
+    exports_65("hidden", hidden);
     function strikethrough(str) {
       return run(str, code([9], 29));
     }
-    exports_64("strikethrough", strikethrough);
+    exports_65("strikethrough", strikethrough);
     function black(str) {
       return run(str, code([30], 39));
     }
-    exports_64("black", black);
+    exports_65("black", black);
     function red(str) {
       return run(str, code([31], 39));
     }
-    exports_64("red", red);
+    exports_65("red", red);
     function green(str) {
       return run(str, code([32], 39));
     }
-    exports_64("green", green);
+    exports_65("green", green);
     function yellow(str) {
       return run(str, code([33], 39));
     }
-    exports_64("yellow", yellow);
+    exports_65("yellow", yellow);
     function blue(str) {
       return run(str, code([34], 39));
     }
-    exports_64("blue", blue);
+    exports_65("blue", blue);
     function magenta(str) {
       return run(str, code([35], 39));
     }
-    exports_64("magenta", magenta);
+    exports_65("magenta", magenta);
     function cyan(str) {
       return run(str, code([36], 39));
     }
-    exports_64("cyan", cyan);
+    exports_65("cyan", cyan);
     function white(str) {
       return run(str, code([37], 39));
     }
-    exports_64("white", white);
+    exports_65("white", white);
     function gray(str) {
       return run(str, code([90], 39));
     }
-    exports_64("gray", gray);
+    exports_65("gray", gray);
     function bgBlack(str) {
       return run(str, code([40], 49));
     }
-    exports_64("bgBlack", bgBlack);
+    exports_65("bgBlack", bgBlack);
     function bgRed(str) {
       return run(str, code([41], 49));
     }
-    exports_64("bgRed", bgRed);
+    exports_65("bgRed", bgRed);
     function bgGreen(str) {
       return run(str, code([42], 49));
     }
-    exports_64("bgGreen", bgGreen);
+    exports_65("bgGreen", bgGreen);
     function bgYellow(str) {
       return run(str, code([43], 49));
     }
-    exports_64("bgYellow", bgYellow);
+    exports_65("bgYellow", bgYellow);
     function bgBlue(str) {
       return run(str, code([44], 49));
     }
-    exports_64("bgBlue", bgBlue);
+    exports_65("bgBlue", bgBlue);
     function bgMagenta(str) {
       return run(str, code([45], 49));
     }
-    exports_64("bgMagenta", bgMagenta);
+    exports_65("bgMagenta", bgMagenta);
     function bgCyan(str) {
       return run(str, code([46], 49));
     }
-    exports_64("bgCyan", bgCyan);
+    exports_65("bgCyan", bgCyan);
     function bgWhite(str) {
       return run(str, code([47], 49));
     }
-    exports_64("bgWhite", bgWhite);
+    exports_65("bgWhite", bgWhite);
     /* Special Color Sequences */
     function clampAndTruncate(n, max = 255, min = 0) {
       return Math.trunc(Math.max(Math.min(n, max), min));
@@ -20790,13 +21048,13 @@ System.register(
     function rgb8(str, color) {
       return run(str, code([38, 5, clampAndTruncate(color)], 39));
     }
-    exports_64("rgb8", rgb8);
+    exports_65("rgb8", rgb8);
     /** Set background color using paletted 8bit colors.
      * https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit */
     function bgRgb8(str, color) {
       return run(str, code([48, 5, clampAndTruncate(color)], 49));
     }
-    exports_64("bgRgb8", bgRgb8);
+    exports_65("bgRgb8", bgRgb8);
     /** Set text color using 24bit rgb.
      * `color` can be a number in range `0x000000` to `0xffffff` or
      * an `Rgb`.
@@ -20827,7 +21085,7 @@ System.register(
         ], 39),
       );
     }
-    exports_64("rgb24", rgb24);
+    exports_65("rgb24", rgb24);
     /** Set background color using 24bit rgb.
      * `color` can be a number in range `0x000000` to `0xffffff` or
      * an `Rgb`.
@@ -20858,11 +21116,11 @@ System.register(
         ], 49),
       );
     }
-    exports_64("bgRgb24", bgRgb24);
+    exports_65("bgRgb24", bgRgb24);
     function stripColor(string) {
       return string.replace(ANSI_PATTERN, "");
     }
-    exports_64("stripColor", stripColor);
+    exports_65("stripColor", stripColor);
     return {
       setters: [],
       execute: function () {
@@ -20881,12 +21139,12 @@ System.register(
   },
 );
 System.register(
-  "https://deno.land/std/fs/exists",
+  "https://deno.land/std@master/fs/exists",
   [],
-  function (exports_65, context_65) {
+  function (exports_66, context_66) {
     "use strict";
     var lstat, lstatSync;
-    var __moduleName = context_65 && context_65.id;
+    var __moduleName = context_66 && context_66.id;
     /**
      * Test whether or not the given path exists by checking with the file system
      */
@@ -20901,7 +21159,7 @@ System.register(
         throw err;
       }
     }
-    exports_65("exists", exists);
+    exports_66("exists", exists);
     /**
      * Test whether or not the given path exists by checking with the file system
      */
@@ -20916,7 +21174,7 @@ System.register(
         throw err;
       }
     }
-    exports_65("existsSync", existsSync);
+    exports_66("existsSync", existsSync);
     return {
       setters: [],
       execute: function () {
@@ -20930,9 +21188,9 @@ System.register(
 // Ported from https://github.com/browserify/path-browserify/
 /** This module is browser compatible. */
 System.register(
-  "https://deno.land/std/path/_constants",
+  "https://deno.land/std@master/path/_constants",
   [],
-  function (exports_66, context_66) {
+  function (exports_67, context_67) {
     "use strict";
     var CHAR_UPPERCASE_A,
       CHAR_LOWERCASE_A,
@@ -20975,87 +21233,87 @@ System.register(
       CHAR_9,
       navigator,
       isWindows;
-    var __moduleName = context_66 && context_66.id;
+    var __moduleName = context_67 && context_67.id;
     return {
       setters: [],
       execute: function () {
         // Alphabet chars.
-        exports_66("CHAR_UPPERCASE_A", CHAR_UPPERCASE_A = 65); /* A */
-        exports_66("CHAR_LOWERCASE_A", CHAR_LOWERCASE_A = 97); /* a */
-        exports_66("CHAR_UPPERCASE_Z", CHAR_UPPERCASE_Z = 90); /* Z */
-        exports_66("CHAR_LOWERCASE_Z", CHAR_LOWERCASE_Z = 122); /* z */
+        exports_67("CHAR_UPPERCASE_A", CHAR_UPPERCASE_A = 65); /* A */
+        exports_67("CHAR_LOWERCASE_A", CHAR_LOWERCASE_A = 97); /* a */
+        exports_67("CHAR_UPPERCASE_Z", CHAR_UPPERCASE_Z = 90); /* Z */
+        exports_67("CHAR_LOWERCASE_Z", CHAR_LOWERCASE_Z = 122); /* z */
         // Non-alphabetic chars.
-        exports_66("CHAR_DOT", CHAR_DOT = 46); /* . */
-        exports_66("CHAR_FORWARD_SLASH", CHAR_FORWARD_SLASH = 47); /* / */
-        exports_66("CHAR_BACKWARD_SLASH", CHAR_BACKWARD_SLASH = 92); /* \ */
-        exports_66("CHAR_VERTICAL_LINE", CHAR_VERTICAL_LINE = 124); /* | */
-        exports_66("CHAR_COLON", CHAR_COLON = 58); /* : */
-        exports_66("CHAR_QUESTION_MARK", CHAR_QUESTION_MARK = 63); /* ? */
-        exports_66("CHAR_UNDERSCORE", CHAR_UNDERSCORE = 95); /* _ */
-        exports_66("CHAR_LINE_FEED", CHAR_LINE_FEED = 10); /* \n */
-        exports_66("CHAR_CARRIAGE_RETURN", CHAR_CARRIAGE_RETURN = 13); /* \r */
-        exports_66("CHAR_TAB", CHAR_TAB = 9); /* \t */
-        exports_66("CHAR_FORM_FEED", CHAR_FORM_FEED = 12); /* \f */
-        exports_66("CHAR_EXCLAMATION_MARK", CHAR_EXCLAMATION_MARK = 33); /* ! */
-        exports_66("CHAR_HASH", CHAR_HASH = 35); /* # */
-        exports_66("CHAR_SPACE", CHAR_SPACE = 32); /*   */
-        exports_66(
+        exports_67("CHAR_DOT", CHAR_DOT = 46); /* . */
+        exports_67("CHAR_FORWARD_SLASH", CHAR_FORWARD_SLASH = 47); /* / */
+        exports_67("CHAR_BACKWARD_SLASH", CHAR_BACKWARD_SLASH = 92); /* \ */
+        exports_67("CHAR_VERTICAL_LINE", CHAR_VERTICAL_LINE = 124); /* | */
+        exports_67("CHAR_COLON", CHAR_COLON = 58); /* : */
+        exports_67("CHAR_QUESTION_MARK", CHAR_QUESTION_MARK = 63); /* ? */
+        exports_67("CHAR_UNDERSCORE", CHAR_UNDERSCORE = 95); /* _ */
+        exports_67("CHAR_LINE_FEED", CHAR_LINE_FEED = 10); /* \n */
+        exports_67("CHAR_CARRIAGE_RETURN", CHAR_CARRIAGE_RETURN = 13); /* \r */
+        exports_67("CHAR_TAB", CHAR_TAB = 9); /* \t */
+        exports_67("CHAR_FORM_FEED", CHAR_FORM_FEED = 12); /* \f */
+        exports_67("CHAR_EXCLAMATION_MARK", CHAR_EXCLAMATION_MARK = 33); /* ! */
+        exports_67("CHAR_HASH", CHAR_HASH = 35); /* # */
+        exports_67("CHAR_SPACE", CHAR_SPACE = 32); /*   */
+        exports_67(
           "CHAR_NO_BREAK_SPACE",
           CHAR_NO_BREAK_SPACE = 160,
         ); /* \u00A0 */
-        exports_66(
+        exports_67(
           "CHAR_ZERO_WIDTH_NOBREAK_SPACE",
           CHAR_ZERO_WIDTH_NOBREAK_SPACE = 65279,
         ); /* \uFEFF */
-        exports_66(
+        exports_67(
           "CHAR_LEFT_SQUARE_BRACKET",
           CHAR_LEFT_SQUARE_BRACKET = 91,
         ); /* [ */
-        exports_66(
+        exports_67(
           "CHAR_RIGHT_SQUARE_BRACKET",
           CHAR_RIGHT_SQUARE_BRACKET = 93,
         ); /* ] */
-        exports_66(
+        exports_67(
           "CHAR_LEFT_ANGLE_BRACKET",
           CHAR_LEFT_ANGLE_BRACKET = 60,
         ); /* < */
-        exports_66(
+        exports_67(
           "CHAR_RIGHT_ANGLE_BRACKET",
           CHAR_RIGHT_ANGLE_BRACKET = 62,
         ); /* > */
-        exports_66(
+        exports_67(
           "CHAR_LEFT_CURLY_BRACKET",
           CHAR_LEFT_CURLY_BRACKET = 123,
         ); /* { */
-        exports_66(
+        exports_67(
           "CHAR_RIGHT_CURLY_BRACKET",
           CHAR_RIGHT_CURLY_BRACKET = 125,
         ); /* } */
-        exports_66("CHAR_HYPHEN_MINUS", CHAR_HYPHEN_MINUS = 45); /* - */
-        exports_66("CHAR_PLUS", CHAR_PLUS = 43); /* + */
-        exports_66("CHAR_DOUBLE_QUOTE", CHAR_DOUBLE_QUOTE = 34); /* " */
-        exports_66("CHAR_SINGLE_QUOTE", CHAR_SINGLE_QUOTE = 39); /* ' */
-        exports_66("CHAR_PERCENT", CHAR_PERCENT = 37); /* % */
-        exports_66("CHAR_SEMICOLON", CHAR_SEMICOLON = 59); /* ; */
-        exports_66(
+        exports_67("CHAR_HYPHEN_MINUS", CHAR_HYPHEN_MINUS = 45); /* - */
+        exports_67("CHAR_PLUS", CHAR_PLUS = 43); /* + */
+        exports_67("CHAR_DOUBLE_QUOTE", CHAR_DOUBLE_QUOTE = 34); /* " */
+        exports_67("CHAR_SINGLE_QUOTE", CHAR_SINGLE_QUOTE = 39); /* ' */
+        exports_67("CHAR_PERCENT", CHAR_PERCENT = 37); /* % */
+        exports_67("CHAR_SEMICOLON", CHAR_SEMICOLON = 59); /* ; */
+        exports_67(
           "CHAR_CIRCUMFLEX_ACCENT",
           CHAR_CIRCUMFLEX_ACCENT = 94,
         ); /* ^ */
-        exports_66("CHAR_GRAVE_ACCENT", CHAR_GRAVE_ACCENT = 96); /* ` */
-        exports_66("CHAR_AT", CHAR_AT = 64); /* @ */
-        exports_66("CHAR_AMPERSAND", CHAR_AMPERSAND = 38); /* & */
-        exports_66("CHAR_EQUAL", CHAR_EQUAL = 61); /* = */
+        exports_67("CHAR_GRAVE_ACCENT", CHAR_GRAVE_ACCENT = 96); /* ` */
+        exports_67("CHAR_AT", CHAR_AT = 64); /* @ */
+        exports_67("CHAR_AMPERSAND", CHAR_AMPERSAND = 38); /* & */
+        exports_67("CHAR_EQUAL", CHAR_EQUAL = 61); /* = */
         // Digits
-        exports_66("CHAR_0", CHAR_0 = 48); /* 0 */
-        exports_66("CHAR_9", CHAR_9 = 57); /* 9 */
+        exports_67("CHAR_0", CHAR_0 = 48); /* 0 */
+        exports_67("CHAR_9", CHAR_9 = 57); /* 9 */
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         navigator = globalThis.navigator;
         isWindows = false;
-        exports_66("isWindows", isWindows);
+        exports_67("isWindows", isWindows);
         if (globalThis.Deno != null) {
-          exports_66("isWindows", isWindows = Deno.build.os == "windows");
+          exports_67("isWindows", isWindows = Deno.build.os == "windows");
         } else if (navigator?.appVersion != null) {
-          exports_66(
+          exports_67(
             "isWindows",
             isWindows = navigator.appVersion.includes("Win"),
           );
@@ -21066,11 +21324,11 @@ System.register(
 );
 /** This module is browser compatible. */
 System.register(
-  "https://deno.land/std/path/_interface",
+  "https://deno.land/std@master/path/_interface",
   [],
-  function (exports_67, context_67) {
+  function (exports_68, context_68) {
     "use strict";
-    var __moduleName = context_67 && context_67.id;
+    var __moduleName = context_68 && context_68.id;
     return {
       setters: [],
       execute: function () {
@@ -21082,12 +21340,12 @@ System.register(
 // Ported from https://github.com/browserify/path-browserify/
 /** This module is browser compatible. */
 System.register(
-  "https://deno.land/std/path/_util",
-  ["https://deno.land/std/path/_constants"],
-  function (exports_68, context_68) {
+  "https://deno.land/std@master/path/_util",
+  ["https://deno.land/std@master/path/_constants"],
+  function (exports_69, context_69) {
     "use strict";
     var _constants_ts_7;
-    var __moduleName = context_68 && context_68.id;
+    var __moduleName = context_69 && context_69.id;
     function assertPath(path) {
       if (typeof path !== "string") {
         throw new TypeError(
@@ -21095,23 +21353,23 @@ System.register(
         );
       }
     }
-    exports_68("assertPath", assertPath);
+    exports_69("assertPath", assertPath);
     function isPosixPathSeparator(code) {
       return code === _constants_ts_7.CHAR_FORWARD_SLASH;
     }
-    exports_68("isPosixPathSeparator", isPosixPathSeparator);
+    exports_69("isPosixPathSeparator", isPosixPathSeparator);
     function isPathSeparator(code) {
       return isPosixPathSeparator(code) ||
         code === _constants_ts_7.CHAR_BACKWARD_SLASH;
     }
-    exports_68("isPathSeparator", isPathSeparator);
+    exports_69("isPathSeparator", isPathSeparator);
     function isWindowsDeviceRoot(code) {
       return ((code >= _constants_ts_7.CHAR_LOWERCASE_A &&
         code <= _constants_ts_7.CHAR_LOWERCASE_Z) ||
         (code >= _constants_ts_7.CHAR_UPPERCASE_A &&
           code <= _constants_ts_7.CHAR_UPPERCASE_Z));
     }
-    exports_68("isWindowsDeviceRoot", isWindowsDeviceRoot);
+    exports_69("isWindowsDeviceRoot", isWindowsDeviceRoot);
     // Resolves . and .. elements in a path with directory names
     function normalizeString(path, allowAboveRoot, separator, isPathSeparator) {
       let res = "";
@@ -21184,7 +21442,7 @@ System.register(
       }
       return res;
     }
-    exports_68("normalizeString", normalizeString);
+    exports_69("normalizeString", normalizeString);
     function _format(sep, pathObject) {
       const dir = pathObject.dir || pathObject.root;
       const base = pathObject.base ||
@@ -21197,7 +21455,7 @@ System.register(
       }
       return dir + sep + base;
     }
-    exports_68("_format", _format);
+    exports_69("_format", _format);
     return {
       setters: [
         function (_constants_ts_7_1) {
@@ -21211,19 +21469,19 @@ System.register(
 );
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/std/_util/assert",
+  "https://deno.land/std@master/_util/assert",
   [],
-  function (exports_69, context_69) {
+  function (exports_70, context_70) {
     "use strict";
     var DenoStdInternalError;
-    var __moduleName = context_69 && context_69.id;
+    var __moduleName = context_70 && context_70.id;
     /** Make an assertion, if not `true`, then throw. */
     function assert(expr, msg = "") {
       if (!expr) {
         throw new DenoStdInternalError(msg);
       }
     }
-    exports_69("assert", assert);
+    exports_70("assert", assert);
     return {
       setters: [],
       execute: function () {
@@ -21233,7 +21491,7 @@ System.register(
             this.name = "DenoStdInternalError";
           }
         };
-        exports_69("DenoStdInternalError", DenoStdInternalError);
+        exports_70("DenoStdInternalError", DenoStdInternalError);
       },
     };
   },
@@ -21242,16 +21500,16 @@ System.register(
 // Ported from https://github.com/browserify/path-browserify/
 /** This module is browser compatible. */
 System.register(
-  "https://deno.land/std/path/win32",
+  "https://deno.land/std@master/path/win32",
   [
-    "https://deno.land/std/path/_constants",
-    "https://deno.land/std/path/_util",
-    "https://deno.land/std/_util/assert",
+    "https://deno.land/std@master/path/_constants",
+    "https://deno.land/std@master/path/_util",
+    "https://deno.land/std@master/_util/assert",
   ],
-  function (exports_70, context_70) {
+  function (exports_71, context_71) {
     "use strict";
     var _constants_ts_8, _util_ts_3, assert_ts_1, sep, delimiter;
-    var __moduleName = context_70 && context_70.id;
+    var __moduleName = context_71 && context_71.id;
     function resolve(...pathSegments) {
       let resolvedDevice = "";
       let resolvedTail = "";
@@ -21399,7 +21657,7 @@ System.register(
       return resolvedDevice + (resolvedAbsolute ? "\\" : "") + resolvedTail ||
         ".";
     }
-    exports_70("resolve", resolve);
+    exports_71("resolve", resolve);
     function normalize(path) {
       _util_ts_3.assertPath(path);
       const len = path.length;
@@ -21525,7 +21783,7 @@ System.register(
         return device;
       }
     }
-    exports_70("normalize", normalize);
+    exports_71("normalize", normalize);
     function isAbsolute(path) {
       _util_ts_3.assertPath(path);
       const len = path.length;
@@ -21545,7 +21803,7 @@ System.register(
       }
       return false;
     }
-    exports_70("isAbsolute", isAbsolute);
+    exports_71("isAbsolute", isAbsolute);
     function join(...paths) {
       const pathsCount = paths.length;
       if (pathsCount === 0) {
@@ -21614,7 +21872,7 @@ System.register(
       }
       return normalize(joined);
     }
-    exports_70("join", join);
+    exports_71("join", join);
     // It will solve the relative path from `from` to `to`, for instance:
     //  from = 'C:\\orandea\\test\\aaa'
     //  to = 'C:\\orandea\\impl\\bbb'
@@ -21749,7 +22007,7 @@ System.register(
         return toOrig.slice(toStart, toEnd);
       }
     }
-    exports_70("relative", relative);
+    exports_71("relative", relative);
     function toNamespacedPath(path) {
       // Note: this will *probably* throw somewhere.
       if (typeof path !== "string") {
@@ -21789,7 +22047,7 @@ System.register(
       }
       return path;
     }
-    exports_70("toNamespacedPath", toNamespacedPath);
+    exports_71("toNamespacedPath", toNamespacedPath);
     function dirname(path) {
       _util_ts_3.assertPath(path);
       const len = path.length;
@@ -21883,7 +22141,7 @@ System.register(
       }
       return path.slice(0, end);
     }
-    exports_70("dirname", dirname);
+    exports_71("dirname", dirname);
     function basename(path, ext = "") {
       if (ext !== undefined && typeof ext !== "string") {
         throw new TypeError('"ext" argument must be a string');
@@ -21971,7 +22229,7 @@ System.register(
         return path.slice(start, end);
       }
     }
-    exports_70("basename", basename);
+    exports_71("basename", basename);
     function extname(path) {
       _util_ts_3.assertPath(path);
       let start = 0;
@@ -22035,7 +22293,7 @@ System.register(
       }
       return path.slice(startDot, end);
     }
-    exports_70("extname", extname);
+    exports_71("extname", extname);
     function format(pathObject) {
       /* eslint-disable max-len */
       if (pathObject === null || typeof pathObject !== "object") {
@@ -22045,7 +22303,7 @@ System.register(
       }
       return _util_ts_3._format("\\", pathObject);
     }
-    exports_70("format", format);
+    exports_71("format", format);
     function parse(path) {
       _util_ts_3.assertPath(path);
       const ret = { root: "", dir: "", base: "", ext: "", name: "" };
@@ -22195,7 +22453,7 @@ System.register(
       }
       return ret;
     }
-    exports_70("parse", parse);
+    exports_71("parse", parse);
     /** Converts a file URL to a path string.
      *
      *      fromFileUrl("file:///C:/Users/foo"); // "C:\\Users\\foo"
@@ -22209,7 +22467,7 @@ System.register(
         .replace(/^\/*([A-Za-z]:)(\/|$)/, "$1/")
         .replace(/\//g, "\\");
     }
-    exports_70("fromFileUrl", fromFileUrl);
+    exports_71("fromFileUrl", fromFileUrl);
     return {
       setters: [
         function (_constants_ts_8_1) {
@@ -22223,8 +22481,8 @@ System.register(
         },
       ],
       execute: function () {
-        exports_70("sep", sep = "\\");
-        exports_70("delimiter", delimiter = ";");
+        exports_71("sep", sep = "\\");
+        exports_71("delimiter", delimiter = ";");
       },
     };
   },
@@ -22233,12 +22491,15 @@ System.register(
 // Ported from https://github.com/browserify/path-browserify/
 /** This module is browser compatible. */
 System.register(
-  "https://deno.land/std/path/posix",
-  ["https://deno.land/std/path/_constants", "https://deno.land/std/path/_util"],
-  function (exports_71, context_71) {
+  "https://deno.land/std@master/path/posix",
+  [
+    "https://deno.land/std@master/path/_constants",
+    "https://deno.land/std@master/path/_util",
+  ],
+  function (exports_72, context_72) {
     "use strict";
     var _constants_ts_9, _util_ts_4, sep, delimiter;
-    var __moduleName = context_71 && context_71.id;
+    var __moduleName = context_72 && context_72.id;
     // path.resolve([from ...], to)
     function resolve(...pathSegments) {
       let resolvedPath = "";
@@ -22283,7 +22544,7 @@ System.register(
         return ".";
       }
     }
-    exports_71("resolve", resolve);
+    exports_72("resolve", resolve);
     function normalize(path) {
       _util_ts_4.assertPath(path);
       if (path.length === 0) {
@@ -22311,13 +22572,13 @@ System.register(
       }
       return path;
     }
-    exports_71("normalize", normalize);
+    exports_72("normalize", normalize);
     function isAbsolute(path) {
       _util_ts_4.assertPath(path);
       return path.length > 0 &&
         path.charCodeAt(0) === _constants_ts_9.CHAR_FORWARD_SLASH;
     }
-    exports_71("isAbsolute", isAbsolute);
+    exports_72("isAbsolute", isAbsolute);
     function join(...paths) {
       if (paths.length === 0) {
         return ".";
@@ -22339,7 +22600,7 @@ System.register(
       }
       return normalize(joined);
     }
-    exports_71("join", join);
+    exports_72("join", join);
     function relative(from, to) {
       _util_ts_4.assertPath(from);
       _util_ts_4.assertPath(to);
@@ -22438,12 +22699,12 @@ System.register(
         return to.slice(toStart);
       }
     }
-    exports_71("relative", relative);
+    exports_72("relative", relative);
     function toNamespacedPath(path) {
       // Non-op on posix systems
       return path;
     }
-    exports_71("toNamespacedPath", toNamespacedPath);
+    exports_72("toNamespacedPath", toNamespacedPath);
     function dirname(path) {
       _util_ts_4.assertPath(path);
       if (path.length === 0) {
@@ -22471,7 +22732,7 @@ System.register(
       }
       return path.slice(0, end);
     }
-    exports_71("dirname", dirname);
+    exports_72("dirname", dirname);
     function basename(path, ext = "") {
       if (ext !== undefined && typeof ext !== "string") {
         throw new TypeError('"ext" argument must be a string');
@@ -22548,7 +22809,7 @@ System.register(
         return path.slice(start, end);
       }
     }
-    exports_71("basename", basename);
+    exports_72("basename", basename);
     function extname(path) {
       _util_ts_4.assertPath(path);
       let startDot = -1;
@@ -22601,7 +22862,7 @@ System.register(
       }
       return path.slice(startDot, end);
     }
-    exports_71("extname", extname);
+    exports_72("extname", extname);
     function format(pathObject) {
       /* eslint-disable max-len */
       if (pathObject === null || typeof pathObject !== "object") {
@@ -22611,7 +22872,7 @@ System.register(
       }
       return _util_ts_4._format("/", pathObject);
     }
-    exports_71("format", format);
+    exports_72("format", format);
     function parse(path) {
       _util_ts_4.assertPath(path);
       const ret = { root: "", dir: "", base: "", ext: "", name: "" };
@@ -22699,7 +22960,7 @@ System.register(
       }
       return ret;
     }
-    exports_71("parse", parse);
+    exports_72("parse", parse);
     /** Converts a file URL to a path string.
      *
      *      fromFileUrl("file:///home/foo"); // "/home/foo"
@@ -22710,7 +22971,7 @@ System.register(
     function fromFileUrl(url) {
       return new URL(url).pathname;
     }
-    exports_71("fromFileUrl", fromFileUrl);
+    exports_72("fromFileUrl", fromFileUrl);
     return {
       setters: [
         function (_constants_ts_9_1) {
@@ -22721,8 +22982,8 @@ System.register(
         },
       ],
       execute: function () {
-        exports_71("sep", sep = "/");
-        exports_71("delimiter", delimiter = ":");
+        exports_72("sep", sep = "/");
+        exports_72("delimiter", delimiter = ":");
       },
     };
   },
@@ -22730,12 +22991,12 @@ System.register(
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 /** This module is browser compatible. */
 System.register(
-  "https://deno.land/std/path/separator",
-  ["https://deno.land/std/path/_constants"],
-  function (exports_72, context_72) {
+  "https://deno.land/std@master/path/separator",
+  ["https://deno.land/std@master/path/_constants"],
+  function (exports_73, context_73) {
     "use strict";
     var _constants_ts_10, SEP, SEP_PATTERN;
-    var __moduleName = context_72 && context_72.id;
+    var __moduleName = context_73 && context_73.id;
     return {
       setters: [
         function (_constants_ts_10_1) {
@@ -22743,8 +23004,8 @@ System.register(
         },
       ],
       execute: function () {
-        exports_72("SEP", SEP = _constants_ts_10.isWindows ? "\\" : "/");
-        exports_72(
+        exports_73("SEP", SEP = _constants_ts_10.isWindows ? "\\" : "/");
+        exports_73(
           "SEP_PATTERN",
           SEP_PATTERN = _constants_ts_10.isWindows ? /[\\/]+/ : /\/+/,
         );
@@ -22755,12 +23016,12 @@ System.register(
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 /** This module is browser compatible. */
 System.register(
-  "https://deno.land/std/path/common",
-  ["https://deno.land/std/path/separator"],
-  function (exports_73, context_73) {
+  "https://deno.land/std@master/path/common",
+  ["https://deno.land/std@master/path/separator"],
+  function (exports_74, context_74) {
     "use strict";
     var separator_ts_4;
-    var __moduleName = context_73 && context_73.id;
+    var __moduleName = context_74 && context_74.id;
     /** Determines the common path from a set of paths, using an optional separator,
      * which defaults to the OS default separator.
      *
@@ -22793,7 +23054,7 @@ System.register(
       const prefix = parts.slice(0, endOfPrefix).join(sep);
       return prefix.endsWith(sep) ? prefix : `${prefix}${sep}`;
     }
-    exports_73("common", common);
+    exports_74("common", common);
     return {
       setters: [
         function (separator_ts_4_1) {
@@ -22810,9 +23071,9 @@ System.register(
 // Copyright (c) 2018 Terkel Gjervig Nielsen
 /** This module is browser compatible. */
 System.register(
-  "https://deno.land/std/path/_globrex",
-  ["https://deno.land/std/path/_constants"],
-  function (exports_74, context_74) {
+  "https://deno.land/std@master/path/_globrex",
+  ["https://deno.land/std@master/path/_constants"],
+  function (exports_75, context_75) {
     "use strict";
     var _constants_ts_11,
       SEP,
@@ -22822,7 +23083,7 @@ System.register(
       WILDCARD,
       GLOBSTAR_SEGMENT,
       WILDCARD_SEGMENT;
-    var __moduleName = context_74 && context_74.id;
+    var __moduleName = context_75 && context_75.id;
     /**
      * Convert any glob pattern to a JavaScript Regexp object
      * @param glob Glob pattern to convert
@@ -23089,7 +23350,7 @@ System.register(
       }
       return result;
     }
-    exports_74("globrex", globrex);
+    exports_75("globrex", globrex);
     return {
       setters: [
         function (_constants_ts_11_1) {
@@ -23111,17 +23372,17 @@ System.register(
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 /** This module is browser compatible. */
 System.register(
-  "https://deno.land/std/path/glob",
+  "https://deno.land/std@master/path/glob",
   [
-    "https://deno.land/std/path/separator",
-    "https://deno.land/std/path/_globrex",
-    "https://deno.land/std/path/mod",
-    "https://deno.land/std/_util/assert",
+    "https://deno.land/std@master/path/separator",
+    "https://deno.land/std@master/path/_globrex",
+    "https://deno.land/std@master/path/mod",
+    "https://deno.land/std@master/_util/assert",
   ],
-  function (exports_75, context_75) {
+  function (exports_76, context_76) {
     "use strict";
     var separator_ts_5, _globrex_ts_2, mod_ts_13, assert_ts_2;
-    var __moduleName = context_75 && context_75.id;
+    var __moduleName = context_76 && context_76.id;
     /**
      * Generate a regex based on glob pattern and options
      * This was meant to be using the the `fs.walk` function
@@ -23156,7 +23417,7 @@ System.register(
       assert_ts_2.assert(result.path != null);
       return result.path.regex;
     }
-    exports_75("globToRegExp", globToRegExp);
+    exports_76("globToRegExp", globToRegExp);
     /** Test whether the given string is a glob */
     function isGlob(str) {
       const chars = { "{": "}", "(": ")", "[": "]" };
@@ -23186,7 +23447,7 @@ System.register(
       }
       return false;
     }
-    exports_75("isGlob", isGlob);
+    exports_76("isGlob", isGlob);
     /** Like normalize(), but doesn't collapse "**\/.." when `globstar` is true. */
     function normalizeGlob(glob, { globstar = false } = {}) {
       if (!!glob.match(/\0/g)) {
@@ -23205,7 +23466,7 @@ System.register(
         "..",
       );
     }
-    exports_75("normalizeGlob", normalizeGlob);
+    exports_76("normalizeGlob", normalizeGlob);
     /** Like join(), but doesn't collapse "**\/.." when `globstar` is true. */
     function joinGlobs(globs, { extended = false, globstar = false } = {}) {
       if (!globstar || globs.length == 0) {
@@ -23230,7 +23491,7 @@ System.register(
       }
       return normalizeGlob(joined, { extended, globstar });
     }
-    exports_75("joinGlobs", joinGlobs);
+    exports_76("joinGlobs", joinGlobs);
     return {
       setters: [
         function (separator_ts_5_1) {
@@ -23255,17 +23516,17 @@ System.register(
 // Ported mostly from https://github.com/browserify/path-browserify/
 /** This module is browser compatible. */
 System.register(
-  "https://deno.land/std/path/mod",
+  "https://deno.land/std@master/path/mod",
   [
-    "https://deno.land/std/path/_constants",
-    "https://deno.land/std/path/win32",
-    "https://deno.land/std/path/posix",
-    "https://deno.land/std/path/common",
-    "https://deno.land/std/path/separator",
-    "https://deno.land/std/path/_interface",
-    "https://deno.land/std/path/glob",
+    "https://deno.land/std@master/path/_constants",
+    "https://deno.land/std@master/path/win32",
+    "https://deno.land/std@master/path/posix",
+    "https://deno.land/std@master/path/common",
+    "https://deno.land/std@master/path/separator",
+    "https://deno.land/std@master/path/_interface",
+    "https://deno.land/std@master/path/glob",
   ],
-  function (exports_76, context_76) {
+  function (exports_77, context_77) {
     "use strict";
     var _constants_ts_12,
       _win32,
@@ -23287,7 +23548,7 @@ System.register(
       resolve,
       sep,
       toNamespacedPath;
-    var __moduleName = context_76 && context_76.id;
+    var __moduleName = context_77 && context_77.id;
     var exportedNames_2 = {
       "win32": true,
       "posix": true,
@@ -23315,7 +23576,7 @@ System.register(
           exports[n] = m[n];
         }
       }
-      exports_76(exports);
+      exports_77(exports);
     }
     return {
       setters: [
@@ -23332,7 +23593,7 @@ System.register(
           exportStar_3(common_ts_6_1);
         },
         function (separator_ts_6_1) {
-          exports_76({
+          exports_77({
             "SEP": separator_ts_6_1["SEP"],
             "SEP_PATTERN": separator_ts_6_1["SEP_PATTERN"],
           });
@@ -23346,22 +23607,22 @@ System.register(
       ],
       execute: function () {
         path = _constants_ts_12.isWindows ? _win32 : _posix;
-        exports_76("win32", win32 = _win32);
-        exports_76("posix", posix = _posix);
-        exports_76("basename", basename = path.basename),
-          exports_76("delimiter", delimiter = path.delimiter),
-          exports_76("dirname", dirname = path.dirname),
-          exports_76("extname", extname = path.extname),
-          exports_76("format", format = path.format),
-          exports_76("fromFileUrl", fromFileUrl = path.fromFileUrl),
-          exports_76("isAbsolute", isAbsolute = path.isAbsolute),
-          exports_76("join", join = path.join),
-          exports_76("normalize", normalize = path.normalize),
-          exports_76("parse", parse = path.parse),
-          exports_76("relative", relative = path.relative),
-          exports_76("resolve", resolve = path.resolve),
-          exports_76("sep", sep = path.sep),
-          exports_76(
+        exports_77("win32", win32 = _win32);
+        exports_77("posix", posix = _posix);
+        exports_77("basename", basename = path.basename),
+          exports_77("delimiter", delimiter = path.delimiter),
+          exports_77("dirname", dirname = path.dirname),
+          exports_77("extname", extname = path.extname),
+          exports_77("format", format = path.format),
+          exports_77("fromFileUrl", fromFileUrl = path.fromFileUrl),
+          exports_77("isAbsolute", isAbsolute = path.isAbsolute),
+          exports_77("join", join = path.join),
+          exports_77("normalize", normalize = path.normalize),
+          exports_77("parse", parse = path.parse),
+          exports_77("relative", relative = path.relative),
+          exports_77("resolve", resolve = path.resolve),
+          exports_77("sep", sep = path.sep),
+          exports_77(
             "toNamespacedPath",
             toNamespacedPath = path.toNamespacedPath,
           );
@@ -23370,12 +23631,12 @@ System.register(
   },
 );
 System.register(
-  "https://deno.land/std/io/util",
-  ["https://deno.land/std/path/mod"],
-  function (exports_77, context_77) {
+  "https://deno.land/std@master/io/util",
+  ["https://deno.land/std@master/path/mod"],
+  function (exports_78, context_78) {
     "use strict";
     var mkdir, open, path;
-    var __moduleName = context_77 && context_77.id;
+    var __moduleName = context_78 && context_78.id;
     /**
      * Copy bytes from one Uint8Array to another.  Bytes from `src` which don't fit
      * into `dst` will not be copied.
@@ -23394,11 +23655,11 @@ System.register(
       dst.set(src, off);
       return src.byteLength;
     }
-    exports_77("copyBytes", copyBytes);
+    exports_78("copyBytes", copyBytes);
     function charCode(s) {
       return s.charCodeAt(0);
     }
-    exports_77("charCode", charCode);
+    exports_78("charCode", charCode);
     /** Create or open a temporal file at specified directory with prefix and
      *  postfix
      * */
@@ -23416,7 +23677,7 @@ System.register(
       });
       return { file, filepath };
     }
-    exports_77("tempFile", tempFile);
+    exports_78("tempFile", tempFile);
     return {
       setters: [
         function (path_2) {
@@ -23435,9 +23696,12 @@ System.register(
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 System.register(
-  "https://deno.land/std/io/bufio",
-  ["https://deno.land/std/io/util", "https://deno.land/std/_util/assert"],
-  function (exports_78, context_78) {
+  "https://deno.land/std@master/io/bufio",
+  [
+    "https://deno.land/std@master/io/util",
+    "https://deno.land/std@master/_util/assert",
+  ],
+  function (exports_79, context_79) {
     "use strict";
     var util_ts_11,
       assert_ts_3,
@@ -23452,7 +23716,7 @@ System.register(
       AbstractBufBase,
       BufWriter,
       BufWriterSync;
-    var __moduleName = context_78 && context_78.id;
+    var __moduleName = context_79 && context_79.id;
     /** Generate longest proper prefix which is also suffix array. */
     function createLPS(pat) {
       const lps = new Uint8Array(pat.length);
@@ -23525,7 +23789,7 @@ System.register(
         inputBuffer = new Deno.Buffer(sliceToProcess);
       }
     }
-    exports_78("readDelim", readDelim);
+    exports_79("readDelim", readDelim);
     /** Read delimited strings from a Reader. */
     async function* readStringDelim(reader, delim) {
       const encoder = new TextEncoder();
@@ -23534,13 +23798,13 @@ System.register(
         yield decoder.decode(chunk);
       }
     }
-    exports_78("readStringDelim", readStringDelim);
+    exports_79("readStringDelim", readStringDelim);
     /** Read strings line-by-line from a Reader. */
     // eslint-disable-next-line require-await
     async function* readLines(reader) {
       yield* readStringDelim(reader, "\n");
     }
-    exports_78("readLines", readLines);
+    exports_79("readLines", readLines);
     return {
       setters: [
         function (util_ts_11_1) {
@@ -23563,7 +23827,7 @@ System.register(
             this.name = "BufferFullError";
           }
         };
-        exports_78("BufferFullError", BufferFullError);
+        exports_79("BufferFullError", BufferFullError);
         PartialReadError = class PartialReadError
           extends Deno.errors.UnexpectedEof {
           constructor() {
@@ -23571,7 +23835,7 @@ System.register(
             this.name = "PartialReadError";
           }
         };
-        exports_78("PartialReadError", PartialReadError);
+        exports_79("PartialReadError", PartialReadError);
         /** BufReader implements buffering for a Reader object. */
         BufReader = class BufReader {
           constructor(rd, size = DEFAULT_BUF_SIZE) {
@@ -23916,7 +24180,7 @@ System.register(
             return this.buf.subarray(this.r, this.r + n);
           }
         };
-        exports_78("BufReader", BufReader);
+        exports_79("BufReader", BufReader);
         AbstractBufBase = class AbstractBufBase {
           constructor() {
             this.usedBufferBytes = 0;
@@ -23965,9 +24229,8 @@ System.register(
           }
           /** return new BufWriter unless writer is BufWriter */
           static create(writer, size = DEFAULT_BUF_SIZE) {
-            return writer instanceof BufWriter
-              ? writer
-              : new BufWriter(writer, size);
+            return writer instanceof BufWriter ? writer
+            : new BufWriter(writer, size);
           }
           /** Discards any unflushed buffered data, clears any error, and
                  * resets buffer to write its output to w.
@@ -24045,7 +24308,7 @@ System.register(
             return totalBytesWritten;
           }
         };
-        exports_78("BufWriter", BufWriter);
+        exports_79("BufWriter", BufWriter);
         /** BufWriterSync implements buffering for a deno.WriterSync object.
              * If an error occurs writing to a WriterSync, no more data will be
              * accepted and all subsequent writes, and flush(), will return the error.
@@ -24144,20 +24407,20 @@ System.register(
             return totalBytesWritten;
           }
         };
-        exports_78("BufWriterSync", BufWriterSync);
+        exports_79("BufWriterSync", BufWriterSync);
       },
     };
   },
 );
 System.register(
-  "https://deno.land/std/log/handlers",
+  "https://deno.land/std@master/log/handlers",
   [
-    "https://deno.land/std/log/levels",
-    "https://deno.land/std/fmt/colors",
-    "https://deno.land/std/fs/exists",
-    "https://deno.land/std/io/bufio",
+    "https://deno.land/std@master/log/levels",
+    "https://deno.land/std@master/fmt/colors",
+    "https://deno.land/std@master/fs/exists",
+    "https://deno.land/std@master/io/bufio",
   ],
-  function (exports_79, context_79) {
+  function (exports_80, context_80) {
     "use strict";
     var open,
       openSync,
@@ -24167,14 +24430,14 @@ System.register(
       levels_ts_1,
       colors_ts_2,
       exists_ts_1,
-      bufio_ts_4,
+      bufio_ts_5,
       DEFAULT_FORMATTER,
       BaseHandler,
       ConsoleHandler,
       WriterHandler,
       FileHandler,
       RotatingFileHandler;
-    var __moduleName = context_79 && context_79.id;
+    var __moduleName = context_80 && context_80.id;
     return {
       setters: [
         function (levels_ts_1_1) {
@@ -24186,8 +24449,8 @@ System.register(
         function (exists_ts_1_1) {
           exists_ts_1 = exists_ts_1_1;
         },
-        function (bufio_ts_4_1) {
-          bufio_ts_4 = bufio_ts_4_1;
+        function (bufio_ts_5_1) {
+          bufio_ts_5 = bufio_ts_5_1;
         },
       ],
       execute: function () {
@@ -24228,7 +24491,7 @@ System.register(
           async setup() {}
           async destroy() {}
         };
-        exports_79("BaseHandler", BaseHandler);
+        exports_80("BaseHandler", BaseHandler);
         ConsoleHandler = class ConsoleHandler extends BaseHandler {
           format(logRecord) {
             let msg = super.format(logRecord);
@@ -24254,7 +24517,7 @@ System.register(
             console.log(msg);
           }
         };
-        exports_79("ConsoleHandler", ConsoleHandler);
+        exports_80("ConsoleHandler", ConsoleHandler);
         WriterHandler = class WriterHandler extends BaseHandler {
           constructor() {
             super(...arguments);
@@ -24262,7 +24525,7 @@ System.register(
           }
           #encoder;
         };
-        exports_79("WriterHandler", WriterHandler);
+        exports_80("WriterHandler", WriterHandler);
         FileHandler = class FileHandler extends WriterHandler {
           constructor(levelName, options) {
             super(levelName, options);
@@ -24283,7 +24546,7 @@ System.register(
           async setup() {
             this._file = await open(this._filename, this._openOptions);
             this._writer = this._file;
-            this._buf = new bufio_ts_4.BufWriterSync(this._file);
+            this._buf = new bufio_ts_5.BufWriterSync(this._file);
             addEventListener("unload", this.#unloadCallback);
           }
           handle(logRecord) {
@@ -24309,7 +24572,7 @@ System.register(
             return Promise.resolve();
           }
         };
-        exports_79("FileHandler", FileHandler);
+        exports_80("FileHandler", FileHandler);
         RotatingFileHandler = class RotatingFileHandler extends FileHandler {
           constructor(levelName, options) {
             super(levelName, options);
@@ -24374,21 +24637,21 @@ System.register(
             }
             this._file = openSync(this._filename, this._openOptions);
             this._writer = this._file;
-            this._buf = new bufio_ts_4.BufWriterSync(this._file);
+            this._buf = new bufio_ts_5.BufWriterSync(this._file);
           }
         };
-        exports_79("RotatingFileHandler", RotatingFileHandler);
+        exports_80("RotatingFileHandler", RotatingFileHandler);
       },
     };
   },
 );
 System.register(
-  "https://deno.land/std/log/logger",
-  ["https://deno.land/std/log/levels"],
-  function (exports_80, context_80) {
+  "https://deno.land/std@master/log/logger",
+  ["https://deno.land/std@master/log/levels"],
+  function (exports_81, context_81) {
     "use strict";
     var levels_ts_2, LogRecord, Logger;
-    var __moduleName = context_80 && context_80.id;
+    var __moduleName = context_81 && context_81.id;
     return {
       setters: [
         function (levels_ts_2_1) {
@@ -24413,7 +24676,7 @@ System.register(
             return new Date(this.#datetime.getTime());
           }
         };
-        exports_80("LogRecord", LogRecord);
+        exports_81("LogRecord", LogRecord);
         Logger = class Logger {
           constructor(levelName, handlers) {
             this.level = levels_ts_2.getLevelByName(levelName);
@@ -24445,20 +24708,20 @@ System.register(
             this._log(levels_ts_2.LogLevels.CRITICAL, msg, ...args);
           }
         };
-        exports_80("Logger", Logger);
+        exports_81("Logger", Logger);
       },
     };
   },
 );
 System.register(
-  "https://deno.land/std/log/mod",
+  "https://deno.land/std@master/log/mod",
   [
-    "https://deno.land/std/log/logger",
-    "https://deno.land/std/log/handlers",
-    "https://deno.land/std/_util/assert",
-    "https://deno.land/std/log/levels",
+    "https://deno.land/std@master/log/logger",
+    "https://deno.land/std@master/log/handlers",
+    "https://deno.land/std@master/_util/assert",
+    "https://deno.land/std@master/log/levels",
   ],
-  function (exports_81, context_81) {
+  function (exports_82, context_82) {
     "use strict";
     var logger_ts_1,
       handlers_ts_1,
@@ -24473,7 +24736,7 @@ System.register(
       warning,
       error,
       critical;
-    var __moduleName = context_81 && context_81.id;
+    var __moduleName = context_82 && context_82.id;
     function getLogger(name) {
       if (!name) {
         const d = state.loggers.get("default");
@@ -24491,7 +24754,7 @@ System.register(
       }
       return result;
     }
-    exports_81("getLogger", getLogger);
+    exports_82("getLogger", getLogger);
     async function setup(config) {
       state.config = {
         handlers: { ...DEFAULT_CONFIG.handlers, ...config.handlers },
@@ -24528,7 +24791,7 @@ System.register(
         state.loggers.set(loggerName, logger);
       }
     }
-    exports_81("setup", setup);
+    exports_82("setup", setup);
     return {
       setters: [
         function (logger_ts_1_1) {
@@ -24541,7 +24804,7 @@ System.register(
           assert_ts_4 = assert_ts_4_1;
         },
         function (levels_ts_3_1) {
-          exports_81({
+          exports_82({
             "LogLevels": levels_ts_3_1["LogLevels"],
           });
         },
@@ -24549,7 +24812,7 @@ System.register(
       execute: async function () {
         LoggerConfig = class LoggerConfig {
         };
-        exports_81("LoggerConfig", LoggerConfig);
+        exports_82("LoggerConfig", LoggerConfig);
         DEFAULT_LEVEL = "INFO";
         DEFAULT_CONFIG = {
           handlers: {
@@ -24567,7 +24830,7 @@ System.register(
           loggers: new Map(),
           config: DEFAULT_CONFIG,
         };
-        exports_81(
+        exports_82(
           "handlers",
           handlers = {
             BaseHandler: handlers_ts_1.BaseHandler,
@@ -24577,24 +24840,24 @@ System.register(
             RotatingFileHandler: handlers_ts_1.RotatingFileHandler,
           },
         );
-        exports_81(
+        exports_82(
           "debug",
           debug = (msg, ...args) => getLogger("default").debug(msg, ...args),
         );
-        exports_81(
+        exports_82(
           "info",
           info = (msg, ...args) => getLogger("default").info(msg, ...args),
         );
-        exports_81(
+        exports_82(
           "warning",
           warning = (msg, ...args) =>
             getLogger("default").warning(msg, ...args),
         );
-        exports_81(
+        exports_82(
           "error",
           error = (msg, ...args) => getLogger("default").error(msg, ...args),
         );
-        exports_81(
+        exports_82(
           "critical",
           critical = (msg, ...args) =>
             getLogger("default").critical(msg, ...args),
@@ -24605,1571 +24868,11 @@ System.register(
   },
 );
 System.register(
-  "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/models/routes",
-  [],
-  function (exports_82, context_82) {
-    "use strict";
-    var Routes;
-    var __moduleName = context_82 && context_82.id;
-    return {
-      setters: [],
-      execute: function () {
-        (function (Routes) {
-          let Methods;
-          (function (Methods) {
-            Methods["DELETE"] = "delete";
-            Methods["GET"] = "get";
-            Methods["HEAD"] = "head";
-            Methods["OPTIONS"] = "options";
-            Methods["PATCH"] = "patch";
-            Methods["POST"] = "post";
-            Methods["PUT"] = "put";
-          })(Methods = Routes.Methods || (Routes.Methods = {}));
-          Routes.isEndpoint = (obj) =>
-            "httpMethod" in obj && "path" in obj && "serviceMethod" in obj;
-        })(Routes || (Routes = {}));
-        exports_82("Routes", Routes);
-      },
-    };
-  },
-);
-// utils is a library of generic helper functions non-specific to soxa
-System.register(
-  "https://deno.land/x/soxa/src/utils",
+  "https://deno.land/std@master/uuid/_common",
   [],
   function (exports_83, context_83) {
     "use strict";
-    var toString;
     var __moduleName = context_83 && context_83.id;
-    // @ts-ignore
-    function isArray(val) {
-      return toString.call(val) === "[object Array]";
-    }
-    exports_83("isArray", isArray);
-    // @ts-ignore
-    function isUndefined(val) {
-      return typeof val === "undefined";
-    }
-    exports_83("isUndefined", isUndefined);
-    // @ts-ignore
-    function isBuffer(val) {
-      return val !== null && !isUndefined(val) && val.constructor !== null &&
-        !isUndefined(val.constructor) &&
-        typeof val.constructor.isBuffer === "function" &&
-        val.constructor.isBuffer(val);
-    }
-    exports_83("isBuffer", isBuffer);
-    // @ts-ignore
-    function isArrayBuffer(val) {
-      return toString.call(val) === "[object ArrayBuffer]";
-    }
-    exports_83("isArrayBuffer", isArrayBuffer);
-    // @ts-ignore
-    function isFormData(val) {
-      return (typeof FormData !== "undefined") && (val instanceof FormData);
-    }
-    exports_83("isFormData", isFormData);
-    // @ts-ignore
-    function isArrayBufferView(val) {
-      var result;
-      if ((typeof ArrayBuffer !== "undefined") && (ArrayBuffer.isView)) {
-        result = ArrayBuffer.isView(val);
-      } else {
-        result = (val) && (val.buffer) && (val.buffer instanceof ArrayBuffer);
-      }
-      return result;
-    }
-    exports_83("isArrayBufferView", isArrayBufferView);
-    // @ts-ignore
-    function isObject(val) {
-      return val !== null && typeof val === "object";
-    }
-    exports_83("isObject", isObject);
-    // @ts-ignore
-    function isDate(val) {
-      return toString.call(val) === "[object Date]";
-    }
-    exports_83("isDate", isDate);
-    // @ts-ignore
-    function isFile(val) {
-      return toString.call(val) === "[object File]";
-    }
-    exports_83("isFile", isFile);
-    // @ts-ignore
-    function isBlob(val) {
-      return toString.call(val) === "[object Blob]";
-    }
-    exports_83("isBlob", isBlob);
-    // @ts-ignore
-    function isFunction(val) {
-      return toString.call(val) === "[object Function]";
-    }
-    // @ts-ignore
-    function isStream(val) {
-      return isObject(val) && isFunction(val.pipe);
-    }
-    exports_83("isStream", isStream);
-    // @ts-ignore
-    function isURLSearchParams(val) {
-      return typeof URLSearchParams !== "undefined" &&
-        val instanceof URLSearchParams;
-    }
-    exports_83("isURLSearchParams", isURLSearchParams);
-    // @ts-ignore
-    function forEach(obj, fn) {
-      // Don't bother if no value provided
-      if (obj === null || typeof obj === "undefined") {
-        return;
-      }
-      // Force an array if not already something iterable
-      if (typeof obj !== "object") {
-        /*eslint no-param-reassign:0*/
-        obj = [obj];
-      }
-      if (isArray(obj)) {
-        // Iterate over array values
-        for (var i = 0, l = obj.length; i < l; i++) {
-          fn.call(null, obj[i], i, obj);
-        }
-      } else {
-        // Iterate over object keys
-        for (var key in obj) {
-          if (Object.prototype.hasOwnProperty.call(obj, key)) {
-            fn.call(null, obj[key], key, obj);
-          }
-        }
-      }
-    }
-    exports_83("forEach", forEach);
-    /**
-     * Accepts varargs expecting each argument to be an object, then
-     * immutably merges the properties of each object and returns result.
-     *
-     * When multiple objects contain the same key the later object in
-     * the arguments list will take precedence.
-     *
-     * Example:
-     *
-     * ```js
-     * var result = merge({foo: 123}, {foo: 456});
-     * console.log(result.foo); // outputs 456
-     * ```
-     *
-     * @param {Object} obj1 Object to merge
-     * @returns {Object} Result of all merge properties
-     */
-    function merge(...args) {
-      var result = {};
-      // @ts-ignore
-      function assignValue(val, key) {
-        // @ts-ignore
-        if (typeof result[key] === "object" && typeof val === "object") {
-          // @ts-ignore
-          result[key] = merge(result[key], val);
-        } else {
-          // @ts-ignore
-          result[key] = val;
-        }
-      }
-      for (var i = 0, l = arguments.length; i < l; i++) {
-        forEach(arguments[i], assignValue);
-      }
-      return result;
-    }
-    exports_83("merge", merge);
-    /**
-     * Function equal to merge with the difference being that no reference
-     * to original objects is kept.
-     *
-     * @see merge
-     * @param {Object} obj1 Object to merge
-     * @returns {Object} Result of all merge properties
-     */
-    function deepMerge(...args) {
-      var result = {};
-      // @ts-ignore
-      function assignValue(val, key) {
-        // @ts-ignore
-        if (typeof result[key] === "object" && typeof val === "object") {
-          // @ts-ignore
-          result[key] = deepMerge(result[key], val);
-        } else if (typeof val === "object") {
-          // @ts-ignore
-          result[key] = deepMerge({}, val);
-        } else {
-          // @ts-ignore
-          result[key] = val;
-        }
-      }
-      for (var i = 0, l = arguments.length; i < l; i++) {
-        forEach(arguments[i], assignValue);
-      }
-      return result;
-    }
-    exports_83("deepMerge", deepMerge);
-    return {
-      setters: [],
-      execute: function () {
-        toString = Object.prototype.toString;
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/src/helpers/buildURL",
-  ["https://deno.land/x/soxa/src/utils"],
-  function (exports_84, context_84) {
-    "use strict";
-    var utils, buildURL;
-    var __moduleName = context_84 && context_84.id;
-    function encode(val) {
-      return encodeURIComponent(val)
-        .replace(/%40/gi, "@")
-        .replace(/%3A/gi, ":")
-        .replace(/%24/g, "$")
-        .replace(/%2C/gi, ",")
-        .replace(/%20/g, "+")
-        .replace(/%5B/gi, "[")
-        .replace(/%5D/gi, "]");
-    }
-    return {
-      setters: [
-        function (utils_1) {
-          utils = utils_1;
-        },
-      ],
-      execute: function () {
-        /**
-             * Build a URL by appending params to the end
-             *
-             * @param {string} url The base of the url (e.g., http://www.google.com)
-             * @param {object} [params] The params to be appended
-             * @returns {string} The formatted url
-             */
-        buildURL = function (url, params, paramsSerializer) {
-          /*eslint no-param-reassign:0*/
-          if (!params) {
-            return url;
-          }
-          let serializedParams;
-          if (paramsSerializer) {
-            serializedParams = paramsSerializer(params);
-          } else if (utils.isURLSearchParams(params)) {
-            serializedParams = params.toString();
-          } else {
-            // @ts-ignore
-            var parts = [];
-            // @ts-ignore
-            utils.forEach(params, function serialize(val, key) {
-              if (val === null || typeof val === "undefined") {
-                return;
-              }
-              if (utils.isArray(val)) {
-                key = key + "[]";
-              } else {
-                val = [val];
-              }
-              // @ts-ignore
-              utils.forEach(val, function parseValue(v) {
-                if (utils.isDate(v)) {
-                  v = v.toISOString();
-                } else if (utils.isObject(v)) {
-                  v = JSON.stringify(v);
-                }
-                parts.push(encode(key) + "=" + encode(v));
-              });
-            });
-            // @ts-ignore
-            serializedParams = parts.join("&");
-          }
-          if (serializedParams) {
-            var hashmarkIndex = url.indexOf("#");
-            if (hashmarkIndex !== -1) {
-              url = url.slice(0, hashmarkIndex);
-            }
-            url += (url.indexOf("?") === -1 ? "?" : "&") + serializedParams;
-          }
-          return url;
-        };
-        exports_84("buildURL", buildURL);
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/src/core/InterceptorManager",
-  ["https://deno.land/x/soxa/src/utils"],
-  function (exports_85, context_85) {
-    "use strict";
-    var utils, InterceptorManager;
-    var __moduleName = context_85 && context_85.id;
-    return {
-      setters: [
-        function (utils_2) {
-          utils = utils_2;
-        },
-      ],
-      execute: function () {
-        InterceptorManager = class InterceptorManager {
-          constructor() {
-            this.handlers = [];
-          }
-          // @ts-ignore
-          use(fulfilled, rejected) {
-            this.handlers.push({
-              fulfilled: fulfilled,
-              rejected: rejected,
-            });
-            return this.handlers.length - 1;
-          }
-          eject(id) {
-            if (this.handlers[id]) {
-              // @ts-ignore
-              this.handlers[id] = null;
-            }
-          }
-          // @ts-ignore
-          forEach(fn) {
-            // @ts-ignore
-            utils.forEach(this.handlers, function forEachHandler(h) {
-              if (h !== null) {
-                fn(h);
-              }
-            });
-          }
-        };
-        exports_85("InterceptorManager", InterceptorManager);
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/src/core/transformData",
-  ["https://deno.land/x/soxa/src/utils"],
-  function (exports_86, context_86) {
-    "use strict";
-    var utils, transformData;
-    var __moduleName = context_86 && context_86.id;
-    return {
-      setters: [
-        function (utils_3) {
-          utils = utils_3;
-        },
-      ],
-      execute: function () {
-        // @ts-ignore
-        transformData = function (data, headers, fns) {
-          // @ts-ignore
-          utils.forEach(fns, function transform(fn) {
-            data = fn(data, headers);
-          });
-          return data;
-        };
-        exports_86("transformData", transformData);
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/src/cancel/isCancel",
-  [],
-  function (exports_87, context_87) {
-    "use strict";
-    var isCancel;
-    var __moduleName = context_87 && context_87.id;
-    return {
-      setters: [],
-      execute: function () {
-        // @ts-ignore
-        isCancel = function (value) {
-          return !!(value && value.__CANCEL__);
-        };
-        exports_87("isCancel", isCancel);
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/src/helpers/normalizeHeaderName",
-  ["https://deno.land/x/soxa/src/utils"],
-  function (exports_88, context_88) {
-    "use strict";
-    var utils, normalizeHeaderName;
-    var __moduleName = context_88 && context_88.id;
-    return {
-      setters: [
-        function (utils_4) {
-          utils = utils_4;
-        },
-      ],
-      execute: function () {
-        normalizeHeaderName = function (headers, normalizedName) {
-          utils.forEach(headers, function processHeader(value, name) {
-            if (
-              name !== normalizedName &&
-              name.toUpperCase() === normalizedName.toUpperCase()
-            ) {
-              // @ts-ignore
-              headers[normalizedName] = value;
-              // @ts-ignore
-              delete headers[name];
-            }
-          });
-        };
-        exports_88("normalizeHeaderName", normalizeHeaderName);
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/src/core/enhanceError",
-  [],
-  function (exports_89, context_89) {
-    "use strict";
-    var enhanceError;
-    var __moduleName = context_89 && context_89.id;
-    return {
-      setters: [],
-      execute: function () {
-        // @ts-ignore
-        enhanceError = function (error, config, code, request, response) {
-          error.config = config;
-          if (code) {
-            error.code = code;
-          }
-          error.request = request;
-          error.response = response;
-          error.isSoxaError = true;
-          error.toJSON = function () {
-            return {
-              // Standard
-              message: this.message,
-              name: this.name,
-              // Microsoft
-              description: this.description,
-              number: this.number,
-              // Mozilla
-              fileName: this.fileName,
-              lineNumber: this.lineNumber,
-              columnNumber: this.columnNumber,
-              stack: this.stack,
-              // Soxa
-              config: this.config,
-              code: this.code,
-            };
-          };
-          return error;
-        };
-        exports_89("enhanceError", enhanceError);
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/src/core/createError",
-  ["https://deno.land/x/soxa/src/core/enhanceError"],
-  function (exports_90, context_90) {
-    "use strict";
-    var enhanceError_ts_1, createError;
-    var __moduleName = context_90 && context_90.id;
-    return {
-      setters: [
-        function (enhanceError_ts_1_1) {
-          enhanceError_ts_1 = enhanceError_ts_1_1;
-        },
-      ],
-      execute: function () {
-        /**
-             * Create an Error with the specified message, config, error code, request and response.
-             *
-             * @param {string} message The error message.
-             * @param {Object} config The config.
-             * @param {string} [code] The error code (for example, 'ECONNABORTED').
-             * @param {Object} [request] The request.
-             * @param {Object} [response] The response.
-             * @returns {Error} The created error.
-             */
-        createError = function (message, config, code, request, response) {
-          var error = new Error(message);
-          return enhanceError_ts_1.enhanceError(
-            error,
-            config,
-            code,
-            request,
-            response,
-          );
-        };
-        exports_90("createError", createError);
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/src/core/settle",
-  ["https://deno.land/x/soxa/src/core/createError"],
-  function (exports_91, context_91) {
-    "use strict";
-    var createError_ts_1, settle;
-    var __moduleName = context_91 && context_91.id;
-    return {
-      setters: [
-        function (createError_ts_1_1) {
-          createError_ts_1 = createError_ts_1_1;
-        },
-      ],
-      execute: function () {
-        // @ts-ignore
-        settle = function (resolve, reject, response) {
-          var validateStatus = response.config.validateStatus;
-          if (!validateStatus || validateStatus(response.status)) {
-            resolve(response);
-          } else {
-            reject(
-              createError_ts_1.createError(
-                "Request failed with status code " + response.status,
-                response.config,
-                null,
-                response.request,
-                response,
-              ),
-            );
-          }
-        };
-        exports_91("settle", settle);
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/src/helpers/isAbsoluteURL",
-  [],
-  function (exports_92, context_92) {
-    "use strict";
-    var isAbsoluteURL;
-    var __moduleName = context_92 && context_92.id;
-    return {
-      setters: [],
-      execute: function () {
-        /**
-             * Determines whether the specified URL is absolute
-             *
-             * @param {string} url The URL to test
-             * @returns {boolean} True if the specified URL is absolute, otherwise false
-             */
-        isAbsoluteURL = function (url) {
-          // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
-          // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
-          // by any combination of letters, digits, plus, period, or hyphen.
-          return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
-        };
-        exports_92("isAbsoluteURL", isAbsoluteURL);
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/src/helpers/combineURLs",
-  [],
-  function (exports_93, context_93) {
-    "use strict";
-    var combineURLs;
-    var __moduleName = context_93 && context_93.id;
-    return {
-      setters: [],
-      execute: function () {
-        /**
-             * Creates a new URL by combining the specified URLs
-             *
-             * @param {string} baseURL The base URL
-             * @param {string} relativeURL The relative URL
-             * @returns {string} The combined URL
-             */
-        combineURLs = function (baseURL, relativeURL) {
-          return relativeURL
-            ? baseURL.replace(/\/+$/, "") + "/" +
-              relativeURL.replace(/^\/+/, "")
-            : baseURL;
-        };
-        exports_93("combineURLs", combineURLs);
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/src/core/buildFullPath",
-  [
-    "https://deno.land/x/soxa/src/helpers/isAbsoluteURL",
-    "https://deno.land/x/soxa/src/helpers/combineURLs",
-  ],
-  function (exports_94, context_94) {
-    "use strict";
-    var isAbsoluteURL_ts_1, combineURLs_ts_1, buildFullPath;
-    var __moduleName = context_94 && context_94.id;
-    return {
-      setters: [
-        function (isAbsoluteURL_ts_1_1) {
-          isAbsoluteURL_ts_1 = isAbsoluteURL_ts_1_1;
-        },
-        function (combineURLs_ts_1_1) {
-          combineURLs_ts_1 = combineURLs_ts_1_1;
-        },
-      ],
-      execute: function () {
-        /**
-             * Creates a new URL by combining the baseURL with the requestedURL,
-             * only when the requestedURL is not already an absolute URL.
-             * If the requestURL is absolute, this function returns the requestedURL untouched.
-             *
-             * @param {string} baseURL The base URL
-             * @param {string} requestedURL Absolute or relative URL to combine
-             * @returns {string} The combined full path
-             */
-        buildFullPath = function (baseURL, requestedURL) {
-          if (baseURL && !isAbsoluteURL_ts_1.isAbsoluteURL(requestedURL)) {
-            return combineURLs_ts_1.combineURLs(baseURL, requestedURL);
-          }
-          return requestedURL;
-        };
-        exports_94("buildFullPath", buildFullPath);
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/src/adapters/fetchAdapter",
-  [
-    "https://deno.land/x/soxa/src/core/settle",
-    "https://deno.land/x/soxa/src/helpers/buildURL",
-    "https://deno.land/x/soxa/src/core/buildFullPath",
-  ],
-  function (exports_95, context_95) {
-    "use strict";
-    var settle_ts_1, buildURL_ts_1, buildFullPath_ts_1, fetchAdapter;
-    var __moduleName = context_95 && context_95.id;
-    return {
-      setters: [
-        function (settle_ts_1_1) {
-          settle_ts_1 = settle_ts_1_1;
-        },
-        function (buildURL_ts_1_1) {
-          buildURL_ts_1 = buildURL_ts_1_1;
-        },
-        function (buildFullPath_ts_1_1) {
-          buildFullPath_ts_1 = buildFullPath_ts_1_1;
-        },
-      ],
-      execute: function () {
-        // @ts-ignore
-        fetchAdapter = function (config) {
-          // At this point:
-          //  - config has been merged with defaults
-          //  - request transformers have already run
-          //  - request interceptors have already run
-          // Make the request using config provided
-          // Upon response settle the Promise
-          return new Promise(function (resolve, reject) {
-            let fullPath = buildFullPath_ts_1.buildFullPath(
-              config.baseURL,
-              config.url,
-            );
-            let parsed = new URL(fullPath);
-            //let protocol = parsed.protocol || 'http:'
-            let path = buildURL_ts_1.buildURL(
-              parsed.href,
-              config.params,
-              config.paramsSerializer,
-            ).replace(/^\?/, "");
-            let headers = config.headers;
-            // HTTP basic authentication
-            var auth = undefined;
-            if (config.auth) {
-              var username = config.auth.username || "";
-              var password = config.auth.password || "";
-              auth = username + ":" + password;
-            }
-            if (auth) {
-              delete headers.Authorization;
-            }
-            let options = {
-              method: config.method.toUpperCase(),
-              body: config.data,
-              headers: headers,
-            };
-            if (auth) {
-              options.headers["Authorization"] = `Basic ${btoa(auth)}`;
-            }
-            fetch(path, options)
-              .then(
-                ((res) => {
-                  let h = {};
-                  for (let [key, value] of res.headers) {
-                    // @ts-ignore
-                    h[key] = value;
-                  }
-                  res.text()
-                    .then((data) => {
-                      var response = {
-                        data: data,
-                        status: res.status,
-                        statusText: res.statusText,
-                        headers: h,
-                        config: config,
-                      };
-                      settle_ts_1.settle(resolve, reject, response);
-                    });
-                }),
-              )
-              .catch((er) => {
-                reject(er);
-              });
-            // From here:
-            //  - response transformers will run
-            //  - response interceptors will run
-          });
-        };
-        exports_95("fetchAdapter", fetchAdapter);
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/src/defaults",
-  [
-    "https://deno.land/x/soxa/src/utils",
-    "https://deno.land/x/soxa/src/helpers/normalizeHeaderName",
-    "https://deno.land/x/soxa/src/adapters/fetchAdapter",
-  ],
-  function (exports_96, context_96) {
-    "use strict";
-    var utils,
-      normalizeHeaderName_ts_1,
-      fetchAdapter_ts_1,
-      DEFAULT_CONTENT_TYPE,
-      defaults;
-    var __moduleName = context_96 && context_96.id;
-    // @ts-ignore
-    function setContentTypeIfUnset(headers, value) {
-      if (
-        !utils.isUndefined(headers) &&
-        utils.isUndefined(headers["Content-Type"])
-      ) {
-        headers["Content-Type"] = value;
-      }
-    }
-    function getDefaultAdapter() {
-      return fetchAdapter_ts_1.fetchAdapter;
-    }
-    return {
-      setters: [
-        function (utils_5) {
-          utils = utils_5;
-        },
-        function (normalizeHeaderName_ts_1_1) {
-          normalizeHeaderName_ts_1 = normalizeHeaderName_ts_1_1;
-        },
-        function (fetchAdapter_ts_1_1) {
-          fetchAdapter_ts_1 = fetchAdapter_ts_1_1;
-        },
-      ],
-      execute: function () {
-        DEFAULT_CONTENT_TYPE = {
-          "Content-Type": "application/x-www-form-urlencoded",
-        };
-        defaults = {
-          headers: {
-            common: {
-              "Accept": "application/json, text/plain, */*",
-            },
-            delete: {},
-            get: {},
-            head: {},
-            post: utils.merge(DEFAULT_CONTENT_TYPE),
-            put: utils.merge(DEFAULT_CONTENT_TYPE),
-            patch: utils.merge(DEFAULT_CONTENT_TYPE),
-          },
-          adapter: getDefaultAdapter(),
-          // @ts-ignore
-          transformRequest: [function transformRequest(data, headers) {
-            normalizeHeaderName_ts_1.normalizeHeaderName(headers, "Accept");
-            normalizeHeaderName_ts_1.normalizeHeaderName(
-              headers,
-              "Content-Type",
-            );
-            if (
-              utils.isFormData(data) ||
-              utils.isArrayBuffer(data) ||
-              utils.isBuffer(data) ||
-              utils.isStream(data) ||
-              utils.isFile(data) ||
-              utils.isBlob(data)
-            ) {
-              return data;
-            }
-            if (utils.isArrayBufferView(data)) {
-              return data.buffer;
-            }
-            if (utils.isURLSearchParams(data)) {
-              setContentTypeIfUnset(
-                headers,
-                "application/x-www-form-urlencoded;charset=utf-8",
-              );
-              return data.toString();
-            }
-            if (utils.isObject(data)) {
-              setContentTypeIfUnset(headers, "application/json;charset=utf-8");
-              return JSON.stringify(data);
-            }
-            return data;
-          }],
-          // @ts-ignore
-          transformResponse: [function transformResponse(data) {
-            /*eslint no-param-reassign:0*/
-            if (typeof data === "string") {
-              try {
-                data = JSON.parse(data);
-              } catch (e) { /* Ignore */ }
-            }
-            return data;
-          }],
-          /**
-                 * A timeout in milliseconds to abort a request. If set to 0 (default) a
-                 * timeout is not created.
-                 */
-          timeout: 0,
-          xsrfCookieName: "XSRF-TOKEN",
-          xsrfHeaderName: "X-XSRF-TOKEN",
-          maxContentLength: -1,
-          // @ts-ignore
-          validateStatus: function validateStatus(status) {
-            return status >= 200 && status < 300;
-          },
-        };
-        exports_96("defaults", defaults);
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/src/core/dispatchRequest",
-  [
-    "https://deno.land/x/soxa/src/utils",
-    "https://deno.land/x/soxa/src/core/transformData",
-    "https://deno.land/x/soxa/src/cancel/isCancel",
-    "https://deno.land/x/soxa/src/defaults",
-  ],
-  function (exports_97, context_97) {
-    "use strict";
-    var utils,
-      transformData_ts_1,
-      isCancel_ts_1,
-      defaults_ts_1,
-      dispatchRequest;
-    var __moduleName = context_97 && context_97.id;
-    // @ts-ignore
-    function throwIfCancellationRequested(config) {
-      if (config.cancelToken) {
-        config.cancelToken.throwIfRequested();
-      }
-    }
-    return {
-      setters: [
-        function (utils_6) {
-          utils = utils_6;
-        },
-        function (transformData_ts_1_1) {
-          transformData_ts_1 = transformData_ts_1_1;
-        },
-        function (isCancel_ts_1_1) {
-          isCancel_ts_1 = isCancel_ts_1_1;
-        },
-        function (defaults_ts_1_1) {
-          defaults_ts_1 = defaults_ts_1_1;
-        },
-      ],
-      execute: function () {
-        // @ts-ignore
-        dispatchRequest = function (config) {
-          throwIfCancellationRequested(config);
-          // Ensure headers exist
-          config.headers = config.headers || {};
-          // Transform request data
-          config.data = transformData_ts_1.transformData(
-            config.data,
-            config.headers,
-            config.transformRequest,
-          );
-          // Flatten headers
-          config.headers = utils.merge(
-            config.headers.common || {},
-            config.headers[config.method] || {},
-            config.headers || {},
-          );
-          utils.forEach(
-            ["delete", "get", "head", "post", "put", "patch", "common"],
-            function cleanHeaderConfig(method) {
-              delete config.headers[method];
-            },
-          );
-          let adapter = config.adapter || defaults_ts_1.defaults.adapter;
-          // @ts-ignore
-          return adapter(config).then(function onAdapterResolution(response) {
-            throwIfCancellationRequested(config);
-            // Transform response data
-            response.data = transformData_ts_1.transformData(
-              response.data,
-              response.headers,
-              config.transformResponse,
-            );
-            return response;
-          }, // @ts-ignore
-          function onAdapterRejection(reason) {
-            if (!isCancel_ts_1.isCancel(reason)) {
-              throwIfCancellationRequested(config);
-              // Transform response data
-              if (reason && reason.response) {
-                reason.response.data = transformData_ts_1.transformData(
-                  reason.response.data,
-                  reason.response.headers,
-                  config.transformResponse,
-                );
-              }
-            }
-            return Promise.reject(reason);
-          });
-        };
-        exports_97("dispatchRequest", dispatchRequest);
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/src/core/mergeConfig",
-  ["https://deno.land/x/soxa/src/utils"],
-  function (exports_98, context_98) {
-    "use strict";
-    var utils, mergeConfig;
-    var __moduleName = context_98 && context_98.id;
-    return {
-      setters: [
-        function (utils_7) {
-          utils = utils_7;
-        },
-      ],
-      execute: function () {
-        // @ts-ignore
-        mergeConfig = function (config1, config2) {
-          // eslint-disable-next-line no-param-reassign
-          config2 = config2 || {};
-          var config = {};
-          var valueFromConfig2Keys = ["url", "method", "params", "data"];
-          var mergeDeepPropertiesKeys = ["headers", "auth", "proxy"];
-          var defaultToConfig2Keys = [
-            "baseURL",
-            "url",
-            "transformRequest",
-            "transformResponse",
-            "paramsSerializer",
-            "timeout",
-            "withCredentials",
-            "adapter",
-            "responseType",
-            "xsrfCookieName",
-            "xsrfHeaderName",
-            "onUploadProgress",
-            "onDownloadProgress",
-            "maxContentLength",
-            "validateStatus",
-            "maxRedirects",
-            "httpAgent",
-            "httpsAgent",
-            "cancelToken",
-            "socketPath",
-          ];
-          utils.forEach(valueFromConfig2Keys, function valueFromConfig2(prop) {
-            if (typeof config2[prop] !== "undefined") {
-              // @ts-ignore
-              config[prop] = config2[prop];
-            }
-          });
-          utils.forEach(
-            mergeDeepPropertiesKeys,
-            function mergeDeepProperties(prop) {
-              if (utils.isObject(config2[prop])) {
-                // @ts-ignore
-                config[prop] = utils.deepMerge(config1[prop], config2[prop]);
-              } else if (typeof config2[prop] !== "undefined") {
-                // @ts-ignore
-                config[prop] = config2[prop];
-              } else if (utils.isObject(config1[prop])) {
-                // @ts-ignore
-                config[prop] = utils.deepMerge(config1[prop]);
-              } else if (typeof config1[prop] !== "undefined") {
-                // @ts-ignore
-                config[prop] = config1[prop];
-              }
-            },
-          );
-          utils.forEach(defaultToConfig2Keys, function defaultToConfig2(prop) {
-            if (typeof config2[prop] !== "undefined") {
-              // @ts-ignore
-              config[prop] = config2[prop];
-            } else if (typeof config1[prop] !== "undefined") {
-              // @ts-ignore
-              config[prop] = config1[prop];
-            }
-          });
-          var soxaKeys = valueFromConfig2Keys
-            .concat(mergeDeepPropertiesKeys)
-            .concat(defaultToConfig2Keys);
-          var otherKeys = Object
-            .keys(config2)
-            .filter(function filterSoxaKeys(key) {
-              return soxaKeys.indexOf(key) === -1;
-            });
-          utils.forEach(otherKeys, function otherKeysDefaultToConfig2(prop) {
-            if (typeof config2[prop] !== "undefined") {
-              // @ts-ignore
-              config[prop] = config2[prop];
-            } else if (typeof config1[prop] !== "undefined") {
-              // @ts-ignore
-              config[prop] = config1[prop];
-            }
-          });
-          return config;
-        };
-        exports_98("mergeConfig", mergeConfig);
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/src/core/Soxa",
-  [
-    "https://deno.land/x/soxa/src/utils",
-    "https://deno.land/x/soxa/src/helpers/buildURL",
-    "https://deno.land/x/soxa/src/core/InterceptorManager",
-    "https://deno.land/x/soxa/src/core/dispatchRequest",
-    "https://deno.land/x/soxa/src/core/mergeConfig",
-  ],
-  function (exports_99, context_99) {
-    "use strict";
-    var utils,
-      buildURL_ts_2,
-      InterceptorManager_ts_1,
-      dispatchRequest_ts_1,
-      mergeConfig_ts_1,
-      Soxa;
-    var __moduleName = context_99 && context_99.id;
-    return {
-      setters: [
-        function (utils_8) {
-          utils = utils_8;
-        },
-        function (buildURL_ts_2_1) {
-          buildURL_ts_2 = buildURL_ts_2_1;
-        },
-        function (InterceptorManager_ts_1_1) {
-          InterceptorManager_ts_1 = InterceptorManager_ts_1_1;
-        },
-        function (dispatchRequest_ts_1_1) {
-          dispatchRequest_ts_1 = dispatchRequest_ts_1_1;
-        },
-        function (mergeConfig_ts_1_1) {
-          mergeConfig_ts_1 = mergeConfig_ts_1_1;
-        },
-      ],
-      execute: function () {
-        Soxa = class Soxa {
-          // @ts-ignore
-          constructor(instanceConfig) {
-            this.defaults = instanceConfig;
-            this.interceptors = {
-              request: new InterceptorManager_ts_1.InterceptorManager(),
-              response: new InterceptorManager_ts_1.InterceptorManager(),
-            };
-          }
-          // @ts-ignore
-          request(config) {
-            // Allow for soxa('example/url'[, config]) a la fetch API
-            if (typeof config === "string") {
-              config = arguments[1] || {};
-              config.url = arguments[0];
-            } else {
-              config = config || {};
-            }
-            config = mergeConfig_ts_1.mergeConfig(this.defaults, config);
-            // Set config.method
-            if (config.method) {
-              config.method = config.method.toLowerCase();
-            } else if (this.defaults.method) {
-              config.method = this.defaults.method.toLowerCase();
-            } else {
-              config.method = "get";
-            }
-            let chain = [dispatchRequest_ts_1.dispatchRequest, undefined];
-            let promise = Promise.resolve(config);
-            // @ts-ignore
-            this.interceptors.request.forEach(
-              function unshiftRequestInterceptors(interceptor) {
-                chain.unshift(interceptor.fulfilled, interceptor.rejected);
-              },
-            );
-            // @ts-ignore
-            this.interceptors.response.forEach(
-              function pushResponseInterceptors(interceptor) {
-                chain.push(interceptor.fulfilled, interceptor.rejected);
-              },
-            );
-            while (chain.length) {
-              promise = promise.then(chain.shift(), chain.shift());
-            }
-            return promise;
-          }
-          // @ts-ignore
-          getUri(config) {
-            config = mergeConfig_ts_1.mergeConfig(this.defaults, config);
-            return buildURL_ts_2.buildURL(
-              config.url,
-              config.params,
-              config.paramsSerializer,
-            ).replace(/^\?/, "");
-          }
-          requestURL(url, method, config) {
-            return this.request(utils.merge(config || {}, {
-              method: method,
-              url: url,
-            }));
-          }
-          requestData(url, data, method, config) {
-            return this.request(utils.merge(config || {}, {
-              method: method,
-              url: url,
-              data: data,
-            }));
-          }
-          // @ts-ignore
-          delete(url, config) {
-            return this.requestURL(url, "delete", config);
-          }
-          // @ts-ignore
-          get(url, config) {
-            return this.requestURL(url, "get", config);
-          }
-          // @ts-ignore
-          head(url, config) {
-            return this.requestURL(url, "head", config);
-          }
-          // @ts-ignore
-          options(url, config) {
-            return this.requestURL(url, "options", config);
-          }
-          post(url, data, config) {
-            return this.requestData(url, data, "post", config);
-          }
-          put(url, data, config) {
-            return this.requestData(url, data, "put", config);
-          }
-          patch(url, data, config) {
-            return this.requestData(url, data, "patch", config);
-          }
-        };
-        exports_99("Soxa", Soxa);
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/src/soxa",
-  [
-    "https://deno.land/x/soxa/src/core/Soxa",
-    "https://deno.land/x/soxa/src/defaults",
-  ],
-  function (exports_100, context_100) {
-    "use strict";
-    var Soxa_ts_1, defaults_ts_2, soxa;
-    var __moduleName = context_100 && context_100.id;
-    return {
-      setters: [
-        function (Soxa_ts_1_1) {
-          Soxa_ts_1 = Soxa_ts_1_1;
-        },
-        function (defaults_ts_2_1) {
-          defaults_ts_2 = defaults_ts_2_1;
-        },
-      ],
-      execute: function () {
-        soxa = new Soxa_ts_1.Soxa(defaults_ts_2.defaults);
-        exports_100("soxa", soxa);
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/x/soxa/mod",
-  ["https://deno.land/x/soxa/src/soxa"],
-  function (exports_101, context_101) {
-    "use strict";
-    var __moduleName = context_101 && context_101.id;
-    return {
-      setters: [
-        function (soxa_ts_1_1) {
-          exports_101({
-            "soxa": soxa_ts_1_1["soxa"],
-          });
-        },
-      ],
-      execute: function () {
-      },
-    };
-  },
-);
-System.register(
-  "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/constants",
-  [],
-  function (exports_102, context_102) {
-    "use strict";
-    var Constants;
-    var __moduleName = context_102 && context_102.id;
-    return {
-      setters: [],
-      execute: function () {
-        Constants = /** @class */ (() => {
-          class Constants {
-          }
-          Constants.APP_NAME = "rest-api";
-          Constants.PORT = 8000;
-          Constants.BASE_PATH = "/api/v1/";
-          Constants.CONTROLLER_DIRECTORY = "./src/controllers";
-          Constants.CORRELATION_ID_HEADER = "X-Correlation-ID";
-          return Constants;
-        })();
-        exports_102("default", Constants);
-      },
-    };
-  },
-);
-System.register(
-  "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/service/interface/health",
-  [],
-  function (exports_103, context_103) {
-    "use strict";
-    var __moduleName = context_103 && context_103.id;
-    return {
-      setters: [],
-      execute: function () {
-      },
-    };
-  },
-);
-System.register(
-  "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/service/implementation/health",
-  [
-    "https://deno.land/x/soxa/mod",
-    "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/constants",
-  ],
-  function (exports_104, context_104) {
-    "use strict";
-    var mod_ts_14, constants_1, HealthService;
-    var __moduleName = context_104 && context_104.id;
-    return {
-      setters: [
-        function (mod_ts_14_1) {
-          mod_ts_14 = mod_ts_14_1;
-        },
-        function (constants_1_1) {
-          constants_1 = constants_1_1;
-        },
-      ],
-      execute: function () {
-        HealthService = class HealthService {
-          constructor() {
-            this.getTime = async (context) => {
-              context.response.body = {
-                serverTime: Date.now(),
-              };
-            };
-            this.getInfo = async ({ response }) => {
-              const ipIfyBaseURL = "http://api.ipify.org";
-              const options = {
-                params: {
-                  format: "json",
-                },
-              };
-              await mod_ts_14.soxa.get(ipIfyBaseURL, options)
-                .then((res) => {
-                  response.body = {
-                    app: constants_1.default.APP_NAME,
-                    status: "UP",
-                    ipAddress: res.data.ip,
-                  };
-                })
-                .catch((err) => {
-                  throw new Error(err);
-                });
-            };
-          }
-        };
-        exports_104("HealthService", HealthService);
-      },
-    };
-  },
-);
-System.register(
-  "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/controllers/health",
-  [
-    "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/models/routes",
-    "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/service/implementation/health",
-  ],
-  function (exports_105, context_105) {
-    "use strict";
-    var routes_ts_1, health_ts_1, GET, health;
-    var __moduleName = context_105 && context_105.id;
-    return {
-      setters: [
-        function (routes_ts_1_1) {
-          routes_ts_1 = routes_ts_1_1;
-        },
-        function (health_ts_1_1) {
-          health_ts_1 = health_ts_1_1;
-        },
-      ],
-      execute: function () {
-        GET = routes_ts_1.Routes.Methods.GET;
-        health = [
-          {
-            httpMethod: GET,
-            path: "",
-            serviceMethod: new health_ts_1.HealthService().getTime,
-          },
-          {
-            httpMethod: GET,
-            path: "/info",
-            serviceMethod: new health_ts_1.HealthService().getInfo,
-          },
-        ];
-        exports_105("default", health);
-      },
-    };
-  },
-);
-System.register(
-  "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/service/interface/service",
-  [],
-  function (exports_106, context_106) {
-    "use strict";
-    var __moduleName = context_106 && context_106.id;
-    return {
-      setters: [],
-      execute: function () {
-      },
-    };
-  },
-);
-System.register(
-  "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/service/implementation/products",
-  [],
-  function (exports_107, context_107) {
-    "use strict";
-    var ProductsService;
-    var __moduleName = context_107 && context_107.id;
-    return {
-      setters: [],
-      execute: function () {
-        ProductsService = class ProductsService {
-          constructor() {
-            this.getName = async ({ response }) => {
-              response.body = {
-                module: "products",
-              };
-            };
-            this.getProductByRegion = async ({ params, response }) => {
-              const productId = params.productId;
-              const regionCode = params.regionCode;
-              response.body = {
-                region: regionCode,
-                products: productId,
-              };
-            };
-          }
-        };
-        exports_107("ProductsService", ProductsService);
-      },
-    };
-  },
-);
-System.register(
-  "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/controllers/products",
-  [
-    "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/models/routes",
-    "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/service/implementation/products",
-  ],
-  function (exports_108, context_108) {
-    "use strict";
-    var routes_ts_2, products_ts_1, GET, products;
-    var __moduleName = context_108 && context_108.id;
-    return {
-      setters: [
-        function (routes_ts_2_1) {
-          routes_ts_2 = routes_ts_2_1;
-        },
-        function (products_ts_1_1) {
-          products_ts_1 = products_ts_1_1;
-        },
-      ],
-      execute: function () {
-        GET = routes_ts_2.Routes.Methods.GET;
-        products = [
-          {
-            httpMethod: GET,
-            path: "",
-            serviceMethod: new products_ts_1.ProductsService().getName,
-          },
-          {
-            httpMethod: GET,
-            path: "/:productId/regions/:regionCode",
-            serviceMethod:
-              new products_ts_1.ProductsService().getProductByRegion,
-          },
-        ];
-        exports_108("default", products);
-      },
-    };
-  },
-);
-System.register(
-  "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/service/implementation/accounts",
-  [],
-  function (exports_109, context_109) {
-    "use strict";
-    var AccountsService;
-    var __moduleName = context_109 && context_109.id;
-    return {
-      setters: [],
-      execute: function () {
-        AccountsService = class AccountsService {
-          constructor() {
-            this.getName = async ({ request, response }) => {
-              const headers = [];
-              request.headers.forEach((value, key) =>
-                headers.push({ [key]: value })
-              );
-              response.body = {
-                module: "accounts",
-                requestHeaders: headers,
-              };
-            };
-            this.getAccountById = async ({ params, response }) => {
-              const accountId = params.accountId;
-              response.body = {
-                account: accountId,
-              };
-            };
-          }
-        };
-        exports_109("AccountsService", AccountsService);
-      },
-    };
-  },
-);
-System.register(
-  "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/controllers/accounts",
-  [
-    "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/models/routes",
-    "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/service/implementation/accounts",
-  ],
-  function (exports_110, context_110) {
-    "use strict";
-    var routes_ts_3, accounts_ts_1, GET, accounts;
-    var __moduleName = context_110 && context_110.id;
-    return {
-      setters: [
-        function (routes_ts_3_1) {
-          routes_ts_3 = routes_ts_3_1;
-        },
-        function (accounts_ts_1_1) {
-          accounts_ts_1 = accounts_ts_1_1;
-        },
-      ],
-      execute: function () {
-        GET = routes_ts_3.Routes.Methods.GET;
-        accounts = [
-          {
-            httpMethod: GET,
-            path: "",
-            serviceMethod: new accounts_ts_1.AccountsService().getName,
-          },
-          {
-            httpMethod: GET,
-            path: "/:accountId",
-            serviceMethod: new accounts_ts_1.AccountsService().getAccountById,
-          },
-        ];
-        exports_110("default", accounts);
-      },
-    };
-  },
-);
-// Generated by src/config/generator.ts - (c) 2020 Damian Perera - MIT License.
-System.register(
-  "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/config/routes",
-  [
-    "https://deno.land/x/oak/mod",
-    "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/controllers/health",
-    "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/controllers/products",
-    "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/controllers/accounts",
-  ],
-  function (exports_111, context_111) {
-    "use strict";
-    var mod_ts_15, router, health_ts_2, products_ts_2, accounts_ts_2;
-    var __moduleName = context_111 && context_111.id;
-    return {
-      setters: [
-        function (mod_ts_15_1) {
-          mod_ts_15 = mod_ts_15_1;
-        },
-        function (health_ts_2_1) {
-          health_ts_2 = health_ts_2_1;
-        },
-        function (products_ts_2_1) {
-          products_ts_2 = products_ts_2_1;
-        },
-        function (accounts_ts_2_1) {
-          accounts_ts_2 = accounts_ts_2_1;
-        },
-      ],
-      execute: function () {
-        exports_111("router", router = new mod_ts_15.Router());
-        router["get"]("/api/v1/health", health_ts_2.default[0].serviceMethod);
-        router["get"](
-          "/api/v1/health/info",
-          health_ts_2.default[1].serviceMethod,
-        );
-        router["get"](
-          "/api/v1/products",
-          products_ts_2.default[0].serviceMethod,
-        );
-        router["get"](
-          "/api/v1/products/:productId/regions/:regionCode",
-          products_ts_2.default[1].serviceMethod,
-        );
-        router["get"](
-          "/api/v1/accounts",
-          accounts_ts_2.default[0].serviceMethod,
-        );
-        router["get"](
-          "/api/v1/accounts/:accountId",
-          accounts_ts_2.default[1].serviceMethod,
-        );
-      },
-    };
-  },
-);
-System.register(
-  "https://deno.land/std/uuid/_common",
-  [],
-  function (exports_112, context_112) {
-    "use strict";
-    var __moduleName = context_112 && context_112.id;
     // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
     function bytesToUuid(bytes) {
       const bits = [...bytes].map((bit) => {
@@ -26188,7 +24891,7 @@ System.register(
         ...bits.slice(10, 16),
       ].join("");
     }
-    exports_112("bytesToUuid", bytesToUuid);
+    exports_83("bytesToUuid", bytesToUuid);
     function uuidToBytes(uuid) {
       const bytes = [];
       uuid.replace(/[a-fA-F0-9]{2}/g, (hex) => {
@@ -26197,7 +24900,7 @@ System.register(
       });
       return bytes;
     }
-    exports_112("uuidToBytes", uuidToBytes);
+    exports_83("uuidToBytes", uuidToBytes);
     function stringToBytes(str) {
       str = unescape(encodeURIComponent(str));
       const bytes = new Array(str.length);
@@ -26206,7 +24909,7 @@ System.register(
       }
       return bytes;
     }
-    exports_112("stringToBytes", stringToBytes);
+    exports_83("stringToBytes", stringToBytes);
     function createBuffer(content) {
       const arrayBuffer = new ArrayBuffer(content.length);
       const uint8Array = new Uint8Array(arrayBuffer);
@@ -26215,7 +24918,7 @@ System.register(
       }
       return arrayBuffer;
     }
-    exports_112("createBuffer", createBuffer);
+    exports_83("createBuffer", createBuffer);
     return {
       setters: [],
       execute: function () {
@@ -26225,23 +24928,24 @@ System.register(
 );
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/std/uuid/v1",
-  ["https://deno.land/std/uuid/_common"],
-  function (exports_113, context_113) {
+  "https://deno.land/std@master/uuid/v1",
+  ["https://deno.land/std@master/uuid/_common"],
+  function (exports_84, context_84) {
     "use strict";
     var _common_ts_1, UUID_RE, _nodeId, _clockseq, _lastMSecs, _lastNSecs;
-    var __moduleName = context_113 && context_113.id;
+    var __moduleName = context_84 && context_84.id;
     function validate(id) {
       return UUID_RE.test(id);
     }
-    exports_113("validate", validate);
+    exports_84("validate", validate);
     function generate(options, buf, offset) {
       let i = (buf && offset) || 0;
       const b = buf || [];
       options = options || {};
       let node = options.node || _nodeId;
-      let clockseq = options.clockseq !== undefined ? options.clockseq
-      : _clockseq;
+      let clockseq = options.clockseq !== undefined
+        ? options.clockseq
+        : _clockseq;
       if (node == null || clockseq == null) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const seedBytes = options.random ||
@@ -26296,7 +25000,7 @@ System.register(
       }
       return buf ? buf : _common_ts_1.bytesToUuid(b);
     }
-    exports_113("generate", generate);
+    exports_84("generate", generate);
     return {
       setters: [
         function (_common_ts_1_1) {
@@ -26316,23 +25020,23 @@ System.register(
 );
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/std/uuid/v4",
-  ["https://deno.land/std/uuid/_common"],
-  function (exports_114, context_114) {
+  "https://deno.land/std@master/uuid/v4",
+  ["https://deno.land/std@master/uuid/_common"],
+  function (exports_85, context_85) {
     "use strict";
     var _common_ts_2, UUID_RE;
-    var __moduleName = context_114 && context_114.id;
+    var __moduleName = context_85 && context_85.id;
     function validate(id) {
       return UUID_RE.test(id);
     }
-    exports_114("validate", validate);
+    exports_85("validate", validate);
     function generate() {
       const rnds = crypto.getRandomValues(new Uint8Array(16));
       rnds[6] = (rnds[6] & 0x0f) | 0x40; // Version 4
       rnds[8] = (rnds[8] & 0x3f) | 0x80; // Variant 10
       return _common_ts_2.bytesToUuid(rnds);
     }
-    exports_114("generate", generate);
+    exports_85("generate", generate);
     return {
       setters: [
         function (_common_ts_2_1) {
@@ -26357,12 +25061,12 @@ System.register(
  * @license MIT
  */
 System.register(
-  "https://deno.land/std/hash/sha1",
+  "https://deno.land/std@master/hash/sha1",
   [],
-  function (exports_115, context_115) {
+  function (exports_86, context_86) {
     "use strict";
     var HEX_CHARS, EXTRA, SHIFT, blocks, Sha1;
-    var __moduleName = context_115 && context_115.id;
+    var __moduleName = context_86 && context_86.id;
     return {
       setters: [],
       execute: function () {
@@ -26725,7 +25429,7 @@ System.register(
             return buffer;
           }
         };
-        exports_115("Sha1", Sha1);
+        exports_86("Sha1", Sha1);
       },
     };
   },
@@ -26753,12 +25457,127 @@ System.register(
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 System.register(
-  "https://deno.land/std/node/_util/_util_callbackify",
+  "https://deno.land/std@master/node/_util/_util_promisify",
   [],
-  function (exports_116, context_116) {
+  function (exports_87, context_87) {
+    "use strict";
+    var kCustomPromisifiedSymbol,
+      kCustomPromisifyArgsSymbol,
+      NodeInvalidArgTypeError;
+    var __moduleName = context_87 && context_87.id;
+    function promisify(original) {
+      if (typeof original !== "function") {
+        throw new NodeInvalidArgTypeError("original", "Function", original);
+      }
+      // @ts-ignore TypeScript (as of 3.7) does not support indexing namespaces by symbol
+      if (original[kCustomPromisifiedSymbol]) {
+        // @ts-ignore TypeScript (as of 3.7) does not support indexing namespaces by symbol
+        const fn = original[kCustomPromisifiedSymbol];
+        if (typeof fn !== "function") {
+          throw new NodeInvalidArgTypeError(
+            "util.promisify.custom",
+            "Function",
+            fn,
+          );
+        }
+        return Object.defineProperty(fn, kCustomPromisifiedSymbol, {
+          value: fn,
+          enumerable: false,
+          writable: false,
+          configurable: true,
+        });
+      }
+      // Names to create an object from in case the callback receives multiple
+      // arguments, e.g. ['bytesRead', 'buffer'] for fs.read.
+      // @ts-ignore TypeScript (as of 3.7) does not support indexing namespaces by symbol
+      const argumentNames = original[kCustomPromisifyArgsSymbol];
+      function fn(...args) {
+        return new Promise((resolve, reject) => {
+          // @ts-ignore
+          original.call(this, ...args, (err, ...values) => {
+            if (err) {
+              return reject(err);
+            }
+            if (argumentNames !== undefined && values.length > 1) {
+              const obj = {};
+              for (let i = 0; i < argumentNames.length; i++) {
+                // @ts-ignore TypeScript
+                obj[argumentNames[i]] = values[i];
+              }
+              resolve(obj);
+            } else {
+              resolve(values[0]);
+            }
+          });
+        });
+      }
+      Object.setPrototypeOf(fn, Object.getPrototypeOf(original));
+      Object.defineProperty(fn, kCustomPromisifiedSymbol, {
+        value: fn,
+        enumerable: false,
+        writable: false,
+        configurable: true,
+      });
+      return Object.defineProperties(
+        fn,
+        Object.getOwnPropertyDescriptors(original),
+      );
+    }
+    exports_87("promisify", promisify);
+    return {
+      setters: [],
+      execute: function () {
+        // In addition to being accessible through util.promisify.custom,
+        // this symbol is registered globally and can be accessed in any environment as Symbol.for('nodejs.util.promisify.custom')
+        kCustomPromisifiedSymbol = Symbol.for("nodejs.util.promisify.custom");
+        // This is an internal Node symbol used by functions returning multiple arguments
+        // e.g. ['bytesRead', 'buffer'] for fs.read.
+        kCustomPromisifyArgsSymbol = Symbol.for(
+          "deno.nodejs.util.promisify.customArgs",
+        );
+        NodeInvalidArgTypeError = class NodeInvalidArgTypeError
+          extends TypeError {
+          constructor(argumentName, type, received) {
+            super(
+              `The "${argumentName}" argument must be of type ${type}. Received ${typeof received}`,
+            );
+            this.code = "ERR_INVALID_ARG_TYPE";
+          }
+        };
+        promisify.custom = kCustomPromisifiedSymbol;
+      },
+    };
+  },
+);
+// Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
+//
+// Adapted from Node.js. Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+System.register(
+  "https://deno.land/std@master/node/_util/_util_callbackify",
+  [],
+  function (exports_88, context_88) {
     "use strict";
     var NodeFalsyValueRejectionError, NodeInvalidArgTypeError;
-    var __moduleName = context_116 && context_116.id;
+    var __moduleName = context_88 && context_88.id;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function callbackify(original) {
       if (typeof original !== "function") {
@@ -26791,7 +25610,7 @@ System.register(
       Object.defineProperties(callbackified, descriptors);
       return callbackified;
     }
-    exports_116("callbackify", callbackify);
+    exports_88("callbackify", callbackify);
     return {
       setters: [],
       execute: function () {
@@ -26838,52 +25657,52 @@ System.register(
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 System.register(
-  "https://deno.land/std/node/_util/_util_types",
+  "https://deno.land/std@master/node/_util/_util_types",
   [],
-  function (exports_117, context_117) {
+  function (exports_89, context_89) {
     "use strict";
     var _toString, _isObjectLike, _isFunctionLike;
-    var __moduleName = context_117 && context_117.id;
+    var __moduleName = context_89 && context_89.id;
     function isAnyArrayBuffer(value) {
       return (_isObjectLike(value) &&
         (_toString.call(value) === "[object ArrayBuffer]" ||
           _toString.call(value) === "[object SharedArrayBuffer]"));
     }
-    exports_117("isAnyArrayBuffer", isAnyArrayBuffer);
+    exports_89("isAnyArrayBuffer", isAnyArrayBuffer);
     function isArrayBufferView(value) {
       return ArrayBuffer.isView(value);
     }
-    exports_117("isArrayBufferView", isArrayBufferView);
+    exports_89("isArrayBufferView", isArrayBufferView);
     function isArgumentsObject(value) {
       return _isObjectLike(value) &&
         _toString.call(value) === "[object Arguments]";
     }
-    exports_117("isArgumentsObject", isArgumentsObject);
+    exports_89("isArgumentsObject", isArgumentsObject);
     function isArrayBuffer(value) {
       return (_isObjectLike(value) &&
         _toString.call(value) === "[object ArrayBuffer]");
     }
-    exports_117("isArrayBuffer", isArrayBuffer);
+    exports_89("isArrayBuffer", isArrayBuffer);
     function isAsyncFunction(value) {
       return (_isFunctionLike(value) &&
         _toString.call(value) === "[object AsyncFunction]");
     }
-    exports_117("isAsyncFunction", isAsyncFunction);
+    exports_89("isAsyncFunction", isAsyncFunction);
     function isBigInt64Array(value) {
       return (_isObjectLike(value) &&
         _toString.call(value) === "[object BigInt64Array]");
     }
-    exports_117("isBigInt64Array", isBigInt64Array);
+    exports_89("isBigInt64Array", isBigInt64Array);
     function isBigUint64Array(value) {
       return (_isObjectLike(value) &&
         _toString.call(value) === "[object BigUint64Array]");
     }
-    exports_117("isBigUint64Array", isBigUint64Array);
+    exports_89("isBigUint64Array", isBigUint64Array);
     function isBooleanObject(value) {
       return _isObjectLike(value) &&
         _toString.call(value) === "[object Boolean]";
     }
-    exports_117("isBooleanObject", isBooleanObject);
+    exports_89("isBooleanObject", isBooleanObject);
     function isBoxedPrimitive(value) {
       return (isBooleanObject(value) ||
         isStringObject(value) ||
@@ -26891,114 +25710,114 @@ System.register(
         isSymbolObject(value) ||
         isBigIntObject(value));
     }
-    exports_117("isBoxedPrimitive", isBoxedPrimitive);
+    exports_89("isBoxedPrimitive", isBoxedPrimitive);
     function isDataView(value) {
       return _isObjectLike(value) &&
         _toString.call(value) === "[object DataView]";
     }
-    exports_117("isDataView", isDataView);
+    exports_89("isDataView", isDataView);
     function isDate(value) {
       return _isObjectLike(value) && _toString.call(value) === "[object Date]";
     }
-    exports_117("isDate", isDate);
+    exports_89("isDate", isDate);
     // isExternal: Not implemented
     function isFloat32Array(value) {
       return (_isObjectLike(value) &&
         _toString.call(value) === "[object Float32Array]");
     }
-    exports_117("isFloat32Array", isFloat32Array);
+    exports_89("isFloat32Array", isFloat32Array);
     function isFloat64Array(value) {
       return (_isObjectLike(value) &&
         _toString.call(value) === "[object Float64Array]");
     }
-    exports_117("isFloat64Array", isFloat64Array);
+    exports_89("isFloat64Array", isFloat64Array);
     function isGeneratorFunction(value) {
       return (_isFunctionLike(value) &&
         _toString.call(value) === "[object GeneratorFunction]");
     }
-    exports_117("isGeneratorFunction", isGeneratorFunction);
+    exports_89("isGeneratorFunction", isGeneratorFunction);
     function isGeneratorObject(value) {
       return _isObjectLike(value) &&
         _toString.call(value) === "[object Generator]";
     }
-    exports_117("isGeneratorObject", isGeneratorObject);
+    exports_89("isGeneratorObject", isGeneratorObject);
     function isInt8Array(value) {
       return _isObjectLike(value) &&
         _toString.call(value) === "[object Int8Array]";
     }
-    exports_117("isInt8Array", isInt8Array);
+    exports_89("isInt8Array", isInt8Array);
     function isInt16Array(value) {
       return (_isObjectLike(value) &&
         _toString.call(value) === "[object Int16Array]");
     }
-    exports_117("isInt16Array", isInt16Array);
+    exports_89("isInt16Array", isInt16Array);
     function isInt32Array(value) {
       return (_isObjectLike(value) &&
         _toString.call(value) === "[object Int32Array]");
     }
-    exports_117("isInt32Array", isInt32Array);
+    exports_89("isInt32Array", isInt32Array);
     function isMap(value) {
       return _isObjectLike(value) && _toString.call(value) === "[object Map]";
     }
-    exports_117("isMap", isMap);
+    exports_89("isMap", isMap);
     function isMapIterator(value) {
       return (_isObjectLike(value) &&
         _toString.call(value) === "[object Map Iterator]");
     }
-    exports_117("isMapIterator", isMapIterator);
+    exports_89("isMapIterator", isMapIterator);
     function isModuleNamespaceObject(value) {
       return _isObjectLike(value) &&
         _toString.call(value) === "[object Module]";
     }
-    exports_117("isModuleNamespaceObject", isModuleNamespaceObject);
+    exports_89("isModuleNamespaceObject", isModuleNamespaceObject);
     function isNativeError(value) {
       return _isObjectLike(value) && _toString.call(value) === "[object Error]";
     }
-    exports_117("isNativeError", isNativeError);
+    exports_89("isNativeError", isNativeError);
     function isNumberObject(value) {
       return _isObjectLike(value) &&
         _toString.call(value) === "[object Number]";
     }
-    exports_117("isNumberObject", isNumberObject);
+    exports_89("isNumberObject", isNumberObject);
     function isBigIntObject(value) {
       return _isObjectLike(value) &&
         _toString.call(value) === "[object BigInt]";
     }
-    exports_117("isBigIntObject", isBigIntObject);
+    exports_89("isBigIntObject", isBigIntObject);
     function isPromise(value) {
       return _isObjectLike(value) &&
         _toString.call(value) === "[object Promise]";
     }
-    exports_117("isPromise", isPromise);
+    exports_89("isPromise", isPromise);
     function isRegExp(value) {
       return _isObjectLike(value) &&
         _toString.call(value) === "[object RegExp]";
     }
-    exports_117("isRegExp", isRegExp);
+    exports_89("isRegExp", isRegExp);
     function isSet(value) {
       return _isObjectLike(value) && _toString.call(value) === "[object Set]";
     }
-    exports_117("isSet", isSet);
+    exports_89("isSet", isSet);
     function isSetIterator(value) {
       return (_isObjectLike(value) &&
         _toString.call(value) === "[object Set Iterator]");
     }
-    exports_117("isSetIterator", isSetIterator);
+    exports_89("isSetIterator", isSetIterator);
     function isSharedArrayBuffer(value) {
       return (_isObjectLike(value) &&
         _toString.call(value) === "[object SharedArrayBuffer]");
     }
-    exports_117("isSharedArrayBuffer", isSharedArrayBuffer);
+    exports_89("isSharedArrayBuffer", isSharedArrayBuffer);
     function isStringObject(value) {
       return _isObjectLike(value) &&
         _toString.call(value) === "[object String]";
     }
-    exports_117("isStringObject", isStringObject);
+    exports_89("isStringObject", isStringObject);
     function isSymbolObject(value) {
       return _isObjectLike(value) &&
         _toString.call(value) === "[object Symbol]";
     }
-    exports_117("isSymbolObject", isSymbolObject);
+    exports_89("isSymbolObject", isSymbolObject);
     // Adapted from Lodash
     function isTypedArray(value) {
       /** Used to match `toStringTag` values of typed arrays. */
@@ -27006,37 +25825,37 @@ System.register(
         /^\[object (?:Float(?:32|64)|(?:Int|Uint)(?:8|16|32)|Uint8Clamped)Array\]$/;
       return _isObjectLike(value) && reTypedTag.test(_toString.call(value));
     }
-    exports_117("isTypedArray", isTypedArray);
+    exports_89("isTypedArray", isTypedArray);
     function isUint8Array(value) {
       return (_isObjectLike(value) &&
         _toString.call(value) === "[object Uint8Array]");
     }
-    exports_117("isUint8Array", isUint8Array);
+    exports_89("isUint8Array", isUint8Array);
     function isUint8ClampedArray(value) {
       return (_isObjectLike(value) &&
         _toString.call(value) === "[object Uint8ClampedArray]");
     }
-    exports_117("isUint8ClampedArray", isUint8ClampedArray);
+    exports_89("isUint8ClampedArray", isUint8ClampedArray);
     function isUint16Array(value) {
       return (_isObjectLike(value) &&
         _toString.call(value) === "[object Uint16Array]");
     }
-    exports_117("isUint16Array", isUint16Array);
+    exports_89("isUint16Array", isUint16Array);
     function isUint32Array(value) {
       return (_isObjectLike(value) &&
         _toString.call(value) === "[object Uint32Array]");
     }
-    exports_117("isUint32Array", isUint32Array);
+    exports_89("isUint32Array", isUint32Array);
     function isWeakMap(value) {
       return _isObjectLike(value) &&
         _toString.call(value) === "[object WeakMap]";
     }
-    exports_117("isWeakMap", isWeakMap);
+    exports_89("isWeakMap", isWeakMap);
     function isWeakSet(value) {
       return _isObjectLike(value) &&
         _toString.call(value) === "[object WeakSet]";
     }
-    exports_117("isWeakSet", isWeakSet);
+    exports_89("isWeakSet", isWeakSet);
     return {
       setters: [],
       execute: function () {
@@ -27049,17 +25868,17 @@ System.register(
   },
 );
 System.register(
-  "https://deno.land/std/node/_utils",
+  "https://deno.land/std@master/node/_utils",
   [],
-  function (exports_118, context_118) {
+  function (exports_90, context_90) {
     "use strict";
     var _TextDecoder, _TextEncoder;
-    var __moduleName = context_118 && context_118.id;
+    var __moduleName = context_90 && context_90.id;
     function notImplemented(msg) {
       const message = msg ? `Not implemented: ${msg}` : "Not implemented";
       throw new Error(message);
     }
-    exports_118("notImplemented", notImplemented);
+    exports_90("notImplemented", notImplemented);
     function intoCallbackAPI(
       /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
       func,
@@ -27071,7 +25890,7 @@ System.register(
         .then((value) => cb && cb(null, value))
         .catch((err) => cb && cb(err, null));
     }
-    exports_118("intoCallbackAPI", intoCallbackAPI);
+    exports_90("intoCallbackAPI", intoCallbackAPI);
     function intoCallbackAPIWithIntercept(
       /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
       func,
@@ -27084,87 +25903,88 @@ System.register(
         .then((value) => cb && cb(null, interceptor(value)))
         .catch((err) => cb && cb(err, null));
     }
-    exports_118("intoCallbackAPIWithIntercept", intoCallbackAPIWithIntercept);
+    exports_90("intoCallbackAPIWithIntercept", intoCallbackAPIWithIntercept);
     function spliceOne(list, index) {
       for (; index + 1 < list.length; index++) {
         list[index] = list[index + 1];
       }
       list.pop();
     }
-    exports_118("spliceOne", spliceOne);
+    exports_90("spliceOne", spliceOne);
     return {
       setters: [],
       execute: function () {
-        exports_118("_TextDecoder", _TextDecoder = TextDecoder);
-        exports_118("_TextEncoder", _TextEncoder = TextEncoder);
+        exports_90("_TextDecoder", _TextDecoder = TextDecoder);
+        exports_90("_TextEncoder", _TextEncoder = TextEncoder);
       },
     };
   },
 );
 System.register(
-  "https://deno.land/std/node/util",
+  "https://deno.land/std@master/node/util",
   [
-    "https://deno.land/std/node/_util/_util_callbackify",
-    "https://deno.land/std/node/_util/_util_types",
-    "https://deno.land/std/node/_utils",
+    "https://deno.land/std@master/node/_util/_util_promisify",
+    "https://deno.land/std@master/node/_util/_util_callbackify",
+    "https://deno.land/std@master/node/_util/_util_types",
+    "https://deno.land/std@master/node/_utils",
   ],
-  function (exports_119, context_119) {
+  function (exports_91, context_91) {
     "use strict";
     var types, _utils_ts_1, TextDecoder, TextEncoder;
-    var __moduleName = context_119 && context_119.id;
+    var __moduleName = context_91 && context_91.id;
     function isArray(value) {
       return Array.isArray(value);
     }
-    exports_119("isArray", isArray);
+    exports_91("isArray", isArray);
     function isBoolean(value) {
       return typeof value === "boolean" || value instanceof Boolean;
     }
-    exports_119("isBoolean", isBoolean);
+    exports_91("isBoolean", isBoolean);
     function isNull(value) {
       return value === null;
     }
-    exports_119("isNull", isNull);
+    exports_91("isNull", isNull);
     function isNullOrUndefined(value) {
       return value === null || value === undefined;
     }
-    exports_119("isNullOrUndefined", isNullOrUndefined);
+    exports_91("isNullOrUndefined", isNullOrUndefined);
     function isNumber(value) {
       return typeof value === "number" || value instanceof Number;
     }
-    exports_119("isNumber", isNumber);
+    exports_91("isNumber", isNumber);
     function isString(value) {
       return typeof value === "string" || value instanceof String;
     }
-    exports_119("isString", isString);
+    exports_91("isString", isString);
     function isSymbol(value) {
       return typeof value === "symbol";
     }
-    exports_119("isSymbol", isSymbol);
+    exports_91("isSymbol", isSymbol);
     function isUndefined(value) {
       return value === undefined;
     }
-    exports_119("isUndefined", isUndefined);
+    exports_91("isUndefined", isUndefined);
     function isObject(value) {
       return value !== null && typeof value === "object";
     }
-    exports_119("isObject", isObject);
+    exports_91("isObject", isObject);
     function isError(e) {
       return e instanceof Error;
     }
-    exports_119("isError", isError);
+    exports_91("isError", isError);
     function isFunction(value) {
       return typeof value === "function";
     }
-    exports_119("isFunction", isFunction);
+    exports_91("isFunction", isFunction);
     function isRegExp(value) {
       return value instanceof RegExp;
     }
-    exports_119("isRegExp", isRegExp);
+    exports_91("isRegExp", isRegExp);
     function isPrimitive(value) {
       return (value === null ||
         (typeof value !== "object" && typeof value !== "function"));
     }
-    exports_119("isPrimitive", isPrimitive);
+    exports_91("isPrimitive", isPrimitive);
     function validateIntegerRange(
       value,
       name,
@@ -27181,11 +26001,16 @@ System.register(
         );
       }
     }
-    exports_119("validateIntegerRange", validateIntegerRange);
+    exports_91("validateIntegerRange", validateIntegerRange);
     return {
       setters: [
+        function (_util_promisify_ts_1_1) {
+          exports_91({
+            "promisify": _util_promisify_ts_1_1["promisify"],
+          });
+        },
         function (_util_callbackify_ts_1_1) {
-          exports_119({
+          exports_91({
             "callbackify": _util_callbackify_ts_1_1["callbackify"],
           });
         },
@@ -27197,30 +26022,30 @@ System.register(
         },
       ],
       execute: function () {
-        exports_119("types", types);
-        exports_119("TextDecoder", TextDecoder = _utils_ts_1._TextDecoder);
-        exports_119("TextEncoder", TextEncoder = _utils_ts_1._TextEncoder);
+        exports_91("types", types);
+        exports_91("TextDecoder", TextDecoder = _utils_ts_1._TextDecoder);
+        exports_91("TextEncoder", TextEncoder = _utils_ts_1._TextEncoder);
       },
     };
   },
 );
 // Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
 System.register(
-  "https://deno.land/std/uuid/v5",
+  "https://deno.land/std@master/uuid/v5",
   [
-    "https://deno.land/std/uuid/_common",
-    "https://deno.land/std/hash/sha1",
-    "https://deno.land/std/node/util",
-    "https://deno.land/std/_util/assert",
+    "https://deno.land/std@master/uuid/_common",
+    "https://deno.land/std@master/hash/sha1",
+    "https://deno.land/std@master/node/util",
+    "https://deno.land/std@master/_util/assert",
   ],
-  function (exports_120, context_120) {
+  function (exports_92, context_92) {
     "use strict";
     var _common_ts_3, sha1_ts_3, util_ts_12, assert_ts_5, UUID_RE;
-    var __moduleName = context_120 && context_120.id;
+    var __moduleName = context_92 && context_92.id;
     function validate(id) {
       return UUID_RE.test(id);
     }
-    exports_120("validate", validate);
+    exports_92("validate", validate);
     function generate(options, buf, offset) {
       const i = (buf && offset) || 0;
       let { value, namespace } = options;
@@ -27247,7 +26072,7 @@ System.register(
       }
       return buf || _common_ts_3.bytesToUuid(bytes);
     }
-    exports_120("generate", generate);
+    exports_92("generate", generate);
     return {
       setters: [
         function (_common_ts_3_1) {
@@ -27271,20 +26096,20 @@ System.register(
   },
 );
 System.register(
-  "https://deno.land/std/uuid/mod",
+  "https://deno.land/std@master/uuid/mod",
   [
-    "https://deno.land/std/uuid/v1",
-    "https://deno.land/std/uuid/v4",
-    "https://deno.land/std/uuid/v5",
+    "https://deno.land/std@master/uuid/v1",
+    "https://deno.land/std@master/uuid/v4",
+    "https://deno.land/std@master/uuid/v5",
   ],
-  function (exports_121, context_121) {
+  function (exports_93, context_93) {
     "use strict";
     var v1, v4, v5, NIL_UUID, NOT_IMPLEMENTED, v3;
-    var __moduleName = context_121 && context_121.id;
+    var __moduleName = context_93 && context_93.id;
     function isNil(val) {
       return val === NIL_UUID;
     }
-    exports_121("isNil", isNil);
+    exports_93("isNil", isNil);
     return {
       setters: [
         function (v1_1) {
@@ -27298,10 +26123,10 @@ System.register(
         },
       ],
       execute: function () {
-        exports_121("v1", v1);
-        exports_121("v4", v4);
-        exports_121("v5", v5);
-        exports_121(
+        exports_93("v1", v1);
+        exports_93("v4", v4);
+        exports_93("v5", v5);
+        exports_93(
           "NIL_UUID",
           NIL_UUID = "00000000-0000-0000-0000-000000000000",
         );
@@ -27314,17 +26139,1230 @@ System.register(
           },
         };
         // TODO Implement
-        exports_121("v3", v3 = NOT_IMPLEMENTED);
+        exports_93("v3", v3 = NOT_IMPLEMENTED);
+      },
+    };
+  },
+);
+// utils is a library of generic helper functions non-specific to soxa
+System.register(
+  "https://deno.land/x/soxa@master/src/utils",
+  [],
+  function (exports_94, context_94) {
+    "use strict";
+    var toString;
+    var __moduleName = context_94 && context_94.id;
+    // @ts-ignore
+    function isArray(val) {
+      return toString.call(val) === "[object Array]";
+    }
+    exports_94("isArray", isArray);
+    // @ts-ignore
+    function isUndefined(val) {
+      return typeof val === "undefined";
+    }
+    exports_94("isUndefined", isUndefined);
+    // @ts-ignore
+    function isBuffer(val) {
+      return val !== null && !isUndefined(val) && val.constructor !== null &&
+        !isUndefined(val.constructor) &&
+        typeof val.constructor.isBuffer === "function" &&
+        val.constructor.isBuffer(val);
+    }
+    exports_94("isBuffer", isBuffer);
+    // @ts-ignore
+    function isArrayBuffer(val) {
+      return toString.call(val) === "[object ArrayBuffer]";
+    }
+    exports_94("isArrayBuffer", isArrayBuffer);
+    // @ts-ignore
+    function isFormData(val) {
+      return (typeof FormData !== "undefined") && (val instanceof FormData);
+    }
+    exports_94("isFormData", isFormData);
+    // @ts-ignore
+    function isArrayBufferView(val) {
+      var result;
+      if ((typeof ArrayBuffer !== "undefined") && (ArrayBuffer.isView)) {
+        result = ArrayBuffer.isView(val);
+      } else {
+        result = (val) && (val.buffer) && (val.buffer instanceof ArrayBuffer);
+      }
+      return result;
+    }
+    exports_94("isArrayBufferView", isArrayBufferView);
+    // @ts-ignore
+    function isObject(val) {
+      return val !== null && typeof val === "object";
+    }
+    exports_94("isObject", isObject);
+    // @ts-ignore
+    function isDate(val) {
+      return toString.call(val) === "[object Date]";
+    }
+    exports_94("isDate", isDate);
+    // @ts-ignore
+    function isFile(val) {
+      return toString.call(val) === "[object File]";
+    }
+    exports_94("isFile", isFile);
+    // @ts-ignore
+    function isBlob(val) {
+      return toString.call(val) === "[object Blob]";
+    }
+    exports_94("isBlob", isBlob);
+    // @ts-ignore
+    function isFunction(val) {
+      return toString.call(val) === "[object Function]";
+    }
+    // @ts-ignore
+    function isStream(val) {
+      return isObject(val) && isFunction(val.pipe);
+    }
+    exports_94("isStream", isStream);
+    // @ts-ignore
+    function isURLSearchParams(val) {
+      return typeof URLSearchParams !== "undefined" &&
+        val instanceof URLSearchParams;
+    }
+    exports_94("isURLSearchParams", isURLSearchParams);
+    // @ts-ignore
+    function forEach(obj, fn) {
+      // Don't bother if no value provided
+      if (obj === null || typeof obj === "undefined") {
+        return;
+      }
+      // Force an array if not already something iterable
+      if (typeof obj !== "object") {
+        /*eslint no-param-reassign:0*/
+        obj = [obj];
+      }
+      if (isArray(obj)) {
+        // Iterate over array values
+        for (var i = 0, l = obj.length; i < l; i++) {
+          fn.call(null, obj[i], i, obj);
+        }
+      } else {
+        // Iterate over object keys
+        for (var key in obj) {
+          if (Object.prototype.hasOwnProperty.call(obj, key)) {
+            fn.call(null, obj[key], key, obj);
+          }
+        }
+      }
+    }
+    exports_94("forEach", forEach);
+    /**
+     * Accepts varargs expecting each argument to be an object, then
+     * immutably merges the properties of each object and returns result.
+     *
+     * When multiple objects contain the same key the later object in
+     * the arguments list will take precedence.
+     *
+     * Example:
+     *
+     * ```js
+     * var result = merge({foo: 123}, {foo: 456});
+     * console.log(result.foo); // outputs 456
+     * ```
+     *
+     * @param {Object} obj1 Object to merge
+     * @returns {Object} Result of all merge properties
+     */
+    function merge(...args) {
+      var result = {};
+      // @ts-ignore
+      function assignValue(val, key) {
+        // @ts-ignore
+        if (typeof result[key] === "object" && typeof val === "object") {
+          // @ts-ignore
+          result[key] = merge(result[key], val);
+        } else {
+          // @ts-ignore
+          result[key] = val;
+        }
+      }
+      for (var i = 0, l = arguments.length; i < l; i++) {
+        forEach(arguments[i], assignValue);
+      }
+      return result;
+    }
+    exports_94("merge", merge);
+    /**
+     * Function equal to merge with the difference being that no reference
+     * to original objects is kept.
+     *
+     * @see merge
+     * @param {Object} obj1 Object to merge
+     * @returns {Object} Result of all merge properties
+     */
+    function deepMerge(...args) {
+      var result = {};
+      // @ts-ignore
+      function assignValue(val, key) {
+        // @ts-ignore
+        if (typeof result[key] === "object" && typeof val === "object") {
+          // @ts-ignore
+          result[key] = deepMerge(result[key], val);
+        } else if (typeof val === "object") {
+          // @ts-ignore
+          result[key] = deepMerge({}, val);
+        } else {
+          // @ts-ignore
+          result[key] = val;
+        }
+      }
+      for (var i = 0, l = arguments.length; i < l; i++) {
+        forEach(arguments[i], assignValue);
+      }
+      return result;
+    }
+    exports_94("deepMerge", deepMerge);
+    return {
+      setters: [],
+      execute: function () {
+        toString = Object.prototype.toString;
       },
     };
   },
 );
 System.register(
-  "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/models/error",
-  [],
-  function (exports_122, context_122) {
+  "https://deno.land/x/soxa@master/src/helpers/buildURL",
+  ["https://deno.land/x/soxa@master/src/utils"],
+  function (exports_95, context_95) {
     "use strict";
-    var __moduleName = context_122 && context_122.id;
+    var utils, buildURL;
+    var __moduleName = context_95 && context_95.id;
+    function encode(val) {
+      return encodeURIComponent(val)
+        .replace(/%40/gi, "@")
+        .replace(/%3A/gi, ":")
+        .replace(/%24/g, "$")
+        .replace(/%2C/gi, ",")
+        .replace(/%20/g, "+")
+        .replace(/%5B/gi, "[")
+        .replace(/%5D/gi, "]");
+    }
+    return {
+      setters: [
+        function (utils_1) {
+          utils = utils_1;
+        },
+      ],
+      execute: function () {
+        /**
+             * Build a URL by appending params to the end
+             *
+             * @param {string} url The base of the url (e.g., http://www.google.com)
+             * @param {object} [params] The params to be appended
+             * @returns {string} The formatted url
+             */
+        buildURL = function (url, params, paramsSerializer) {
+          /*eslint no-param-reassign:0*/
+          if (!params) {
+            return url;
+          }
+          let serializedParams;
+          if (paramsSerializer) {
+            serializedParams = paramsSerializer(params);
+          } else if (utils.isURLSearchParams(params)) {
+            serializedParams = params.toString();
+          } else {
+            // @ts-ignore
+            var parts = [];
+            // @ts-ignore
+            utils.forEach(params, function serialize(val, key) {
+              if (val === null || typeof val === "undefined") {
+                return;
+              }
+              if (utils.isArray(val)) {
+                key = key + "[]";
+              } else {
+                val = [val];
+              }
+              // @ts-ignore
+              utils.forEach(val, function parseValue(v) {
+                if (utils.isDate(v)) {
+                  v = v.toISOString();
+                } else if (utils.isObject(v)) {
+                  v = JSON.stringify(v);
+                }
+                parts.push(encode(key) + "=" + encode(v));
+              });
+            });
+            // @ts-ignore
+            serializedParams = parts.join("&");
+          }
+          if (serializedParams) {
+            var hashmarkIndex = url.indexOf("#");
+            if (hashmarkIndex !== -1) {
+              url = url.slice(0, hashmarkIndex);
+            }
+            url += (url.indexOf("?") === -1 ? "?" : "&") + serializedParams;
+          }
+          return url;
+        };
+        exports_95("buildURL", buildURL);
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/soxa@master/src/core/InterceptorManager",
+  ["https://deno.land/x/soxa@master/src/utils"],
+  function (exports_96, context_96) {
+    "use strict";
+    var utils, InterceptorManager;
+    var __moduleName = context_96 && context_96.id;
+    return {
+      setters: [
+        function (utils_2) {
+          utils = utils_2;
+        },
+      ],
+      execute: function () {
+        InterceptorManager = class InterceptorManager {
+          constructor() {
+            this.handlers = [];
+          }
+          // @ts-ignore
+          use(fulfilled, rejected) {
+            this.handlers.push({
+              fulfilled: fulfilled,
+              rejected: rejected,
+            });
+            return this.handlers.length - 1;
+          }
+          eject(id) {
+            if (this.handlers[id]) {
+              // @ts-ignore
+              this.handlers[id] = null;
+            }
+          }
+          // @ts-ignore
+          forEach(fn) {
+            // @ts-ignore
+            utils.forEach(this.handlers, function forEachHandler(h) {
+              if (h !== null) {
+                fn(h);
+              }
+            });
+          }
+        };
+        exports_96("InterceptorManager", InterceptorManager);
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/soxa@master/src/core/transformData",
+  ["https://deno.land/x/soxa@master/src/utils"],
+  function (exports_97, context_97) {
+    "use strict";
+    var utils, transformData;
+    var __moduleName = context_97 && context_97.id;
+    return {
+      setters: [
+        function (utils_3) {
+          utils = utils_3;
+        },
+      ],
+      execute: function () {
+        // @ts-ignore
+        transformData = function (data, headers, fns) {
+          // @ts-ignore
+          utils.forEach(fns, function transform(fn) {
+            data = fn(data, headers);
+          });
+          return data;
+        };
+        exports_97("transformData", transformData);
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/soxa@master/src/cancel/isCancel",
+  [],
+  function (exports_98, context_98) {
+    "use strict";
+    var isCancel;
+    var __moduleName = context_98 && context_98.id;
+    return {
+      setters: [],
+      execute: function () {
+        // @ts-ignore
+        isCancel = function (value) {
+          return !!(value && value.__CANCEL__);
+        };
+        exports_98("isCancel", isCancel);
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/soxa@master/src/helpers/normalizeHeaderName",
+  ["https://deno.land/x/soxa@master/src/utils"],
+  function (exports_99, context_99) {
+    "use strict";
+    var utils, normalizeHeaderName;
+    var __moduleName = context_99 && context_99.id;
+    return {
+      setters: [
+        function (utils_4) {
+          utils = utils_4;
+        },
+      ],
+      execute: function () {
+        normalizeHeaderName = function (headers, normalizedName) {
+          utils.forEach(headers, function processHeader(value, name) {
+            if (
+              name !== normalizedName &&
+              name.toUpperCase() === normalizedName.toUpperCase()
+            ) {
+              // @ts-ignore
+              headers[normalizedName] = value;
+              // @ts-ignore
+              delete headers[name];
+            }
+          });
+        };
+        exports_99("normalizeHeaderName", normalizeHeaderName);
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/soxa@master/src/core/enhanceError",
+  [],
+  function (exports_100, context_100) {
+    "use strict";
+    var enhanceError;
+    var __moduleName = context_100 && context_100.id;
+    return {
+      setters: [],
+      execute: function () {
+        // @ts-ignore
+        enhanceError = function (error, config, code, request, response) {
+          error.config = config;
+          if (code) {
+            error.code = code;
+          }
+          error.request = request;
+          error.response = response;
+          error.isSoxaError = true;
+          error.toJSON = function () {
+            return {
+              // Standard
+              message: this.message,
+              name: this.name,
+              // Microsoft
+              description: this.description,
+              number: this.number,
+              // Mozilla
+              fileName: this.fileName,
+              lineNumber: this.lineNumber,
+              columnNumber: this.columnNumber,
+              stack: this.stack,
+              // Soxa
+              config: this.config,
+              code: this.code,
+            };
+          };
+          return error;
+        };
+        exports_100("enhanceError", enhanceError);
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/soxa@master/src/core/createError",
+  ["https://deno.land/x/soxa@master/src/core/enhanceError"],
+  function (exports_101, context_101) {
+    "use strict";
+    var enhanceError_ts_1, createError;
+    var __moduleName = context_101 && context_101.id;
+    return {
+      setters: [
+        function (enhanceError_ts_1_1) {
+          enhanceError_ts_1 = enhanceError_ts_1_1;
+        },
+      ],
+      execute: function () {
+        /**
+             * Create an Error with the specified message, config, error code, request and response.
+             *
+             * @param {string} message The error message.
+             * @param {Object} config The config.
+             * @param {string} [code] The error code (for example, 'ECONNABORTED').
+             * @param {Object} [request] The request.
+             * @param {Object} [response] The response.
+             * @returns {Error} The created error.
+             */
+        createError = function (message, config, code, request, response) {
+          var error = new Error(message);
+          return enhanceError_ts_1.enhanceError(
+            error,
+            config,
+            code,
+            request,
+            response,
+          );
+        };
+        exports_101("createError", createError);
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/soxa@master/src/core/settle",
+  ["https://deno.land/x/soxa@master/src/core/createError"],
+  function (exports_102, context_102) {
+    "use strict";
+    var createError_ts_1, settle;
+    var __moduleName = context_102 && context_102.id;
+    return {
+      setters: [
+        function (createError_ts_1_1) {
+          createError_ts_1 = createError_ts_1_1;
+        },
+      ],
+      execute: function () {
+        // @ts-ignore
+        settle = function (resolve, reject, response) {
+          var validateStatus = response.config.validateStatus;
+          if (!validateStatus || validateStatus(response.status)) {
+            resolve(response);
+          } else {
+            reject(
+              createError_ts_1.createError(
+                "Request failed with status code " + response.status,
+                response.config,
+                null,
+                response.request,
+                response,
+              ),
+            );
+          }
+        };
+        exports_102("settle", settle);
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/soxa@master/src/helpers/isAbsoluteURL",
+  [],
+  function (exports_103, context_103) {
+    "use strict";
+    var isAbsoluteURL;
+    var __moduleName = context_103 && context_103.id;
+    return {
+      setters: [],
+      execute: function () {
+        /**
+             * Determines whether the specified URL is absolute
+             *
+             * @param {string} url The URL to test
+             * @returns {boolean} True if the specified URL is absolute, otherwise false
+             */
+        isAbsoluteURL = function (url) {
+          // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
+          // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
+          // by any combination of letters, digits, plus, period, or hyphen.
+          return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
+        };
+        exports_103("isAbsoluteURL", isAbsoluteURL);
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/soxa@master/src/helpers/combineURLs",
+  [],
+  function (exports_104, context_104) {
+    "use strict";
+    var combineURLs;
+    var __moduleName = context_104 && context_104.id;
+    return {
+      setters: [],
+      execute: function () {
+        /**
+             * Creates a new URL by combining the specified URLs
+             *
+             * @param {string} baseURL The base URL
+             * @param {string} relativeURL The relative URL
+             * @returns {string} The combined URL
+             */
+        combineURLs = function (baseURL, relativeURL) {
+          return relativeURL
+            ? baseURL.replace(/\/+$/, "") + "/" +
+              relativeURL.replace(/^\/+/, "")
+            : baseURL;
+        };
+        exports_104("combineURLs", combineURLs);
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/soxa@master/src/core/buildFullPath",
+  [
+    "https://deno.land/x/soxa@master/src/helpers/isAbsoluteURL",
+    "https://deno.land/x/soxa@master/src/helpers/combineURLs",
+  ],
+  function (exports_105, context_105) {
+    "use strict";
+    var isAbsoluteURL_ts_1, combineURLs_ts_1, buildFullPath;
+    var __moduleName = context_105 && context_105.id;
+    return {
+      setters: [
+        function (isAbsoluteURL_ts_1_1) {
+          isAbsoluteURL_ts_1 = isAbsoluteURL_ts_1_1;
+        },
+        function (combineURLs_ts_1_1) {
+          combineURLs_ts_1 = combineURLs_ts_1_1;
+        },
+      ],
+      execute: function () {
+        /**
+             * Creates a new URL by combining the baseURL with the requestedURL,
+             * only when the requestedURL is not already an absolute URL.
+             * If the requestURL is absolute, this function returns the requestedURL untouched.
+             *
+             * @param {string} baseURL The base URL
+             * @param {string} requestedURL Absolute or relative URL to combine
+             * @returns {string} The combined full path
+             */
+        buildFullPath = function (baseURL, requestedURL) {
+          if (baseURL && !isAbsoluteURL_ts_1.isAbsoluteURL(requestedURL)) {
+            return combineURLs_ts_1.combineURLs(baseURL, requestedURL);
+          }
+          return requestedURL;
+        };
+        exports_105("buildFullPath", buildFullPath);
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/soxa@master/src/adapters/fetchAdapter",
+  [
+    "https://deno.land/x/soxa@master/src/core/settle",
+    "https://deno.land/x/soxa@master/src/helpers/buildURL",
+    "https://deno.land/x/soxa@master/src/core/buildFullPath",
+  ],
+  function (exports_106, context_106) {
+    "use strict";
+    var settle_ts_1, buildURL_ts_1, buildFullPath_ts_1, fetchAdapter;
+    var __moduleName = context_106 && context_106.id;
+    return {
+      setters: [
+        function (settle_ts_1_1) {
+          settle_ts_1 = settle_ts_1_1;
+        },
+        function (buildURL_ts_1_1) {
+          buildURL_ts_1 = buildURL_ts_1_1;
+        },
+        function (buildFullPath_ts_1_1) {
+          buildFullPath_ts_1 = buildFullPath_ts_1_1;
+        },
+      ],
+      execute: function () {
+        // @ts-ignore
+        fetchAdapter = function (config) {
+          // At this point:
+          //  - config has been merged with defaults
+          //  - request transformers have already run
+          //  - request interceptors have already run
+          // Make the request using config provided
+          // Upon response settle the Promise
+          return new Promise(function (resolve, reject) {
+            let fullPath = buildFullPath_ts_1.buildFullPath(
+              config.baseURL,
+              config.url,
+            );
+            let parsed = new URL(fullPath);
+            //let protocol = parsed.protocol || 'http:'
+            let path = buildURL_ts_1.buildURL(
+              parsed.href,
+              config.params,
+              config.paramsSerializer,
+            ).replace(/^\?/, "");
+            let headers = config.headers;
+            // HTTP basic authentication
+            var auth = undefined;
+            if (config.auth) {
+              var username = config.auth.username || "";
+              var password = config.auth.password || "";
+              auth = username + ":" + password;
+            }
+            if (auth) {
+              delete headers.Authorization;
+            }
+            let options = {
+              method: config.method.toUpperCase(),
+              body: config.data,
+              headers: headers,
+            };
+            if (auth) {
+              options.headers["Authorization"] = `Basic ${btoa(auth)}`;
+            }
+            fetch(path, options)
+              .then(
+                ((res) => {
+                  let h = {};
+                  for (let [key, value] of res.headers) {
+                    // @ts-ignore
+                    h[key] = value;
+                  }
+                  res.text()
+                    .then((data) => {
+                      var response = {
+                        data: data,
+                        status: res.status,
+                        statusText: res.statusText,
+                        headers: h,
+                        config: config,
+                      };
+                      settle_ts_1.settle(resolve, reject, response);
+                    });
+                }),
+              )
+              .catch((er) => {
+                reject(er);
+              });
+            // From here:
+            //  - response transformers will run
+            //  - response interceptors will run
+          });
+        };
+        exports_106("fetchAdapter", fetchAdapter);
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/soxa@master/src/defaults",
+  [
+    "https://deno.land/x/soxa@master/src/utils",
+    "https://deno.land/x/soxa@master/src/helpers/normalizeHeaderName",
+    "https://deno.land/x/soxa@master/src/adapters/fetchAdapter",
+  ],
+  function (exports_107, context_107) {
+    "use strict";
+    var utils,
+      normalizeHeaderName_ts_1,
+      fetchAdapter_ts_1,
+      DEFAULT_CONTENT_TYPE,
+      defaults;
+    var __moduleName = context_107 && context_107.id;
+    // @ts-ignore
+    function setContentTypeIfUnset(headers, value) {
+      if (
+        !utils.isUndefined(headers) &&
+        utils.isUndefined(headers["Content-Type"])
+      ) {
+        headers["Content-Type"] = value;
+      }
+    }
+    function getDefaultAdapter() {
+      return fetchAdapter_ts_1.fetchAdapter;
+    }
+    return {
+      setters: [
+        function (utils_5) {
+          utils = utils_5;
+        },
+        function (normalizeHeaderName_ts_1_1) {
+          normalizeHeaderName_ts_1 = normalizeHeaderName_ts_1_1;
+        },
+        function (fetchAdapter_ts_1_1) {
+          fetchAdapter_ts_1 = fetchAdapter_ts_1_1;
+        },
+      ],
+      execute: function () {
+        DEFAULT_CONTENT_TYPE = {
+          "Content-Type": "application/x-www-form-urlencoded",
+        };
+        defaults = {
+          headers: {
+            common: {
+              "Accept": "application/json, text/plain, */*",
+            },
+            delete: {},
+            get: {},
+            head: {},
+            post: utils.merge(DEFAULT_CONTENT_TYPE),
+            put: utils.merge(DEFAULT_CONTENT_TYPE),
+            patch: utils.merge(DEFAULT_CONTENT_TYPE),
+          },
+          adapter: getDefaultAdapter(),
+          // @ts-ignore
+          transformRequest: [function transformRequest(data, headers) {
+            normalizeHeaderName_ts_1.normalizeHeaderName(headers, "Accept");
+            normalizeHeaderName_ts_1.normalizeHeaderName(
+              headers,
+              "Content-Type",
+            );
+            if (
+              utils.isFormData(data) ||
+              utils.isArrayBuffer(data) ||
+              utils.isBuffer(data) ||
+              utils.isStream(data) ||
+              utils.isFile(data) ||
+              utils.isBlob(data)
+            ) {
+              return data;
+            }
+            if (utils.isArrayBufferView(data)) {
+              return data.buffer;
+            }
+            if (utils.isURLSearchParams(data)) {
+              setContentTypeIfUnset(
+                headers,
+                "application/x-www-form-urlencoded;charset=utf-8",
+              );
+              return data.toString();
+            }
+            if (utils.isObject(data)) {
+              setContentTypeIfUnset(headers, "application/json;charset=utf-8");
+              return JSON.stringify(data);
+            }
+            return data;
+          }],
+          // @ts-ignore
+          transformResponse: [function transformResponse(data) {
+            /*eslint no-param-reassign:0*/
+            if (typeof data === "string") {
+              try {
+                data = JSON.parse(data);
+              } catch (e) { /* Ignore */ }
+            }
+            return data;
+          }],
+          /**
+                 * A timeout in milliseconds to abort a request. If set to 0 (default) a
+                 * timeout is not created.
+                 */
+          timeout: 0,
+          xsrfCookieName: "XSRF-TOKEN",
+          xsrfHeaderName: "X-XSRF-TOKEN",
+          maxContentLength: -1,
+          // @ts-ignore
+          validateStatus: function validateStatus(status) {
+            return status >= 200 && status < 300;
+          },
+        };
+        exports_107("defaults", defaults);
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/soxa@master/src/core/dispatchRequest",
+  [
+    "https://deno.land/x/soxa@master/src/utils",
+    "https://deno.land/x/soxa@master/src/core/transformData",
+    "https://deno.land/x/soxa@master/src/cancel/isCancel",
+    "https://deno.land/x/soxa@master/src/defaults",
+  ],
+  function (exports_108, context_108) {
+    "use strict";
+    var utils,
+      transformData_ts_1,
+      isCancel_ts_1,
+      defaults_ts_1,
+      dispatchRequest;
+    var __moduleName = context_108 && context_108.id;
+    // @ts-ignore
+    function throwIfCancellationRequested(config) {
+      if (config.cancelToken) {
+        config.cancelToken.throwIfRequested();
+      }
+    }
+    return {
+      setters: [
+        function (utils_6) {
+          utils = utils_6;
+        },
+        function (transformData_ts_1_1) {
+          transformData_ts_1 = transformData_ts_1_1;
+        },
+        function (isCancel_ts_1_1) {
+          isCancel_ts_1 = isCancel_ts_1_1;
+        },
+        function (defaults_ts_1_1) {
+          defaults_ts_1 = defaults_ts_1_1;
+        },
+      ],
+      execute: function () {
+        // @ts-ignore
+        dispatchRequest = function (config) {
+          throwIfCancellationRequested(config);
+          // Ensure headers exist
+          config.headers = config.headers || {};
+          // Transform request data
+          config.data = transformData_ts_1.transformData(
+            config.data,
+            config.headers,
+            config.transformRequest,
+          );
+          // Flatten headers
+          config.headers = utils.merge(
+            config.headers.common || {},
+            config.headers[config.method] || {},
+            config.headers || {},
+          );
+          utils.forEach(
+            ["delete", "get", "head", "post", "put", "patch", "common"],
+            function cleanHeaderConfig(method) {
+              delete config.headers[method];
+            },
+          );
+          let adapter = config.adapter || defaults_ts_1.defaults.adapter;
+          // @ts-ignore
+          return adapter(config).then(function onAdapterResolution(response) {
+            throwIfCancellationRequested(config);
+            // Transform response data
+            response.data = transformData_ts_1.transformData(
+              response.data,
+              response.headers,
+              config.transformResponse,
+            );
+            return response;
+          }, // @ts-ignore
+          function onAdapterRejection(reason) {
+            if (!isCancel_ts_1.isCancel(reason)) {
+              throwIfCancellationRequested(config);
+              // Transform response data
+              if (reason && reason.response) {
+                reason.response.data = transformData_ts_1.transformData(
+                  reason.response.data,
+                  reason.response.headers,
+                  config.transformResponse,
+                );
+              }
+            }
+            return Promise.reject(reason);
+          });
+        };
+        exports_108("dispatchRequest", dispatchRequest);
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/soxa@master/src/core/mergeConfig",
+  ["https://deno.land/x/soxa@master/src/utils"],
+  function (exports_109, context_109) {
+    "use strict";
+    var utils, mergeConfig;
+    var __moduleName = context_109 && context_109.id;
+    return {
+      setters: [
+        function (utils_7) {
+          utils = utils_7;
+        },
+      ],
+      execute: function () {
+        // @ts-ignore
+        mergeConfig = function (config1, config2) {
+          // eslint-disable-next-line no-param-reassign
+          config2 = config2 || {};
+          var config = {};
+          var valueFromConfig2Keys = ["url", "method", "params", "data"];
+          var mergeDeepPropertiesKeys = ["headers", "auth", "proxy"];
+          var defaultToConfig2Keys = [
+            "baseURL",
+            "url",
+            "transformRequest",
+            "transformResponse",
+            "paramsSerializer",
+            "timeout",
+            "withCredentials",
+            "adapter",
+            "responseType",
+            "xsrfCookieName",
+            "xsrfHeaderName",
+            "onUploadProgress",
+            "onDownloadProgress",
+            "maxContentLength",
+            "validateStatus",
+            "maxRedirects",
+            "httpAgent",
+            "httpsAgent",
+            "cancelToken",
+            "socketPath",
+          ];
+          utils.forEach(valueFromConfig2Keys, function valueFromConfig2(prop) {
+            if (typeof config2[prop] !== "undefined") {
+              // @ts-ignore
+              config[prop] = config2[prop];
+            }
+          });
+          utils.forEach(
+            mergeDeepPropertiesKeys,
+            function mergeDeepProperties(prop) {
+              if (utils.isObject(config2[prop])) {
+                // @ts-ignore
+                config[prop] = utils.deepMerge(config1[prop], config2[prop]);
+              } else if (typeof config2[prop] !== "undefined") {
+                // @ts-ignore
+                config[prop] = config2[prop];
+              } else if (utils.isObject(config1[prop])) {
+                // @ts-ignore
+                config[prop] = utils.deepMerge(config1[prop]);
+              } else if (typeof config1[prop] !== "undefined") {
+                // @ts-ignore
+                config[prop] = config1[prop];
+              }
+            },
+          );
+          utils.forEach(defaultToConfig2Keys, function defaultToConfig2(prop) {
+            if (typeof config2[prop] !== "undefined") {
+              // @ts-ignore
+              config[prop] = config2[prop];
+            } else if (typeof config1[prop] !== "undefined") {
+              // @ts-ignore
+              config[prop] = config1[prop];
+            }
+          });
+          var soxaKeys = valueFromConfig2Keys
+            .concat(mergeDeepPropertiesKeys)
+            .concat(defaultToConfig2Keys);
+          var otherKeys = Object
+            .keys(config2)
+            .filter(function filterSoxaKeys(key) {
+              return soxaKeys.indexOf(key) === -1;
+            });
+          utils.forEach(otherKeys, function otherKeysDefaultToConfig2(prop) {
+            if (typeof config2[prop] !== "undefined") {
+              // @ts-ignore
+              config[prop] = config2[prop];
+            } else if (typeof config1[prop] !== "undefined") {
+              // @ts-ignore
+              config[prop] = config1[prop];
+            }
+          });
+          return config;
+        };
+        exports_109("mergeConfig", mergeConfig);
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/soxa@master/src/core/Soxa",
+  [
+    "https://deno.land/x/soxa@master/src/utils",
+    "https://deno.land/x/soxa@master/src/helpers/buildURL",
+    "https://deno.land/x/soxa@master/src/core/InterceptorManager",
+    "https://deno.land/x/soxa@master/src/core/dispatchRequest",
+    "https://deno.land/x/soxa@master/src/core/mergeConfig",
+  ],
+  function (exports_110, context_110) {
+    "use strict";
+    var utils,
+      buildURL_ts_2,
+      InterceptorManager_ts_1,
+      dispatchRequest_ts_1,
+      mergeConfig_ts_1,
+      Soxa;
+    var __moduleName = context_110 && context_110.id;
+    return {
+      setters: [
+        function (utils_8) {
+          utils = utils_8;
+        },
+        function (buildURL_ts_2_1) {
+          buildURL_ts_2 = buildURL_ts_2_1;
+        },
+        function (InterceptorManager_ts_1_1) {
+          InterceptorManager_ts_1 = InterceptorManager_ts_1_1;
+        },
+        function (dispatchRequest_ts_1_1) {
+          dispatchRequest_ts_1 = dispatchRequest_ts_1_1;
+        },
+        function (mergeConfig_ts_1_1) {
+          mergeConfig_ts_1 = mergeConfig_ts_1_1;
+        },
+      ],
+      execute: function () {
+        Soxa = class Soxa {
+          // @ts-ignore
+          constructor(instanceConfig) {
+            this.defaults = instanceConfig;
+            this.interceptors = {
+              request: new InterceptorManager_ts_1.InterceptorManager(),
+              response: new InterceptorManager_ts_1.InterceptorManager(),
+            };
+          }
+          // @ts-ignore
+          request(config) {
+            // Allow for soxa('example/url'[, config]) a la fetch API
+            if (typeof config === "string") {
+              config = arguments[1] || {};
+              config.url = arguments[0];
+            } else {
+              config = config || {};
+            }
+            config = mergeConfig_ts_1.mergeConfig(this.defaults, config);
+            // Set config.method
+            if (config.method) {
+              config.method = config.method.toLowerCase();
+            } else if (this.defaults.method) {
+              config.method = this.defaults.method.toLowerCase();
+            } else {
+              config.method = "get";
+            }
+            let chain = [dispatchRequest_ts_1.dispatchRequest, undefined];
+            let promise = Promise.resolve(config);
+            // @ts-ignore
+            this.interceptors.request.forEach(
+              function unshiftRequestInterceptors(interceptor) {
+                chain.unshift(interceptor.fulfilled, interceptor.rejected);
+              },
+            );
+            // @ts-ignore
+            this.interceptors.response.forEach(
+              function pushResponseInterceptors(interceptor) {
+                chain.push(interceptor.fulfilled, interceptor.rejected);
+              },
+            );
+            while (chain.length) {
+              promise = promise.then(chain.shift(), chain.shift());
+            }
+            return promise;
+          }
+          // @ts-ignore
+          getUri(config) {
+            config = mergeConfig_ts_1.mergeConfig(this.defaults, config);
+            return buildURL_ts_2.buildURL(
+              config.url,
+              config.params,
+              config.paramsSerializer,
+            ).replace(/^\?/, "");
+          }
+          requestURL(url, method, config) {
+            return this.request(utils.merge(config || {}, {
+              method: method,
+              url: url,
+            }));
+          }
+          requestData(url, data, method, config) {
+            return this.request(utils.merge(config || {}, {
+              method: method,
+              url: url,
+              data: data,
+            }));
+          }
+          // @ts-ignore
+          delete(url, config) {
+            return this.requestURL(url, "delete", config);
+          }
+          // @ts-ignore
+          get(url, config) {
+            return this.requestURL(url, "get", config);
+          }
+          // @ts-ignore
+          head(url, config) {
+            return this.requestURL(url, "head", config);
+          }
+          // @ts-ignore
+          options(url, config) {
+            return this.requestURL(url, "options", config);
+          }
+          post(url, data, config) {
+            return this.requestData(url, data, "post", config);
+          }
+          put(url, data, config) {
+            return this.requestData(url, data, "put", config);
+          }
+          patch(url, data, config) {
+            return this.requestData(url, data, "patch", config);
+          }
+        };
+        exports_110("Soxa", Soxa);
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/soxa@master/src/soxa",
+  [
+    "https://deno.land/x/soxa@master/src/core/Soxa",
+    "https://deno.land/x/soxa@master/src/defaults",
+  ],
+  function (exports_111, context_111) {
+    "use strict";
+    var Soxa_ts_1, defaults_ts_2, soxa;
+    var __moduleName = context_111 && context_111.id;
+    return {
+      setters: [
+        function (Soxa_ts_1_1) {
+          Soxa_ts_1 = Soxa_ts_1_1;
+        },
+        function (defaults_ts_2_1) {
+          defaults_ts_2 = defaults_ts_2_1;
+        },
+      ],
+      execute: function () {
+        soxa = new Soxa_ts_1.Soxa(defaults_ts_2.defaults);
+        exports_111("soxa", soxa);
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/soxa@master/mod",
+  ["https://deno.land/x/soxa@master/src/soxa"],
+  function (exports_112, context_112) {
+    "use strict";
+    var __moduleName = context_112 && context_112.id;
+    return {
+      setters: [
+        function (soxa_ts_1_1) {
+          exports_112({
+            "soxa": soxa_ts_1_1["soxa"],
+          });
+        },
+      ],
+      execute: function () {
+      },
+    };
+  },
+);
+System.register(
+  "https://raw.githubusercontent.com/udibo/mixins/v0.3.0/apply",
+  [],
+  function (exports_113, context_113) {
+    "use strict";
+    var __moduleName = context_113 && context_113.id;
+    /** Applies properties of mixins to instance. */
+    function applyMixins(instance, mixins) {
+      mixins.forEach((mixin) => {
+        Object.getOwnPropertyNames(mixin).forEach((name) => {
+          Object.defineProperty(
+            instance,
+            name,
+            Object.getOwnPropertyDescriptor(mixin, name),
+          );
+        });
+      });
+    }
+    exports_113("applyMixins", applyMixins);
+    /** Applies properties of base class prototypes to instance. */
+    function applyInstanceMixins(instance, baseCtors) {
+      applyMixins(instance, baseCtors.map((baseCtor) => baseCtor.prototype));
+    }
+    exports_113("applyInstanceMixins", applyInstanceMixins);
+    /** Applies properties of base class prototypes to class prototype. */
+    function applyClassMixins(ctor, baseCtors) {
+      applyInstanceMixins(ctor.prototype, baseCtors);
+    }
+    exports_113("applyClassMixins", applyClassMixins);
     return {
       setters: [],
       execute: function () {
@@ -27333,23 +27371,1490 @@ System.register(
   },
 );
 System.register(
-  "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/config/http",
-  [
-    "https://deno.land/std/log/mod",
-    "https://deno.land/std/uuid/mod",
-    "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/constants",
-  ],
-  function (exports_123, context_123) {
+  "https://deno.land/x/mock/deps/udibo/mixins/apply",
+  ["https://raw.githubusercontent.com/udibo/mixins/v0.3.0/apply"],
+  function (exports_114, context_114) {
     "use strict";
-    var log, mod_ts_16, constants_2, HTTP;
-    var __moduleName = context_123 && context_123.id;
+    var __moduleName = context_114 && context_114.id;
     return {
       setters: [
+        function (apply_ts_1_1) {
+          exports_114({
+            "applyMixins": apply_ts_1_1["applyMixins"],
+            "applyInstanceMixins": apply_ts_1_1["applyInstanceMixins"],
+          });
+        },
+      ],
+      execute: function () {
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/mock/spy",
+  ["https://deno.land/x/mock/deps/udibo/mixins/apply"],
+  function (exports_115, context_115) {
+    "use strict";
+    var apply_ts_2, SpyError, SpyMixin;
+    var __moduleName = context_115 && context_115.id;
+    function isSpy(func) {
+      return typeof func === "function" &&
+        typeof func.originalFunc === "function" &&
+        typeof func.func === "function" &&
+        Array.isArray(func.calls);
+    }
+    function spyFactory(func, obj) {
+      const calls = [];
+      if (isSpy(func)) {
+        throw new SpyError("already spying on function");
+      }
+      const spy = function () {
+        const call = { args: [...arguments] };
+        let returned;
+        if (this) {
+          call.self = this;
+        }
+        try {
+          returned = spy.func.apply(this, arguments);
+        } catch (error) {
+          call.error = error;
+          calls.push(call);
+          throw error;
+        }
+        if (typeof returned !== "undefined") {
+          call.returned = returned;
+        }
+        calls.push(call);
+        return returned;
+      };
+      apply_ts_2.applyInstanceMixins(spy, [SpyMixin]);
+      if (obj) {
+        spy.obj = obj;
+      }
+      spy.originalFunc = func;
+      spy.func = func;
+      spy.calls = calls;
+      return spy;
+    }
+    function spy(objOrFunc, method) {
+      let spy;
+      if (typeof method === "string") {
+        spy = spyFactory(objOrFunc[method], objOrFunc);
+        spy.method = method;
+        spy.restored = false;
+        if (typeof spy.obj[method] !== "function") {
+          throw new SpyError("instance method missing");
+        }
+        spy.obj[method] = spy;
+      } else if (typeof objOrFunc === "function") {
+        spy = spyFactory(objOrFunc);
+      } else {
+        spy = spyFactory(() => undefined);
+      }
+      return spy;
+    }
+    exports_115("spy", spy);
+    return {
+      setters: [
+        function (apply_ts_2_1) {
+          apply_ts_2 = apply_ts_2_1;
+        },
+      ],
+      execute: function () {
+        /** An error related to spying on a function or instance method. */
+        SpyError = class SpyError extends Error {
+          constructor(message) {
+            super(message);
+            this.name = "SpyError";
+          }
+        };
+        exports_115("SpyError", SpyError);
+        SpyMixin = class SpyMixin {
+          constructor() {
+            this.func = () => undefined;
+            this.originalFunc = this.func;
+            this.calls = [];
+          }
+          restore() {
+            if (this.obj && this.method) {
+              if (!this.restored) {
+                this.obj[this.method] = this.originalFunc;
+                this.restored = true;
+              } else {
+                throw new SpyError("instance method already restored");
+              }
+            } else {
+              throw new SpyError("no instance method to restore");
+            }
+          }
+        };
+      },
+    };
+  },
+);
+System.register(
+  "https://deno.land/x/mock/stub",
+  ["https://deno.land/x/mock/spy"],
+  function (exports_116, context_116) {
+    "use strict";
+    var spy_ts_1;
+    var __moduleName = context_116 && context_116.id;
+    function stub(instance, method, arrOrFunc) {
+      const stub = spy_ts_1.spy(instance, method);
+      stub.returns = Array.isArray(arrOrFunc) ? arrOrFunc : [];
+      const func = typeof arrOrFunc === "function"
+        ? function () {
+          return arrOrFunc.apply(this, arguments);
+        }
+        : typeof arrOrFunc === "undefined"
+        ? () => undefined
+        : () => {
+          throw new spy_ts_1.SpyError("no return for call");
+        };
+      stub.func = function () {
+        if (stub.returns.length === 0) {
+          return func.apply(this, arguments);
+        }
+        return stub.returns.shift();
+      };
+      return stub;
+    }
+    exports_116("stub", stub);
+    /** Creates a function that returns the instance the method was called on. */
+    function returnsThis() {
+      return function () {
+        return this;
+      };
+    }
+    exports_116("returnsThis", returnsThis);
+    /** Creates a function that returns one of its arguments. */
+    function returnsArg(idx) {
+      return function () {
+        return arguments[idx];
+      };
+    }
+    exports_116("returnsArg", returnsArg);
+    /** Creates a function that returns its arguments or a subset of them. If end is specified, it will return arguments up to but not including the end. */
+    function returnsArgs(start = 0, end) {
+      return function () {
+        return Array.prototype.slice.call(arguments, start, end);
+      };
+    }
+    exports_116("returnsArgs", returnsArgs);
+    /** Creates a function that throws a specific error. */
+    function throws(error) {
+      return function () {
+        throw error;
+      };
+    }
+    exports_116("throws", throws);
+    /** Creates a function that returns a promise that will resolve a specific value. */
+    function resolves(value) {
+      return () => Promise.resolve(value);
+    }
+    exports_116("resolves", resolves);
+    /** Creates a function that returns a promise that will reject a specific error. */
+    function rejects(error) {
+      return () => Promise.reject(error);
+    }
+    exports_116("rejects", rejects);
+    return {
+      setters: [
+        function (spy_ts_1_1) {
+          spy_ts_1 = spy_ts_1_1;
+        },
+      ],
+      execute: function () {
+        exports_116("spy", spy_ts_1.spy);
+        exports_116("SpyError", spy_ts_1.SpyError);
+      },
+    };
+  },
+);
+// Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
+/** A module to print ANSI terminal colors. Inspired by chalk, kleur, and colors
+ * on npm.
+ *
+ * ```
+ * import { bgBlue, red, bold } from "https://deno.land/std/fmt/colors.ts";
+ * console.log(bgBlue(red(bold("Hello world!"))));
+ * ```
+ *
+ * This module supports `NO_COLOR` environmental variable disabling any coloring
+ * if `NO_COLOR` is set.
+ *
+ * This module is browser compatible. */
+System.register(
+  "https://deno.land/std/fmt/colors",
+  [],
+  function (exports_117, context_117) {
+    "use strict";
+    var noColor, enabled, ANSI_PATTERN;
+    var __moduleName = context_117 && context_117.id;
+    function setColorEnabled(value) {
+      if (noColor) {
+        return;
+      }
+      enabled = value;
+    }
+    exports_117("setColorEnabled", setColorEnabled);
+    function getColorEnabled() {
+      return enabled;
+    }
+    exports_117("getColorEnabled", getColorEnabled);
+    function code(open, close) {
+      return {
+        open: `\x1b[${open.join(";")}m`,
+        close: `\x1b[${close}m`,
+        regexp: new RegExp(`\\x1b\\[${close}m`, "g"),
+      };
+    }
+    function run(str, code) {
+      return enabled
+        ? `${code.open}${str.replace(code.regexp, code.open)}${code.close}`
+        : str;
+    }
+    function reset(str) {
+      return run(str, code([0], 0));
+    }
+    exports_117("reset", reset);
+    function bold(str) {
+      return run(str, code([1], 22));
+    }
+    exports_117("bold", bold);
+    function dim(str) {
+      return run(str, code([2], 22));
+    }
+    exports_117("dim", dim);
+    function italic(str) {
+      return run(str, code([3], 23));
+    }
+    exports_117("italic", italic);
+    function underline(str) {
+      return run(str, code([4], 24));
+    }
+    exports_117("underline", underline);
+    function inverse(str) {
+      return run(str, code([7], 27));
+    }
+    exports_117("inverse", inverse);
+    function hidden(str) {
+      return run(str, code([8], 28));
+    }
+    exports_117("hidden", hidden);
+    function strikethrough(str) {
+      return run(str, code([9], 29));
+    }
+    exports_117("strikethrough", strikethrough);
+    function black(str) {
+      return run(str, code([30], 39));
+    }
+    exports_117("black", black);
+    function red(str) {
+      return run(str, code([31], 39));
+    }
+    exports_117("red", red);
+    function green(str) {
+      return run(str, code([32], 39));
+    }
+    exports_117("green", green);
+    function yellow(str) {
+      return run(str, code([33], 39));
+    }
+    exports_117("yellow", yellow);
+    function blue(str) {
+      return run(str, code([34], 39));
+    }
+    exports_117("blue", blue);
+    function magenta(str) {
+      return run(str, code([35], 39));
+    }
+    exports_117("magenta", magenta);
+    function cyan(str) {
+      return run(str, code([36], 39));
+    }
+    exports_117("cyan", cyan);
+    function white(str) {
+      return run(str, code([37], 39));
+    }
+    exports_117("white", white);
+    function gray(str) {
+      return run(str, code([90], 39));
+    }
+    exports_117("gray", gray);
+    function bgBlack(str) {
+      return run(str, code([40], 49));
+    }
+    exports_117("bgBlack", bgBlack);
+    function bgRed(str) {
+      return run(str, code([41], 49));
+    }
+    exports_117("bgRed", bgRed);
+    function bgGreen(str) {
+      return run(str, code([42], 49));
+    }
+    exports_117("bgGreen", bgGreen);
+    function bgYellow(str) {
+      return run(str, code([43], 49));
+    }
+    exports_117("bgYellow", bgYellow);
+    function bgBlue(str) {
+      return run(str, code([44], 49));
+    }
+    exports_117("bgBlue", bgBlue);
+    function bgMagenta(str) {
+      return run(str, code([45], 49));
+    }
+    exports_117("bgMagenta", bgMagenta);
+    function bgCyan(str) {
+      return run(str, code([46], 49));
+    }
+    exports_117("bgCyan", bgCyan);
+    function bgWhite(str) {
+      return run(str, code([47], 49));
+    }
+    exports_117("bgWhite", bgWhite);
+    /* Special Color Sequences */
+    function clampAndTruncate(n, max = 255, min = 0) {
+      return Math.trunc(Math.max(Math.min(n, max), min));
+    }
+    /** Set text color using paletted 8bit colors.
+     * https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit */
+    function rgb8(str, color) {
+      return run(str, code([38, 5, clampAndTruncate(color)], 39));
+    }
+    exports_117("rgb8", rgb8);
+    /** Set background color using paletted 8bit colors.
+     * https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit */
+    function bgRgb8(str, color) {
+      return run(str, code([48, 5, clampAndTruncate(color)], 49));
+    }
+    exports_117("bgRgb8", bgRgb8);
+    /** Set text color using 24bit rgb.
+     * `color` can be a number in range `0x000000` to `0xffffff` or
+     * an `Rgb`.
+     *
+     * To produce the color magenta:
+     *
+     *      rgba24("foo", 0xff00ff);
+     *      rgba24("foo", {r: 255, g: 0, b: 255});
+     */
+    function rgb24(str, color) {
+      if (typeof color === "number") {
+        return run(
+          str,
+          code(
+            [38, 2, (color >> 16) & 0xff, (color >> 8) & 0xff, color & 0xff],
+            39,
+          ),
+        );
+      }
+      return run(
+        str,
+        code([
+          38,
+          2,
+          clampAndTruncate(color.r),
+          clampAndTruncate(color.g),
+          clampAndTruncate(color.b),
+        ], 39),
+      );
+    }
+    exports_117("rgb24", rgb24);
+    /** Set background color using 24bit rgb.
+     * `color` can be a number in range `0x000000` to `0xffffff` or
+     * an `Rgb`.
+     *
+     * To produce the color magenta:
+     *
+     *      bgRgba24("foo", 0xff00ff);
+     *      bgRgba24("foo", {r: 255, g: 0, b: 255});
+     */
+    function bgRgb24(str, color) {
+      if (typeof color === "number") {
+        return run(
+          str,
+          code(
+            [48, 2, (color >> 16) & 0xff, (color >> 8) & 0xff, color & 0xff],
+            49,
+          ),
+        );
+      }
+      return run(
+        str,
+        code([
+          48,
+          2,
+          clampAndTruncate(color.r),
+          clampAndTruncate(color.g),
+          clampAndTruncate(color.b),
+        ], 49),
+      );
+    }
+    exports_117("bgRgb24", bgRgb24);
+    function stripColor(string) {
+      return string.replace(ANSI_PATTERN, "");
+    }
+    exports_117("stripColor", stripColor);
+    return {
+      setters: [],
+      execute: function () {
+        noColor = globalThis.Deno?.noColor ?? true;
+        enabled = !noColor;
+        // https://github.com/chalk/ansi-regex/blob/2b56fb0c7a07108e5b54241e8faec160d393aedb/index.js
+        ANSI_PATTERN = new RegExp(
+          [
+            "[\\u001B\\u009B][[\\]()#;?]*(?:(?:(?:[a-zA-Z\\d]*(?:;[-a-zA-Z\\d\\/#&.:=?%@~_]*)*)?\\u0007)",
+            "(?:(?:\\d{1,4}(?:;\\d{0,4})*)?[\\dA-PR-TZcf-ntqry=><~]))",
+          ].join("|"),
+          "g",
+        );
+      },
+    };
+  },
+);
+// Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
+/** This module is browser compatible. */
+System.register(
+  "https://deno.land/std/testing/diff",
+  [],
+  function (exports_118, context_118) {
+    "use strict";
+    var DiffType, REMOVED, COMMON, ADDED;
+    var __moduleName = context_118 && context_118.id;
+    function createCommon(A, B, reverse) {
+      const common = [];
+      if (A.length === 0 || B.length === 0) {
+        return [];
+      }
+      for (let i = 0; i < Math.min(A.length, B.length); i += 1) {
+        if (
+          A[reverse ? A.length - i - 1 : i] ===
+            B[reverse ? B.length - i - 1 : i]
+        ) {
+          common.push(A[reverse ? A.length - i - 1 : i]);
+        } else {
+          return common;
+        }
+      }
+      return common;
+    }
+    function diff(A, B) {
+      const prefixCommon = createCommon(A, B);
+      const suffixCommon = createCommon(
+        A.slice(prefixCommon.length),
+        B.slice(prefixCommon.length),
+        true,
+      ).reverse();
+      A = suffixCommon.length
+        ? A.slice(prefixCommon.length, -suffixCommon.length)
+        : A.slice(prefixCommon.length);
+      B = suffixCommon.length
+        ? B.slice(prefixCommon.length, -suffixCommon.length)
+        : B.slice(prefixCommon.length);
+      const swapped = B.length > A.length;
+      [A, B] = swapped ? [B, A] : [A, B];
+      const M = A.length;
+      const N = B.length;
+      if (!M && !N && !suffixCommon.length && !prefixCommon.length) {
+        return [];
+      }
+      if (!N) {
+        return [
+          ...prefixCommon.map((c) => ({ type: DiffType.common, value: c })),
+          ...A.map((a) => ({
+            type: swapped ? DiffType.added : DiffType.removed,
+            value: a,
+          })),
+          ...suffixCommon.map((c) => ({ type: DiffType.common, value: c })),
+        ];
+      }
+      const offset = N;
+      const delta = M - N;
+      const size = M + N + 1;
+      const fp = new Array(size).fill({ y: -1 });
+      /**
+         * INFO:
+         * This buffer is used to save memory and improve performance.
+         * The first half is used to save route and last half is used to save diff
+         * type.
+         * This is because, when I kept new uint8array area to save type,performance
+         * worsened.
+         */
+      const routes = new Uint32Array((M * N + size + 1) * 2);
+      const diffTypesPtrOffset = routes.length / 2;
+      let ptr = 0;
+      let p = -1;
+      function backTrace(A, B, current, swapped) {
+        const M = A.length;
+        const N = B.length;
+        const result = [];
+        let a = M - 1;
+        let b = N - 1;
+        let j = routes[current.id];
+        let type = routes[current.id + diffTypesPtrOffset];
+        while (true) {
+          if (!j && !type) {
+            break;
+          }
+          const prev = j;
+          if (type === REMOVED) {
+            result.unshift({
+              type: swapped ? DiffType.removed : DiffType.added,
+              value: B[b],
+            });
+            b -= 1;
+          } else if (type === ADDED) {
+            result.unshift({
+              type: swapped ? DiffType.added : DiffType.removed,
+              value: A[a],
+            });
+            a -= 1;
+          } else {
+            result.unshift({ type: DiffType.common, value: A[a] });
+            a -= 1;
+            b -= 1;
+          }
+          j = routes[prev];
+          type = routes[prev + diffTypesPtrOffset];
+        }
+        return result;
+      }
+      function createFP(slide, down, k, M) {
+        if (slide && slide.y === -1 && down && down.y === -1) {
+          return { y: 0, id: 0 };
+        }
+        if (
+          (down && down.y === -1) ||
+          k === M ||
+          (slide && slide.y) > (down && down.y) + 1
+        ) {
+          const prev = slide.id;
+          ptr++;
+          routes[ptr] = prev;
+          routes[ptr + diffTypesPtrOffset] = ADDED;
+          return { y: slide.y, id: ptr };
+        } else {
+          const prev = down.id;
+          ptr++;
+          routes[ptr] = prev;
+          routes[ptr + diffTypesPtrOffset] = REMOVED;
+          return { y: down.y + 1, id: ptr };
+        }
+      }
+      function snake(k, slide, down, _offset, A, B) {
+        const M = A.length;
+        const N = B.length;
+        if (k < -N || M < k) {
+          return { y: -1, id: -1 };
+        }
+        const fp = createFP(slide, down, k, M);
+        while (fp.y + k < M && fp.y < N && A[fp.y + k] === B[fp.y]) {
+          const prev = fp.id;
+          ptr++;
+          fp.id = ptr;
+          fp.y += 1;
+          routes[ptr] = prev;
+          routes[ptr + diffTypesPtrOffset] = COMMON;
+        }
+        return fp;
+      }
+      while (fp[delta + offset].y < N) {
+        p = p + 1;
+        for (let k = -p; k < delta; ++k) {
+          fp[k + offset] = snake(
+            k,
+            fp[k - 1 + offset],
+            fp[k + 1 + offset],
+            offset,
+            A,
+            B,
+          );
+        }
+        for (let k = delta + p; k > delta; --k) {
+          fp[k + offset] = snake(
+            k,
+            fp[k - 1 + offset],
+            fp[k + 1 + offset],
+            offset,
+            A,
+            B,
+          );
+        }
+        fp[delta + offset] = snake(
+          delta,
+          fp[delta - 1 + offset],
+          fp[delta + 1 + offset],
+          offset,
+          A,
+          B,
+        );
+      }
+      return [
+        ...prefixCommon.map((c) => ({ type: DiffType.common, value: c })),
+        ...backTrace(A, B, fp[delta + offset], swapped),
+        ...suffixCommon.map((c) => ({ type: DiffType.common, value: c })),
+      ];
+    }
+    exports_118("default", diff);
+    return {
+      setters: [],
+      execute: function () {
+        (function (DiffType) {
+          DiffType["removed"] = "removed";
+          DiffType["common"] = "common";
+          DiffType["added"] = "added";
+        })(DiffType || (DiffType = {}));
+        exports_118("DiffType", DiffType);
+        REMOVED = 1;
+        COMMON = 2;
+        ADDED = 3;
+      },
+    };
+  },
+);
+// Copyright 2018-2020 the Deno authors. All rights reserved. MIT license.
+/** This module is browser compatible. Do not rely on good formatting of values
+ * for AssertionError messages in browsers. */
+System.register(
+  "https://deno.land/std/testing/asserts",
+  ["https://deno.land/std/fmt/colors", "https://deno.land/std/testing/diff"],
+  function (exports_119, context_119) {
+    "use strict";
+    var colors_ts_3, diff_ts_2, CAN_NOT_DISPLAY, AssertionError;
+    var __moduleName = context_119 && context_119.id;
+    function format(v) {
+      let string = globalThis.Deno ? Deno.inspect(v) : String(v);
+      if (typeof v == "string") {
+        string = `"${string.replace(/(?=["\\])/g, "\\")}"`;
+      }
+      return string;
+    }
+    function createColor(diffType) {
+      switch (diffType) {
+        case diff_ts_2.DiffType.added:
+          return (s) => colors_ts_3.green(colors_ts_3.bold(s));
+        case diff_ts_2.DiffType.removed:
+          return (s) => colors_ts_3.red(colors_ts_3.bold(s));
+        default:
+          return colors_ts_3.white;
+      }
+    }
+    function createSign(diffType) {
+      switch (diffType) {
+        case diff_ts_2.DiffType.added:
+          return "+   ";
+        case diff_ts_2.DiffType.removed:
+          return "-   ";
+        default:
+          return "    ";
+      }
+    }
+    function buildMessage(diffResult) {
+      const messages = [];
+      messages.push("");
+      messages.push("");
+      messages.push(
+        `    ${colors_ts_3.gray(colors_ts_3.bold("[Diff]"))} ${
+          colors_ts_3.red(colors_ts_3.bold("Actual"))
+        } / ${colors_ts_3.green(colors_ts_3.bold("Expected"))}`,
+      );
+      messages.push("");
+      messages.push("");
+      diffResult.forEach((result) => {
+        const c = createColor(result.type);
+        messages.push(c(`${createSign(result.type)}${result.value}`));
+      });
+      messages.push("");
+      return messages;
+    }
+    function isKeyedCollection(x) {
+      return [Symbol.iterator, "size"].every((k) => k in x);
+    }
+    function equal(c, d) {
+      const seen = new Map();
+      return (function compare(a, b) {
+        // Have to render RegExp & Date for string comparison
+        // unless it's mistreated as object
+        if (
+          a &&
+          b &&
+          ((a instanceof RegExp && b instanceof RegExp) ||
+            (a instanceof Date && b instanceof Date))
+        ) {
+          return String(a) === String(b);
+        }
+        if (Object.is(a, b)) {
+          return true;
+        }
+        if (a && typeof a === "object" && b && typeof b === "object") {
+          if (seen.get(a) === b) {
+            return true;
+          }
+          if (Object.keys(a || {}).length !== Object.keys(b || {}).length) {
+            return false;
+          }
+          if (isKeyedCollection(a) && isKeyedCollection(b)) {
+            if (a.size !== b.size) {
+              return false;
+            }
+            let unmatchedEntries = a.size;
+            for (const [aKey, aValue] of a.entries()) {
+              for (const [bKey, bValue] of b.entries()) {
+                /* Given that Map keys can be references, we need
+                             * to ensure that they are also deeply equal */
+                if (
+                  (aKey === aValue && bKey === bValue && compare(aKey, bKey)) ||
+                  (compare(aKey, bKey) && compare(aValue, bValue))
+                ) {
+                  unmatchedEntries--;
+                }
+              }
+            }
+            return unmatchedEntries === 0;
+          }
+          const merged = { ...a, ...b };
+          for (const key in merged) {
+            if (!compare(a && a[key], b && b[key])) {
+              return false;
+            }
+          }
+          seen.set(a, b);
+          return true;
+        }
+        return false;
+      })(c, d);
+    }
+    exports_119("equal", equal);
+    /** Make an assertion, if not `true`, then throw. */
+    function assert(expr, msg = "") {
+      if (!expr) {
+        throw new AssertionError(msg);
+      }
+    }
+    exports_119("assert", assert);
+    /**
+     * Make an assertion that `actual` and `expected` are equal, deeply. If not
+     * deeply equal, then throw.
+     */
+    function assertEquals(actual, expected, msg) {
+      if (equal(actual, expected)) {
+        return;
+      }
+      let message = "";
+      const actualString = format(actual);
+      const expectedString = format(expected);
+      try {
+        const diffResult = diff_ts_2.default(
+          actualString.split("\n"),
+          expectedString.split("\n"),
+        );
+        const diffMsg = buildMessage(diffResult).join("\n");
+        message = `Values are not equal:\n${diffMsg}`;
+      } catch (e) {
+        message = `\n${colors_ts_3.red(CAN_NOT_DISPLAY)} + \n\n`;
+      }
+      if (msg) {
+        message = msg;
+      }
+      throw new AssertionError(message);
+    }
+    exports_119("assertEquals", assertEquals);
+    /**
+     * Make an assertion that `actual` and `expected` are not equal, deeply.
+     * If not then throw.
+     */
+    function assertNotEquals(actual, expected, msg) {
+      if (!equal(actual, expected)) {
+        return;
+      }
+      let actualString;
+      let expectedString;
+      try {
+        actualString = String(actual);
+      } catch (e) {
+        actualString = "[Cannot display]";
+      }
+      try {
+        expectedString = String(expected);
+      } catch (e) {
+        expectedString = "[Cannot display]";
+      }
+      if (!msg) {
+        msg = `actual: ${actualString} expected: ${expectedString}`;
+      }
+      throw new AssertionError(msg);
+    }
+    exports_119("assertNotEquals", assertNotEquals);
+    /**
+     * Make an assertion that `actual` and `expected` are strictly equal.  If
+     * not then throw.
+     */
+    function assertStrictEquals(actual, expected, msg) {
+      if (actual === expected) {
+        return;
+      }
+      let message;
+      if (msg) {
+        message = msg;
+      } else {
+        const actualString = format(actual);
+        const expectedString = format(expected);
+        if (actualString === expectedString) {
+          const withOffset = actualString
+            .split("\n")
+            .map((l) => `     ${l}`)
+            .join("\n");
+          message =
+            `Values have the same structure but are not reference-equal:\n\n${
+              colors_ts_3.red(withOffset)
+            }\n`;
+        } else {
+          try {
+            const diffResult = diff_ts_2.default(
+              actualString.split("\n"),
+              expectedString.split("\n"),
+            );
+            const diffMsg = buildMessage(diffResult).join("\n");
+            message = `Values are not strictly equal:\n${diffMsg}`;
+          } catch (e) {
+            message = `\n${colors_ts_3.red(CAN_NOT_DISPLAY)} + \n\n`;
+          }
+        }
+      }
+      throw new AssertionError(message);
+    }
+    exports_119("assertStrictEquals", assertStrictEquals);
+    /**
+     * Make an assertion that actual contains expected. If not
+     * then thrown.
+     */
+    function assertStringContains(actual, expected, msg) {
+      if (!actual.includes(expected)) {
+        if (!msg) {
+          msg = `actual: "${actual}" expected to contain: "${expected}"`;
+        }
+        throw new AssertionError(msg);
+      }
+    }
+    exports_119("assertStringContains", assertStringContains);
+    /**
+     * Make an assertion that `actual` contains the `expected` values
+     * If not then thrown.
+     */
+    function assertArrayContains(actual, expected, msg) {
+      const missing = [];
+      for (let i = 0; i < expected.length; i++) {
+        let found = false;
+        for (let j = 0; j < actual.length; j++) {
+          if (equal(expected[i], actual[j])) {
+            found = true;
+            break;
+          }
+        }
+        if (!found) {
+          missing.push(expected[i]);
+        }
+      }
+      if (missing.length === 0) {
+        return;
+      }
+      if (!msg) {
+        msg = `actual: "${format(actual)}" expected to contain: "${
+          format(expected)
+        }"\nmissing: ${format(missing)}`;
+      }
+      throw new AssertionError(msg);
+    }
+    exports_119("assertArrayContains", assertArrayContains);
+    /**
+     * Make an assertion that `actual` match RegExp `expected`. If not
+     * then thrown
+     */
+    function assertMatch(actual, expected, msg) {
+      if (!expected.test(actual)) {
+        if (!msg) {
+          msg = `actual: "${actual}" expected to match: "${expected}"`;
+        }
+        throw new AssertionError(msg);
+      }
+    }
+    exports_119("assertMatch", assertMatch);
+    /**
+     * Forcefully throws a failed assertion
+     */
+    function fail(msg) {
+      // eslint-disable-next-line @typescript-eslint/no-use-before-define
+      assert(false, `Failed assertion${msg ? `: ${msg}` : "."}`);
+    }
+    exports_119("fail", fail);
+    /** Executes a function, expecting it to throw.  If it does not, then it
+     * throws.  An error class and a string that should be included in the
+     * error message can also be asserted.
+     */
+    function assertThrows(fn, ErrorClass, msgIncludes = "", msg) {
+      let doesThrow = false;
+      let error = null;
+      try {
+        fn();
+      } catch (e) {
+        if (
+          ErrorClass && !(Object.getPrototypeOf(e) === ErrorClass.prototype)
+        ) {
+          msg =
+            `Expected error to be instance of "${ErrorClass.name}", but was "${e.constructor.name}"${
+              msg ? `: ${msg}` : "."
+            }`;
+          throw new AssertionError(msg);
+        }
+        if (
+          msgIncludes &&
+          !colors_ts_3.stripColor(e.message).includes(
+            colors_ts_3.stripColor(msgIncludes),
+          )
+        ) {
+          msg =
+            `Expected error message to include "${msgIncludes}", but got "${e.message}"${
+              msg ? `: ${msg}` : "."
+            }`;
+          throw new AssertionError(msg);
+        }
+        doesThrow = true;
+        error = e;
+      }
+      if (!doesThrow) {
+        msg = `Expected function to throw${msg ? `: ${msg}` : "."}`;
+        throw new AssertionError(msg);
+      }
+      return error;
+    }
+    exports_119("assertThrows", assertThrows);
+    async function assertThrowsAsync(fn, ErrorClass, msgIncludes = "", msg) {
+      let doesThrow = false;
+      let error = null;
+      try {
+        await fn();
+      } catch (e) {
+        if (
+          ErrorClass && !(Object.getPrototypeOf(e) === ErrorClass.prototype)
+        ) {
+          msg =
+            `Expected error to be instance of "${ErrorClass.name}", but got "${e.name}"${
+              msg ? `: ${msg}` : "."
+            }`;
+          throw new AssertionError(msg);
+        }
+        if (
+          msgIncludes &&
+          !colors_ts_3.stripColor(e.message).includes(
+            colors_ts_3.stripColor(msgIncludes),
+          )
+        ) {
+          msg =
+            `Expected error message to include "${msgIncludes}", but got "${e.message}"${
+              msg ? `: ${msg}` : "."
+            }`;
+          throw new AssertionError(msg);
+        }
+        doesThrow = true;
+        error = e;
+      }
+      if (!doesThrow) {
+        msg = `Expected function to throw${msg ? `: ${msg}` : "."}`;
+        throw new AssertionError(msg);
+      }
+      return error;
+    }
+    exports_119("assertThrowsAsync", assertThrowsAsync);
+    /** Use this to stub out methods that will throw when invoked. */
+    function unimplemented(msg) {
+      throw new AssertionError(msg || "unimplemented");
+    }
+    exports_119("unimplemented", unimplemented);
+    /** Use this to assert unreachable code. */
+    function unreachable() {
+      throw new AssertionError("unreachable");
+    }
+    exports_119("unreachable", unreachable);
+    return {
+      setters: [
+        function (colors_ts_3_1) {
+          colors_ts_3 = colors_ts_3_1;
+        },
+        function (diff_ts_2_1) {
+          diff_ts_2 = diff_ts_2_1;
+        },
+      ],
+      execute: function () {
+        CAN_NOT_DISPLAY = "[Cannot display]";
+        AssertionError = class AssertionError extends Error {
+          constructor(message) {
+            super(message);
+            this.name = "AssertionError";
+          }
+        };
+        exports_119("AssertionError", AssertionError);
+      },
+    };
+  },
+);
+System.register(
+  "file:///home/runner/work/deno-starter/deno-starter/src/deps",
+  [
+    "https://deno.land/x/oak@master/mod",
+    "https://deno.land/x/oak@master/deps",
+    "https://deno.land/std@master/log/mod",
+    "https://deno.land/std@master/uuid/mod",
+    "https://deno.land/x/soxa@master/mod",
+    "https://deno.land/x/mock/stub",
+    "https://deno.land/std/testing/asserts",
+  ],
+  function (exports_120, context_120) {
+    "use strict";
+    var __moduleName = context_120 && context_120.id;
+    return {
+      setters: [
+        function (mod_ts_14_1) {
+          exports_120({
+            "Application": mod_ts_14_1["Application"],
+            "Context": mod_ts_14_1["Context"],
+            "Router": mod_ts_14_1["Router"],
+            "Request": mod_ts_14_1["Request"],
+            "Response": mod_ts_14_1["Response"],
+          });
+        },
+        function (deps_ts_16_1) {
+          exports_120({
+            "ServerRequest": deps_ts_16_1["ServerRequest"],
+          });
+        },
         function (log_1) {
-          log = log_1;
+          exports_120("log", log_1);
+        },
+        function (mod_ts_15_1) {
+          exports_120({
+            "v4": mod_ts_15_1["v4"],
+          });
         },
         function (mod_ts_16_1) {
-          mod_ts_16 = mod_ts_16_1;
+          exports_120({
+            "api": mod_ts_16_1["soxa"],
+          });
+        },
+        function (stub_ts_1_1) {
+          exports_120({
+            "stub": stub_ts_1_1["stub"],
+            "resolves": stub_ts_1_1["resolves"],
+          });
+        },
+        function (asserts_ts_11_1) {
+          exports_120({
+            "assertEquals": asserts_ts_11_1["assertEquals"],
+          });
+        },
+      ],
+      execute: function () {
+      },
+    };
+  },
+);
+System.register(
+  "file:///home/runner/work/deno-starter/deno-starter/src/constants",
+  [],
+  function (exports_121, context_121) {
+    "use strict";
+    var Constants;
+    var __moduleName = context_121 && context_121.id;
+    return {
+      setters: [],
+      execute: function () {
+        Constants = /** @class */ (() => {
+          class Constants {
+          }
+          Constants.APP_NAME = "rest-api";
+          Constants.PORT = 8000;
+          Constants.BASE_PATH = "/api/v1/";
+          Constants.CONTROLLER_DIRECTORY = "./src/controllers";
+          Constants.CORRELATION_ID_HEADER = "X-Correlation-ID";
+          return Constants;
+        })();
+        exports_121("default", Constants);
+      },
+    };
+  },
+);
+System.register(
+  "file:///home/runner/work/deno-starter/deno-starter/src/models/routes",
+  [],
+  function (exports_122, context_122) {
+    "use strict";
+    var Routes;
+    var __moduleName = context_122 && context_122.id;
+    return {
+      setters: [],
+      execute: function () {
+        (function (Routes) {
+          let Methods;
+          (function (Methods) {
+            Methods["DELETE"] = "delete";
+            Methods["GET"] = "get";
+            Methods["HEAD"] = "head";
+            Methods["OPTIONS"] = "options";
+            Methods["PATCH"] = "patch";
+            Methods["POST"] = "post";
+            Methods["PUT"] = "put";
+          })(Methods = Routes.Methods || (Routes.Methods = {}));
+          Routes.isEndpoint = (obj) =>
+            "httpMethod" in obj && "path" in obj && "serviceMethod" in obj;
+        })(Routes || (Routes = {}));
+        exports_122("Routes", Routes);
+      },
+    };
+  },
+);
+System.register(
+  "file:///home/runner/work/deno-starter/deno-starter/src/service/interface/service",
+  [],
+  function (exports_123, context_123) {
+    "use strict";
+    var __moduleName = context_123 && context_123.id;
+    return {
+      setters: [],
+      execute: function () {
+      },
+    };
+  },
+);
+System.register(
+  "file:///home/runner/work/deno-starter/deno-starter/src/service/implementation/accounts",
+  [],
+  function (exports_124, context_124) {
+    "use strict";
+    var AccountsService;
+    var __moduleName = context_124 && context_124.id;
+    return {
+      setters: [],
+      execute: function () {
+        AccountsService = class AccountsService {
+          constructor() {
+            this.getName = async ({ request, response }) => {
+              const headers = [];
+              request.headers.forEach((value, key) =>
+                headers.push({ [key]: value })
+              );
+              response.body = {
+                module: "accounts",
+                requestHeaders: headers,
+              };
+            };
+            this.getAccountById = async ({ params, response }) => {
+              const accountId = params.accountId;
+              response.body = {
+                account: accountId,
+              };
+            };
+          }
+        };
+        exports_124("AccountsService", AccountsService);
+      },
+    };
+  },
+);
+System.register(
+  "file:///home/runner/work/deno-starter/deno-starter/src/controllers/accounts",
+  [
+    "file:///home/runner/work/deno-starter/deno-starter/src/models/routes",
+    "file:///home/runner/work/deno-starter/deno-starter/src/service/implementation/accounts",
+  ],
+  function (exports_125, context_125) {
+    "use strict";
+    var routes_ts_1, accounts_ts_1, GET, accounts;
+    var __moduleName = context_125 && context_125.id;
+    return {
+      setters: [
+        function (routes_ts_1_1) {
+          routes_ts_1 = routes_ts_1_1;
+        },
+        function (accounts_ts_1_1) {
+          accounts_ts_1 = accounts_ts_1_1;
+        },
+      ],
+      execute: function () {
+        GET = routes_ts_1.Routes.Methods.GET;
+        accounts = [
+          {
+            httpMethod: GET,
+            path: "",
+            serviceMethod: new accounts_ts_1.AccountsService().getName,
+          },
+          {
+            httpMethod: GET,
+            path: "/:accountId",
+            serviceMethod: new accounts_ts_1.AccountsService().getAccountById,
+          },
+        ];
+        exports_125("default", accounts);
+      },
+    };
+  },
+);
+System.register(
+  "file:///home/runner/work/deno-starter/deno-starter/src/service/implementation/products",
+  [],
+  function (exports_126, context_126) {
+    "use strict";
+    var ProductsService;
+    var __moduleName = context_126 && context_126.id;
+    return {
+      setters: [],
+      execute: function () {
+        ProductsService = class ProductsService {
+          constructor() {
+            this.getName = async ({ response }) => {
+              response.body = {
+                module: "products",
+              };
+            };
+            this.getProductByRegion = async ({ params, response }) => {
+              const productId = params.productId;
+              const regionCode = params.regionCode;
+              response.body = {
+                region: regionCode,
+                products: productId,
+              };
+            };
+          }
+        };
+        exports_126("ProductsService", ProductsService);
+      },
+    };
+  },
+);
+System.register(
+  "file:///home/runner/work/deno-starter/deno-starter/src/controllers/products",
+  [
+    "file:///home/runner/work/deno-starter/deno-starter/src/models/routes",
+    "file:///home/runner/work/deno-starter/deno-starter/src/service/implementation/products",
+  ],
+  function (exports_127, context_127) {
+    "use strict";
+    var routes_ts_2, products_ts_1, GET, products;
+    var __moduleName = context_127 && context_127.id;
+    return {
+      setters: [
+        function (routes_ts_2_1) {
+          routes_ts_2 = routes_ts_2_1;
+        },
+        function (products_ts_1_1) {
+          products_ts_1 = products_ts_1_1;
+        },
+      ],
+      execute: function () {
+        GET = routes_ts_2.Routes.Methods.GET;
+        products = [
+          {
+            httpMethod: GET,
+            path: "",
+            serviceMethod: new products_ts_1.ProductsService().getName,
+          },
+          {
+            httpMethod: GET,
+            path: "/:productId/regions/:regionCode",
+            serviceMethod:
+              new products_ts_1.ProductsService().getProductByRegion,
+          },
+        ];
+        exports_127("default", products);
+      },
+    };
+  },
+);
+System.register(
+  "file:///home/runner/work/deno-starter/deno-starter/src/service/interface/health",
+  [],
+  function (exports_128, context_128) {
+    "use strict";
+    var __moduleName = context_128 && context_128.id;
+    return {
+      setters: [],
+      execute: function () {
+      },
+    };
+  },
+);
+System.register(
+  "file:///home/runner/work/deno-starter/deno-starter/src/service/implementation/health",
+  [
+    "file:///home/runner/work/deno-starter/deno-starter/src/deps",
+    "file:///home/runner/work/deno-starter/deno-starter/src/constants",
+  ],
+  function (exports_129, context_129) {
+    "use strict";
+    var deps_1, constants_1, HealthService;
+    var __moduleName = context_129 && context_129.id;
+    return {
+      setters: [
+        function (deps_1_1) {
+          deps_1 = deps_1_1;
+        },
+        function (constants_1_1) {
+          constants_1 = constants_1_1;
+        },
+      ],
+      execute: function () {
+        HealthService = class HealthService {
+          constructor() {
+            this.getTime = async (context) => {
+              context.response.body = {
+                serverTime: Date.now(),
+              };
+            };
+            this.getInfo = async ({ response }) => {
+              const ipIfyBaseURL = "http://api.ipify.org";
+              const options = {
+                params: {
+                  format: "json",
+                },
+              };
+              await deps_1.api.get(ipIfyBaseURL, options)
+                .then((res) => {
+                  response.body = {
+                    app: constants_1.default.APP_NAME,
+                    status: "UP",
+                    ipAddress: res.data.ip,
+                  };
+                })
+                .catch((err) => {
+                  throw new Error(err);
+                });
+            };
+          }
+        };
+        exports_129("HealthService", HealthService);
+      },
+    };
+  },
+);
+System.register(
+  "file:///home/runner/work/deno-starter/deno-starter/src/controllers/health",
+  [
+    "file:///home/runner/work/deno-starter/deno-starter/src/models/routes",
+    "file:///home/runner/work/deno-starter/deno-starter/src/service/implementation/health",
+  ],
+  function (exports_130, context_130) {
+    "use strict";
+    var routes_ts_3, health_ts_1, GET, health;
+    var __moduleName = context_130 && context_130.id;
+    return {
+      setters: [
+        function (routes_ts_3_1) {
+          routes_ts_3 = routes_ts_3_1;
+        },
+        function (health_ts_1_1) {
+          health_ts_1 = health_ts_1_1;
+        },
+      ],
+      execute: function () {
+        GET = routes_ts_3.Routes.Methods.GET;
+        health = [
+          {
+            httpMethod: GET,
+            path: "",
+            serviceMethod: new health_ts_1.HealthService().getTime,
+          },
+          {
+            httpMethod: GET,
+            path: "/info",
+            serviceMethod: new health_ts_1.HealthService().getInfo,
+          },
+        ];
+        exports_130("default", health);
+      },
+    };
+  },
+);
+// Generated by src/config/generator.ts - (c) 2020 Damian Perera - MIT License.
+System.register(
+  "file:///home/runner/work/deno-starter/deno-starter/src/config/routes",
+  [
+    "file:///home/runner/work/deno-starter/deno-starter/src/deps",
+    "file:///home/runner/work/deno-starter/deno-starter/src/controllers/accounts",
+    "file:///home/runner/work/deno-starter/deno-starter/src/controllers/products",
+    "file:///home/runner/work/deno-starter/deno-starter/src/controllers/health",
+  ],
+  function (exports_131, context_131) {
+    "use strict";
+    var deps_2, router, accounts_ts_2, products_ts_2, health_ts_2;
+    var __moduleName = context_131 && context_131.id;
+    return {
+      setters: [
+        function (deps_2_1) {
+          deps_2 = deps_2_1;
+        },
+        function (accounts_ts_2_1) {
+          accounts_ts_2 = accounts_ts_2_1;
+        },
+        function (products_ts_2_1) {
+          products_ts_2 = products_ts_2_1;
+        },
+        function (health_ts_2_1) {
+          health_ts_2 = health_ts_2_1;
+        },
+      ],
+      execute: function () {
+        exports_131("router", router = new deps_2.Router());
+        router["get"](
+          "/api/v1/accounts",
+          accounts_ts_2.default[0].serviceMethod,
+        );
+        router["get"](
+          "/api/v1/accounts/:accountId",
+          accounts_ts_2.default[1].serviceMethod,
+        );
+        router["get"](
+          "/api/v1/products",
+          products_ts_2.default[0].serviceMethod,
+        );
+        router["get"](
+          "/api/v1/products/:productId/regions/:regionCode",
+          products_ts_2.default[1].serviceMethod,
+        );
+        router["get"]("/api/v1/health", health_ts_2.default[0].serviceMethod);
+        router["get"](
+          "/api/v1/health/info",
+          health_ts_2.default[1].serviceMethod,
+        );
+      },
+    };
+  },
+);
+System.register(
+  "file:///home/runner/work/deno-starter/deno-starter/src/models/error",
+  [],
+  function (exports_132, context_132) {
+    "use strict";
+    var __moduleName = context_132 && context_132.id;
+    return {
+      setters: [],
+      execute: function () {
+      },
+    };
+  },
+);
+System.register(
+  "file:///home/runner/work/deno-starter/deno-starter/src/config/http",
+  [
+    "file:///home/runner/work/deno-starter/deno-starter/src/deps",
+    "file:///home/runner/work/deno-starter/deno-starter/src/constants",
+  ],
+  function (exports_133, context_133) {
+    "use strict";
+    var deps_3, constants_2, HTTP;
+    var __moduleName = context_133 && context_133.id;
+    return {
+      setters: [
+        function (deps_3_1) {
+          deps_3 = deps_3_1;
         },
         function (constants_2_1) {
           constants_2 = constants_2_1;
@@ -27364,7 +28869,7 @@ System.register(
                 try {
                   await next();
                 } catch (e) {
-                  log.error(e);
+                  deps_3.log.error(e);
                   const error = {
                     statusCode: e.statusCode || this.INTERNAL_SERVER_ERROR,
                     message: e.message,
@@ -27383,9 +28888,9 @@ System.register(
                 ) &&
                   context.request.headers.set(
                     constants_2.default.CORRELATION_ID_HEADER,
-                    mod_ts_16.v4.generate(),
+                    deps_3.v4.generate(),
                   );
-                log.info(
+                deps_3.log.info(
                   `[REQ] - ${
                     context.request.headers.get(
                       constants_2.default.CORRELATION_ID_HEADER,
@@ -27399,7 +28904,7 @@ System.register(
                 await next();
                 const ms = Date.now() - start;
                 context.response.headers.set("X-Response-Time", `${ms}ms`);
-                log.info(
+                deps_3.log.info(
                   `[RES] - ${
                     context.request.headers.get(
                       constants_2.default.CORRELATION_ID_HEADER,
@@ -27411,31 +28916,30 @@ System.register(
           }
           HTTP.Logger = Logger;
         })(HTTP || (HTTP = {}));
-        exports_123("HTTP", HTTP);
+        exports_133("HTTP", HTTP);
       },
     };
   },
 );
 System.register(
-  "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/server",
+  "file:///home/runner/work/deno-starter/deno-starter/src/server",
   [
-    "https://deno.land/x/oak/mod",
-    "https://deno.land/std/log/mod",
-    "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/config/routes",
-    "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/config/http",
-    "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/constants",
+    "file:///home/runner/work/deno-starter/deno-starter/src/deps",
+    "file:///home/runner/work/deno-starter/deno-starter/src/constants",
+    "file:///home/runner/work/deno-starter/deno-starter/src/config/routes",
+    "file:///home/runner/work/deno-starter/deno-starter/src/config/http",
   ],
-  function (exports_124, context_124) {
+  function (exports_134, context_134) {
     "use strict";
-    var mod_ts_17, log, routes_ts_4, http_ts_1, constants_3, app;
-    var __moduleName = context_124 && context_124.id;
+    var deps_4, constants_3, routes_ts_4, http_ts_1, app;
+    var __moduleName = context_134 && context_134.id;
     return {
       setters: [
-        function (mod_ts_17_1) {
-          mod_ts_17 = mod_ts_17_1;
+        function (deps_4_1) {
+          deps_4 = deps_4_1;
         },
-        function (log_2) {
-          log = log_2;
+        function (constants_3_1) {
+          constants_3 = constants_3_1;
         },
         function (routes_ts_4_1) {
           routes_ts_4 = routes_ts_4_1;
@@ -27443,18 +28947,15 @@ System.register(
         function (http_ts_1_1) {
           http_ts_1 = http_ts_1_1;
         },
-        function (constants_3_1) {
-          constants_3 = constants_3_1;
-        },
       ],
       execute: async function () {
-        app = new mod_ts_17.Application();
+        app = new deps_4.Application();
         app.use(new http_ts_1.HTTP.Exceptions().catch);
         app.use(new http_ts_1.HTTP.Logger().requestCorrelation);
         app.use(new http_ts_1.HTTP.Logger().requestTimer);
         app.use(routes_ts_4.router.routes());
         app.use(routes_ts_4.router.allowedMethods());
-        log.info(
+        deps_4.log.info(
           `${constants_3.default.APP_NAME} started on port ${constants_3.default.PORT}`,
         );
         await app.listen({ port: constants_3.default.PORT });
@@ -27464,5 +28965,5 @@ System.register(
 );
 
 await __instantiateAsync(
-  "file:///home/runner/work/Deno-REST-Boilerplate/Deno-REST-Boilerplate/src/server",
+  "file:///home/runner/work/deno-starter/deno-starter/src/server",
 );
