@@ -1,8 +1,6 @@
-import { Context } from 'https://deno.land/x/oak/mod.ts'
-import * as log from 'https://deno.land/std/log/mod.ts'
-import { v4 } from 'https://deno.land/std/uuid/mod.ts'
-import { Error } from 'models/error.ts'
+import { Context, log, v4 } from 'deps'
 import Constants from 'constants'
+import { Error } from 'models/error.ts'
 
 export namespace HTTP {
     export class Exceptions {

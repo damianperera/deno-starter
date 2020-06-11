@@ -1,5 +1,4 @@
-import { Context, Response } from 'https://deno.land/x/oak/mod.ts'
-import { soxa as api } from 'https://deno.land/x/soxa/mod.ts'
+import { Context, Response, api } from 'deps'
 import Constants from 'constants'
 import { Health } from 'service/interface/health.ts'
 
