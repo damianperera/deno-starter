@@ -1,6 +1,4 @@
-import { assertEquals } from 'https://deno.land/std/testing/asserts.ts'
-import { ServerRequest } from 'https://deno.land/x/oak/deps.ts'
-import { Request, Response } from 'https://deno.land/x/oak/mod.ts'
+import { assertEquals, ServerRequest, Request, Response } from 'deps'
 import { ProductsService } from 'service/implementation/products.ts'
 import { Routes } from 'models/routes.ts'
 

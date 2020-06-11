@@ -1,4 +1,4 @@
-import * as log from 'https://deno.land/std/log/mod.ts'
+import { log } from 'deps'
 import Constants from 'constants'
 import { Routes } from 'models/routes.ts'
 

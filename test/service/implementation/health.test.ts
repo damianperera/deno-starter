@@ -1,10 +1,6 @@
-import { assertEquals } from 'https://deno.land/std/testing/asserts.ts'
-import { ServerRequest } from 'https://deno.land/x/oak/deps.ts'
-import { Application, Context, Request, Response } from 'https://deno.land/x/oak/mod.ts'
-import { stub, resolves } from 'https://deno.land/x/mock/stub.ts'
+import { assertEquals, ServerRequest, Application, Context, Request, Response, stub, resolves, api as soxa } from 'deps'
 import { HealthService } from 'service/implementation/health.ts'
 import { Routes } from 'models/routes.ts'
-import { soxa } from 'https://deno.land/x/soxa/mod.ts'
 import Constants from 'constants'
 
 const { test } = Deno
